@@ -10,6 +10,7 @@ Soluciones:
 6#  align-items: center;
     justify-content: center;
 7#  justify-content: space-around;
+    align-items:end;
 8#  flex-direction: row-reverse;
 9#  flex-direction: column;
 10# flex-direction: row-reverse;
