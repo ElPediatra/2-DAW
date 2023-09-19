@@ -40,29 +40,42 @@ public class Ejercicio1_GomezMorales_Alberto {
                 switch(opcion){
                     case 1: //Invertir la palabra
                         String palabraInvertida = "";
-                        char letra;
+                        char letra1;
 
                         for (int i = palabra.length() - 1; i >= 0; i--) {
-                            letra = palabra.charAt(i);
-                            palabraInvertida += letra;
+                            letra1 = palabra.charAt(i);
+                            palabraInvertida += letra1;
                         }
 
                         System.out.println("La palabra '"+palabra+"' invertida es '"+palabraInvertida+"'.");
                     break;
                     
                     case 2:
-                        int contador = 0;
-                        String palabraAux = palabra.toLowerCase();
+                        int contador1 = 0;
+                        String palabraAux1 = palabra.toLowerCase();
 
                         for(int i =0; i<palabra.length();i++){
-                            if ((palabraAux.charAt(i)=='a') || (palabraAux.charAt(i)=='e') || (palabraAux.charAt(i)=='i') || (palabraAux.charAt(i)=='o') || (palabraAux.charAt(i)=='u')){ 
-                                contador++;
+                            if ((palabraAux1.charAt(i)=='a') || (palabraAux1.charAt(i)=='e') || (palabraAux1.charAt(i)=='i') || (palabraAux1.charAt(i)=='o') || (palabraAux1.charAt(i)=='u')){ 
+                                contador1++;
                             }
                         }
-                        System.out.println("En la palabra '"+palabra+"' hay "+contador+" vocales.");
+                        System.out.println("En la palabra '"+palabra+"' hay "+contador1+" vocales.");
                     break;
 
                     case 3:
+                        int contador2 = 0;
+                        char letra2;
+                        String palabraAux2 = palabra.toLowerCase();
+
+                        for (int i = 0; i<palabra.length(); i++){
+                            letra2 = palabraAux2.charAt(i);
+
+                            if(esConsonante(letra2)) {
+                                contador2++;
+                            }
+                        }
+
+                        System.out.println("En la palabra '"+palabra+"' hay "+contador2+" consonantes.");
                     break;
 
                     case 4:
@@ -83,5 +96,11 @@ public class Ejercicio1_GomezMorales_Alberto {
         }while(!palabra.equalsIgnoreCase("salir"));
         
         System.out.println("Hasta la próxima!");
+        teclado.close();
+    }
+
+    /* Métodos */
+    public static boolean esConsonante (char letra){ //Comprobamos si la letra es consonante o no
+        return "bcdfghjklmnñpqrstvwxyz".contains(String.valueOf(letra).toLowerCase());
     }
 }
