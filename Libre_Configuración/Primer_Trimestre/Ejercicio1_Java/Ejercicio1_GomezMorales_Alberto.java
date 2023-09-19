@@ -79,12 +79,27 @@ public class Ejercicio1_GomezMorales_Alberto {
                     break;
 
                     case 4:
+                        String palabraAux3 = palabra.toLowerCase();
+                        System.out.println("La palabra '"+palabra+"' con todo en minúsculas es '"+palabraAux3+"'.");
                     break;
 
                     case 5:
+                        String palabraAux4 = palabra.toUpperCase();
+                        System.out.println("La palabra '"+palabra+"' con todo en mayúsculas es '"+palabraAux4+"'.");
                     break;
 
                     case 6:
+                        String palabraReversa = "";
+                        
+                        for(int i = (palabra.length()-1); i >=0; --i){
+                            palabraReversa = palabraReversa + palabra.charAt(i);
+                        }
+
+                        if(palabra.toLowerCase().equals(palabraReversa.toLowerCase())){
+                            System.out.println("La palabra '"+palabra+"' SI es palíndroma.");
+                        } else {
+                            System.out.println("La palabra '"+palabra+"' NO es palíndroma.");
+                        }
                     break;
 
                     default:
