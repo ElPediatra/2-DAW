@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <!-- Crea un segundo botón para el ejemplo del apartado 1.6.1 que modifique
 el título "Modificando el contenido" -->
-<html>
-    
-</html>
+    <html>
+        <body>
+            <h1 id="titulo">
+                Modificar codigo de HTML de manera dinamica
+            </h1>
+            <p id="prueba"> Modificamos el contenido...</p>
+
+            <button type="button" onclick="document.getElementById('prueba').innerHTML = 'CAMBIANDO EL CONTENIDO!'">Cambiar parrafo!</button>
+            <button type="button" onclick="document.getElementById('titulo').innerHTML = 'Modificando el contenido...'">Cambiar Titulo!</button>
+        </body>
+    </html>
