@@ -1,0 +1,15 @@
+sudo apt install lamp-server^
+
+info.php
+
+<?php
+	phpinfo();
+?>
+
+/var/www/html
+
+localhost/info.php
+
+www-data (usuario)
+
+sudo chown usuarioPC . -R
