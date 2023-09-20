@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Elabora una secuencia de imágenes con al menos 4 fotogramas.
+    Según el usuario vaya haciendo clic sobre las imágenes, la
+    secuencia irá reproduciendo. -->
+    <body>
+        <h1>
+            Secuencia de Imagenes
+        </h1>
+
+        <p>Cambia las imagenes clicando en ellas</p>
+        <img id="imagen" src="Imagen1.jpg" alt="Imagen 1">
+        <script>
+            const imagenes = ["Imagen1.jpg", "Imagen2.jpg", "Imagen3.jpg", "Imagen4.jpg"];
+            let indice = 0;
+
+            const imagenElement = document.getElementById("imagen");
+
+            imagenElement.addEventListener("click", () => {
+                if (indice < imagenes.length - 1) {
+                    indice++;
+                } else {
+                    indice = 0;
+                }
+                    imagenElement.src = imagenes[indice];
+            });
+        </script>
+    </body>
