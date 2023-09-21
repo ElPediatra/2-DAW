@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Diseña una web con tres botones para que al pulsarlos se genere un mensaje de bienvenida
+en ruso, español e inglés en la misma página. El mensaje irá en un párrafo (etiqueta <p>). Se
+pide que los mensajes tengan un color diferente dependiendo del idioma. -->
+<html>
+    <head>
+        <script>
+            function esp(){
+                document.getElementById('txtSaludo').innerHTML = 'Buenos dias!';
+                txtSaludo.style.color = "orange";
+            }
+
+            function ing(){
+                document.getElementById('txtSaludo').innerHTML = 'Good Morning!';
+                txtSaludo.style.color = "blue";
+            }
+
+            function rus(){
+                document.getElementById('txtSaludo').innerHTML = 'Доброе утро! (Dobroye utro)';
+                txtSaludo.style.color = "red";
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1> Saludos en varios idiomas </h1>
+        <p> Pulsa uno de los botones para ver como se saluda en estos 3 idiomas </p>
+        <p id="txtSaludo"></p>
+
+        <button type="button" onclick="esp()">Español</button>
+        <button type="button" onclick="ing()">Ingles</button>
+        <button type="button" onclick="rus()">Ruso</button>
+    </body>
+</html>
