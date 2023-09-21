@@ -54,10 +54,24 @@ align-self: flex-end;
 align-self: flex-end;
 
 12. 
-justify-content: space-between; 
-align-items: center;
-order: 1; 
+.tower-group-1 {
+display: flex;
+justify-content: space-between;
+}
+.tower-1-1 {
+order: -1;
+}
+.tower-1-2 {
 align-self: center;
-align-self: center;
-align-self: flex-end;
+}
+.tower-1-3 {
 order: 1;
+align-self: center;
+}
+.tower-1-4 {
+align-self: center;
+}
+.tower-1-5 {
+order: 1;
+align-self: flex-end;
+}
