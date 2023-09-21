@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Realiza un test de 7 preguntas donde cada pregunta tenga dos botones
+(verdadero y falso). Dependiendo de si el usuario hace clic en verdadero o
+en falso la frase se pone verde (acierto) o roja (error).-->
+<html>
+    <head>
+        <script>
+            /* Pregunta 1 */
+            function vp1() {
+                var x = document.getElementById("p1");
+                x.style.color = "red";
+            }
+            function fp1() {
+                var x = document.getElementById("p1");
+                x.style.color = "green";
+            }
+
+            /* Pregunta 2 */
+            function vp2() {
+                var x = document.getElementById("p2");
+                x.style.color = "green";
+            }
+            function fp2() {
+                var x = document.getElementById("p2");
+                x.style.color = "red";
+            }
+
+            /* Pregunta 3 */
+            function vp3() {
+                var x = document.getElementById("p3");
+                x.style.color = "red";
+            }
+            function fp3() {
+                var x = document.getElementById("p3");
+                x.style.color = "green";
+            }
+
+            /* Pregunta 4 */
+            function vp4() {
+                var x = document.getElementById("p4");
+                x.style.color = "green";
+            }
+            function fp4() {
+                var x = document.getElementById("p4");
+                x.style.color = "red";
+            }
+
+            /* Pregunta 5 */
+            function vp5() {
+                var x = document.getElementById("p5");
+                x.style.color = "red";
+            }
+            function fp5() {
+                var x = document.getElementById("p5");
+                x.style.color = "green";
+            }
+
+            /* Pregunta 6 */
+            function vp6() {
+                var x = document.getElementById("p6");
+                x.style.color = "red";
+            }
+            function fp6() {
+                var x = document.getElementById("p6");
+                x.style.color = "green";
+            }
+
+            /* Pregunta 7 */
+            function vp7() {
+                var x = document.getElementById("p7");
+                x.style.color = "red";
+            }
+            function fp7() {
+                var x = document.getElementById("p7");
+                x.style.color = "green";
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1> Cuestionario de preguntas </h1>
+        <p id="p1">El sol gira alrededor de la Tierra.</p>
+        <button type="button" onclick="vp1()">Verdadero</button>
+        <button type="button" onclick="fp1()">Falso</button>
+
+        <p id="p2">El agua hierve a 100 grados Celsius a nivel del mar.</p>
+        <button type="button" onclick="vp2()">Verdadero</button>
+        <button type="button" onclick="fp2()">Falso</button>
+
+        <p id="p3">La Luna tiene su propia luz.</p>
+        <button type="button" onclick="vp3()">Verdadero</button>
+        <button type="button" onclick="fp3()">Falso</button>
+
+        <p id="p4">La Gran Muralla China es visible desde el espacio.</p>
+        <button type="button" onclick="vp4()">Verdadero</button>
+        <button type="button" onclick="fp4()">Falso</button>
+
+        <p id="p5">El oxígeno es el elemento más abundante en la Tierra.</p>
+        <button type="button" onclick="vp5()">Verdadero</button>
+        <button type="button" onclick="fp5()">Falso</button>
+
+        <p id="p6">Los seres humanos solo usan el 10% de su cerebro.</p>
+        <button type="button" onclick="vp6()">Verdadero</button>
+        <button type="button" onclick="fp6()">Falso</button>
+
+        <p id="p7">Los pingüinos viven en el Polo Norte.</p>
+        <button type="button" onclick="vp7()">Verdadero</button>
+        <button type="button" onclick="fp7()">Falso</button>
+    </body>
+</html>
