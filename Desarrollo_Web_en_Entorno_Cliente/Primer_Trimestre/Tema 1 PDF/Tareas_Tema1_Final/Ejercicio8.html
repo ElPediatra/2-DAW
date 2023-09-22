@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<!-- Modifica el código anterior para que los mensajes de bienvenida se
-    generen como mensajes de consola -->
+<!-- Transforma el código anterior para que los mensajes de bienvenida se
+generen con el método write(). -->
 <html>
     <head>
         <script>
             function esp(){
-                console.log("Buenos dias!");
+                document.getElementById("texto").innerHTML = "Buenos dias!";
             }
 
             function ing(){
-                console.log("Good Morning!");
+                document.getElementById("texto").innerHTML = "Good Morning!";
             }
 
             function rus(){
-                console.log("Доброе утро! (Dobroye utro)");
+                document.getElementById("texto").innerHTML = "Доброе утро! (Dobroye utro)";
             }
         </script>
     </head>
 
     <body>
-        <h1> Saludos en varios idiomas por consola </h1>
+        <h1> Saludos en varios idiomas por write() </h1>
         <p> Pulsa uno de los botones para ver como se saluda en estos 3 idiomas </p>
-        
+        <p id="texto"> </p>
+
         <button type="button" onclick="esp()">Español</button>
         <button type="button" onclick="ing()">Ingles</button>
         <button type="button" onclick="rus()">Ruso</button>
     </body>
 </html>
+
