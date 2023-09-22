@@ -1,0 +1,8 @@
+¿En qué se diferencia JavaScript de Java?-->
+
+1.- El lenguaje de programación JavaScript, desarrollador por Netscape, Inc., no forma parte de la plataforma Java.
+2.- JavaScript no crea applets ni aplicaciones independientes. En su forma más habitual, JavaScript está en documentos HTML y puede proporcionar niveles de interactividad en las páginas web que no se pueden conseguir con HTML simple.
+3.- Java es un lenguaje de programación OOP, mientras que Java Script es un lenguaje de scripts OOP.
+4.- Java crea aplicaciones que se ejecutan en una máquina o explorador virtual, mientras que el código JavaScript sólo se ejecuta en un explorador.
+5.- El código Java necesita compilación, mientras que el código JavaScript está en todo el texto.
+6.- Necesitan diferentes plugins.

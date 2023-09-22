@@ -1,0 +1,8 @@
+Describe las ventajas más importantes de usar JavaScript.
+
+1.- Simplicidad. Posee una estructura sencilla que lo vuelve más fácil de aprender e implementar. 
+2.- Velocidad. Se ejecuta más rápido que otros lenguajes y favorece la detección de los errores.
+3.- Versatilidad. Es compatible con otros lenguajes, como: PHP, Perl y Java. Además, hace que la ciencia de datos y el aprendizaje automático sean accesibles.
+4.- Popularidad. Existen numerosos recursos y foros disponibles para ayudar a los principiantes con habilidades y conocimientos limitados.
+5.- Carga del servidor. La validación de datos puede realizarse a través del navegador web y las actualizaciones solo se aplican a ciertas secciones de la página web.
+6.- Actualizaciones. Se actualiza de forma continua con nuevos frameworks y librerías, esto le asegura relevancia dentro del sector.
