@@ -1,0 +1,77 @@
+/* Normalize del tio del ejemplo */
+html {
+    box-sizing: border-box;
+  }
+  
+  /* Configuramos estilos */
+  
+  *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    /* Configuración de estilos */
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        background: #3494E6;
+        background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
+        background: linear-gradient(to right, #EC6EAD, #3494E6);
+      }
+      
+      .wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding:50px;
+      }
+    
+      /* Imagen */
+      img {
+        max-width:100%;
+      }
+      
+      /* Links */
+      a {
+        color:white;
+        text-decoration: none;
+        font-size: 15px;
+        background:rgba(0,0,0,0.2);
+        padding:20px 5px;
+      }
+      a:hover {
+        background:rgba(0,0,0,0.4);
+      }
+      
+      /* Contenedores */
+      .slider-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      /* 1º Caja */
+      .slider-nav li {
+        flex: 2;
+        text-align: center;
+        display: flex;
+      }
+      
+      /* Animaciones */
+      .slider-nav .arrow {
+        flex: 1;
+      }
+      
+      .arrow a {
+        font-size: 30px;
+      }
+      
+      .slider-nav a {
+        flex-basis: 100%; /* Estiramos el centro */        
+        display: flex;
+        align-items: center;
+      }
+      
+      .slider-nav span {
+        display: block;
+        width: 100%;
+      }

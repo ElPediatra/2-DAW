@@ -1,13 +1,13 @@
 /* Normalize del tio del ejemplo */
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Configuramos estilos */
+
+*, *:before, *:after {
+    box-sizing: inherit;
   }
-  
-  /* Configuramos estilos */
-  
-  *, *:before, *:after {
-      box-sizing: inherit;
-    }
 
 /* Configuración de estilos */
 body {
