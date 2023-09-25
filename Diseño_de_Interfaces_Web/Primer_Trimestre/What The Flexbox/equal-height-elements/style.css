@@ -1,0 +1,45 @@
+/* Normalize del tio del ejemplo */
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+   /* Configuramos estilos */
+   body {
+    font-family: sans-serif;
+    margin: 0;
+    background: #3494E6;
+    background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
+    background: linear-gradient(to right, #EC6EAD, #3494E6);
+  }
+  
+  a {
+    color:white;
+  }
+  
+  .item.large {
+    font-size: 40px;
+  }
+  
+  .item.small {
+    font-size: 20px;
+  }
+  
+  .item {
+    background:rgba(255,255,255,0.2);
+    margin:10px;
+    padding:20px;
+    font-size: 30px;
+  }
+  
+  .elements {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .item {
+    flex: 1 1 calc(33.33% - 20px);
+  }
