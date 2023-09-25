@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FlexBox Nav</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="wrapper">
+    
+    <header class="top">
+      <h1><a href="#">No se que estoy haciendo jaja :D </a></h1>
+    </header>
+
+    <nav class="flex-nav">
+      <a href="#" class="toggleNav">☰ Menu</a>
+      <ul>
+        <li><a href="#">AYUDA</a></li>
+        <li><a href="#">ME</a></li>
+        <li><a href="#">ESTÁN</a></li>
+        <li><a href="#">MATANDO</a></li>
+        <li><a href="#">JAJA</a></li>
+        <li><a href="#">GATITO</a></li>
+        <li class="social">
+            <a href="https://twitter.com/AlbertoDA_TW"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li class="social">
+            <a href="https://www.facebook.com/alberto.gomezmorales.5/"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li class="social">
+            <a href="https://github.com/ElPediatra"><i class="fa fa-github"></i></a>
+          </li>
+          <li class="social">
+            <a href="https://www.instagram.com/albertoda_ig/"><i class="fa fa-instagram"></i></a>
+          </li>
+      </ul>
+    </nav>
+
+    <!-- Pongo el link el gatito porque la que había puesta no está -->
+    <section class="hero">
+      <img src="https://placekitten.com/1000/600">
+    </section>
+
+    <section class="details">
+      <p>Replicando esta página para un trabajo de clase.</p>
+      <p>Espero que me salga bien!</p>
+    </section>
+
+    <section class="signup">
+      <form action="" class="signup">
+        <input type="text" placeholder="Tu Nombre">
+        <input type="email" placeholder="Correo electrónico">
+        <input type="submit" value="Enviar!">
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; El Pediatra (by Enea Xharja)</p>
+    </footer>
+
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    //Función del ejemplo - NO la he creado yo
+    $(function() {
+      $('.toggleNav').on('click',function() {
+        $('.flex-nav ul').toggleClass('open');
+      });
+    });
+
+  </script>
+</body>
+</html>

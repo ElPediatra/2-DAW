@@ -1,0 +1,110 @@
+/* Normalize del tio del ejemplo */
+html {
+    box-sizing: border-box;
+  }
+  
+  /* Configuramos estilos */
+  
+  *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+/* Configuración de estilos */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: #3494E6;
+    background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
+    background: linear-gradient(to right, #EC6EAD, #3494E6);
+  }
+  
+  /* Links */
+  a {
+    color:white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background:rgba(0,0,0,0.2);
+    padding:20px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition:all 0.5s;
+  }
+  
+  a:hover { background:rgba(0,0,0,0.3); }
+  
+  .toggleNav { display: none; }
+  
+  /* Imagen */
+  img { width:100%; }
+  
+  .wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Formulario */
+  input {
+    padding:10px;
+    border:0;
+  }
+  
+  /* Cuadro central y footer */
+  section, footer {
+    text-align: center;
+    background:rgba(0,0,0,0.2);
+    padding:20px;
+    margin:20px 0;
+    color:white;
+    font-weight: 100;
+  }
+  
+  /* Contenedores */
+  .flex-nav ul {
+    border:1px solid black;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  /* Animaciones del tío */
+  .flex-nav li { flex: 3; }
+  
+  .flex-nav .social { flex: 1; }
+  
+  @media all and (max-width:1000px) {
+    .flex-nav ul { flex-wrap: wrap; }
+  
+    .flex-nav li { flex: 1 1 50%; }
+  
+    .flex-nav .social { flex: 1 1 25%; }
+  }
+  
+  
+  @media all and (max-width:500px) {
+    .flex-nav li { flex-basis: 100%; }
+  
+    /* Reorden mobil */
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .wrapper > * { order: 9999; }
+  
+    .flex-nav { order: 1; }
+  
+    .toggleNav { display: block; }
+  
+    .flex-nav ul { display: none; }
+  
+    .flex-nav ul.open { display: flex; }
+  
+    .top { order: 2; }
+  
+    .details { order: 3; }
+  
+    .signup { order: 4; }
+  }
