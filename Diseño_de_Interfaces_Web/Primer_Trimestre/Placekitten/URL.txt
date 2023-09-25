@@ -1,0 +1,4 @@
+URL: https://placekitten.com
+
+poner https://placekitten.com/X (por ejemplo 400)/ Y (por ejemplo 300)
+https://placekitten.com/400/300
