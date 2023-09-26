@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <!-- Investiga el operador ternario y pon un ejemplo completo de uso. -->
 <html>
+    <head>
+        <script>
+            //Creo las constantes para el ejercicio
+            const edad = 20;
+            const puedeVotar = edad >= 18 ? "Puede votar" : "No puede votar";
 
+            console.log(puedeVotar);
+        </script>
+    </head>
+    <body>
+        <h1> Ejemplo ternario JS </h1>
+        <p> Ejemplo de operador ternario en JS </p>
+        <p> Puede votar una persona con 20 años? </p>
+        <p id="ternario"></p>
+
+        <button type="button" onclick="document.getElementById('ternario').innerHTML = puedeVotar">Podrá?</button>
+    </body>
 </html>
