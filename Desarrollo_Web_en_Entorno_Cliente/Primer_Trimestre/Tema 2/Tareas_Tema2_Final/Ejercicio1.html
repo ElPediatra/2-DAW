@@ -2,5 +2,24 @@
 <!-- Realiza un programa JavaScript que calcule el área y la longitud
     de una circunferencia de radio 5-->
 <html>
+    <head>
+        <title> Datos circunferencia </title>
+        <script>
+            //Creo mi constante para el radio, el area y la longitud
+            const radio = 5;
+            const area = Math.PI * Math.pow(radio, 2);
+            const longitud = 2 * Math.PI * radio;        
+        </script>
+    </head>
+    <body>
+        <h1> Calcular Área y Longitud de una circunferencia </h1>
+        <p> Realiza un programa JavaScript que calcule el área y la longitud
+            de una circunferencia de radio 5 </p>
+        <p id="area"></p>
+        <p id="longitud"></p>
 
+        <button type="button" onclick="document.getElementById('area').innerHTML ='Área de la circunferencia:' + area">Calcular Area</button>
+        <button type="button" onclick="document.getElementById('longitud').innerHTML ='Longitud de la circunferencia' + longitud">Click aquí!</button>
+
+    </body>
 </html>
