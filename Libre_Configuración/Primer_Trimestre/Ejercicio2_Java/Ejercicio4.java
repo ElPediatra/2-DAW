@@ -5,6 +5,7 @@
  * otra en letras minúsculas.
  */
 
+/* Imports */
 import java.util.Scanner;
 
 public class Ejercicio4 {
