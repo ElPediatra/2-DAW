@@ -35,9 +35,9 @@ html {
   
   .plan a {
     text-decoration: none;
-    background:red;
+    background:greenyellow;
     padding:10px;
-    color:yellow;
+    color:black;
     border-radius:4px;
   }
   
