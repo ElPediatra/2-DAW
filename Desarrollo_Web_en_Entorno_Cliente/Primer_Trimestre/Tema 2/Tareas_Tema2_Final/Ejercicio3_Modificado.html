@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //Creo atributo para los intentos
+            let intentos = 3;
+
+            //Función con prompt para solicitar la nota y verificar si está aprobado o suspenso
+            function verificarAprobacion() {
+                if (intentos === 0) {
+                    document.getElementById('resultado').innerHTML = 'Has agotado tus 3 intentos. El programa terminará.';
+                    return;
+                }
+
+                const nota = parseFloat(prompt("Ingrese su nota del 0 al 10:"));
+
+                    if (isNaN(nota) || nota < 0 || nota > 10) {
+                        document.getElementById('resultado').innerHTML = 'Por favor, ingrese una nota válida del 0 al 10.';
+                        intentos--;
+            
+                verificarAprobacion(); //Llamamos a la función de manera recursiva hasta que haya 0 intentos
+                } else {
+                    if (nota >= 6) {
+                        document.getElementById('resultado').innerHTML = 'Aprobado';
+                    } else {
+                        document.getElementById('resultado').innerHTML = 'Suspenso';
+                    }
+
+                    intentos--;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!--Llamamos a la función para iniciar el proceso-->
+        <p id="resultado"></p>
+        <button type="button" onclick="verificarAprobacion()">Calcular nota</button>
+    </body>
+</html>
