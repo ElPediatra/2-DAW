@@ -1,12 +1,12 @@
 /* Alberto Gómez Morales - 2º DAW - Libre Configuración
  *
- * 7.- Escriba una aplicación que lea una línea de texto y que imprima sólo aquellas palabras que
- * comiencen con la letra "b".
+ * 8.- Escriba una aplicación que lea una línea de texto y que imprima sólo aquellas palabras que
+ * comiencen con las letras "ED".
  */
 
 import java.util.Scanner;
 
-public class Ejercicio7 {
+public class Ejercicio8 {
         public static void main(String[] args) {
         
         /* Atributos */
@@ -21,14 +21,14 @@ public class Ejercicio7 {
         //Separo la frase en el array por los espacios
         palabras = frase.split(" ");
 
-        //Creo un bucle para revisar todas las palabras del array y mnuestro las que empiecen por b
-        System.out.println("Palabras que comienzan con 'b':");
+        //Creo un bucle para revisar todas las palabras del array y mnuestro las que empiecen por ed
+        System.out.println("Palabras que comienzan con 'ED':");
         for (String palabra : palabras) {
             //Quito los caracteres innecesarios y la pasamos a minúscula
             palabra = palabra.replaceAll("[^a-zA-Z]+$", "");
-            palabra = palabra.toLowerCase();
+            palabra = palabra.toUpperCase();
 
-            if (palabra.startsWith("b")) {
+            if (palabra.startsWith("ED")) {
                 System.out.println(palabra);
             }
         }
