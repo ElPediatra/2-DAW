@@ -34,5 +34,7 @@ public class Ejercicio3 {
         } else {
             System.out.println("Las 2 frases son iguales.");
         }
+
+        teclado.close();
     }
 }

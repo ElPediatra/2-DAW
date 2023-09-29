@@ -27,5 +27,7 @@ public class Ejercicio9 {
         } else {
             System.out.println("El número indicado no es válido.");
         }
+
+        teclado.close();
     }
 }

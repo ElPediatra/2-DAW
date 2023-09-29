@@ -32,5 +32,7 @@ public class Ejercicio8 {
                 System.out.println(palabra);
             }
         }
+        
+        teclado.close();
     }
 }

@@ -36,5 +36,7 @@ public class Ejercicio5 {
 
         //Mostramos el restultado
         System.out.println("La letra " + letra + " está " + contador + " veces.");
+
+        teclado.close();
     }
 }

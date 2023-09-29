@@ -26,5 +26,7 @@ public class Ejercicio4 {
 
         System.out.println("La frase es mayúsculas es: '"+mayuscula+"'.");
         System.out.println("La frase en minúsculas es: '"+minuscula+"'.");
+
+        teclado.close();
     }
 }
