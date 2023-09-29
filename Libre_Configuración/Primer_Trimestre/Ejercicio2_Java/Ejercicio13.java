@@ -1,6 +1,8 @@
 /* Alberto Gómez Morales - 2º DAW - Libre Configuración
  * 
- * 13.-
+ * 13.- Escriba una aplicación que lea una línea de texto e imprima una tabla que indique el número de
+ * palabras de una letra, de dos letras, de tres letras, etcétera, que aparezcan en el texto. Por ejemplo,
+ * en la siguiente tabla se muestra la cuenta para la frase
  */
 
 /* Imports */
