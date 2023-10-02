@@ -107,6 +107,6 @@ public class Ejercicio3_15 {
     }
 
     public static void imprimirTarjetaEmbarque(int asiento, String clase) { //"Imprimimos" el ticket del usuario
-        System.out.println("¡Felicitaciones! Ha sido asignado al asiento número " + asiento + " en la sección de " + clase + ".");
+        System.out.println("¡Enhorabuena! Se le ha asignado al asiento número " + asiento + " en la sección de " + clase + ".");
     }
 }
