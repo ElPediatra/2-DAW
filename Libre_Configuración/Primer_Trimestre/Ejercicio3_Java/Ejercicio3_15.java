@@ -49,9 +49,9 @@ public class Ejercicio3_15 {
                     imprimirTarjetaEmbarque(asiento, "Primera Clase");
                     asientosOcupados++;
                 } else {
-                    System.out.println("La sección de Primera Clase está llena. ¿Desea ser colocado en Económico? (Sí/No)");
+                    System.out.println("La sección de Primera Clase está llena. ¿Quiere que le pongamos en la sección Económico? (Si/No)");
                     respuesta = teclado.next();
-                    if (respuesta.equalsIgnoreCase("Sí")) {
+                    if (respuesta.equalsIgnoreCase("Si")) {
                         asiento = asignarAsiento(asientos, 6, 10);
                         if (asiento != -1) {
                             imprimirTarjetaEmbarque(asiento, "Económico");
@@ -71,9 +71,9 @@ public class Ejercicio3_15 {
                     imprimirTarjetaEmbarque(asiento, "Económico");
                     asientosOcupados++;
                 } else {
-                    System.out.println("La sección Económica está llena. ¿Desea ser colocado en Primera Clase? (Sí/No)");
+                    System.out.println("La sección Económica está llena. ¿Quiere que le pongamos en la sección Primera Clase? (Si/No)");
                     respuesta = teclado.next();
-                    if (respuesta.equalsIgnoreCase("Sí")) {
+                    if (respuesta.equalsIgnoreCase("Si")) {
                         asiento = asignarAsiento(asientos, 1, 5);
                         if (asiento != -1) {
                             imprimirTarjetaEmbarque(asiento, "Primera Clase");
