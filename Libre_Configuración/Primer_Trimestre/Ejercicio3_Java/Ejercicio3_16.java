@@ -19,8 +19,68 @@
  * en la parte inferior de las columnas totalizadas.
  */
 
-public class Ejercicio3_16 {
-    public static void main(String[] args){
+/* Imports */
+import java.util.Scanner;
 
+public class Ejercicio3_16 {
+    public static void main(String[] args) {
+        /* Atributos */
+        double[][] ventas = new double[5][4]; // 5productos y 4 vendedores
+        boolean continuar = true;
+        int vendedor;
+        int producto;
+        double[] totalPorVendedor = new double[4];
+        double[] totalPorProducto = new double[5];
+        Scanner teclado = new Scanner(System.in);
+
+        while (continuar) {
+            System.out.print("Ingrese el número del vendedor (1-4, o 0 para salir): ");
+            vendedor = teclado.nextInt();
+
+            if (vendedor == 0) {
+                continuar = false;
+                continue;
+            }
+
+            System.out.print("Ingrese el número del producto (1-5): ");
+            producto = teclado.nextInt();
+
+            if (vendedor >= 1 && vendedor <= 4 && producto >= 1 && producto <= 5) {
+                System.out.print("Ingrese las ventas para el vendedor " + vendedor + " y el producto " + producto + ": ");
+                ventas[producto - 1][vendedor - 1] += teclado.nextDouble();
+            } else {
+                System.out.println("Entrada inválida. Por favor, ingrese valores válidos.");
+            }
+        }
+
+        // Calcular los totales por vendedor y por producto
+        for (vendedor = 0; vendedor < 4; vendedor++) {
+            for (producto = 0; producto < 5; producto++) {
+                totalPorVendedor[vendedor] += ventas[producto][vendedor];
+                totalPorProducto[producto] += ventas[producto][vendedor];
+            }
+        }
+
+        // Mostrar los resultados en formato tabular
+        System.out.println("Ventas Totales:");
+        System.out.println("Producto\tVendedor 1\tVendedor 2\tVendedor 3\tVendedor 4\tTotal Producto");
+        for (producto = 0; producto < 5; producto++) {
+            System.out.print((producto + 1) + "\t\t");
+            for (vendedor = 0; vendedor < 4; vendedor++) {
+                System.out.print(ventas[producto][vendedor] + "\t\t");
+            }
+            System.out.println(totalPorProducto[producto]);
+        }
+
+        // Mostrar los totales por vendedor y el total general
+        System.out.print("Total Vendedor\t");
+        double totalGeneral = 0;
+        for (vendedor = 0; vendedor < 4; vendedor++) {
+            System.out.print(totalPorVendedor[vendedor] + "\t\t");
+            totalGeneral += totalPorVendedor[vendedor];
+        }
+        System.out.println(totalGeneral);
+
+        teclado.close();
     }
 }
