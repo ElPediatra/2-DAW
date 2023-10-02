@@ -7,6 +7,12 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
     * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* Comienzo mis estilos */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: linear-gradient(260deg, #d8913f 0%, #2e2230 100%);
+}
+
 header{
     width: 800px; margin: 0 auto;
 }
