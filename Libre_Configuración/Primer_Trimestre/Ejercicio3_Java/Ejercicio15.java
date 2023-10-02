@@ -22,3 +22,91 @@
  * de primera clase (y viceversa). Si la persona acepta, haga la asignación de asiento apropiada. Si no
  * acepta , imprima el mensaje "El próximo vuelo sale en 3 horas".
  */
+
+/* Imports */
+import java.util.Scanner;
+
+public class Ejercicio15 {
+    public static void main(String[] args) {
+        /* Atributos */
+        boolean[] asientos = new boolean[11]; //Se inicializa en false
+        int asientosOcupados = 0; //Contador para el bucle
+        int eleccion;
+        int asiento;
+        String respuesta;
+
+        Scanner teclado = new Scanner(System.in);
+
+
+        //Bucle para solicitud de asientos
+        while (asientosOcupados < 10) {
+            System.out.println("Selecciona el ticket que quieres, escribe '1' para Primera Clase o '2' para Económico:");
+            eleccion = teclado.nextInt();
+
+            if (eleccion == 1) {
+                asiento = asignarAsiento(asientos, 1, 5);
+                if (asiento != -1) {
+                    imprimirTarjetaEmbarque(asiento, "Primera Clase");
+                    asientosOcupados++;
+                } else {
+                    System.out.println("La sección de Primera Clase está llena. ¿Desea ser colocado en Económico? (Sí/No)");
+                    respuesta = teclado.next();
+                    if (respuesta.equalsIgnoreCase("Sí")) {
+                        asiento = asignarAsiento(asientos, 6, 10);
+                        if (asiento != -1) {
+                            imprimirTarjetaEmbarque(asiento, "Económico");
+                            asientosOcupados++;
+                        } else {
+                            System.out.println("Lo siento, el avión está lleno. El próximo vuelo sale en 3 horas.");
+                            break;
+                        }
+                    } else {
+                        System.out.println("El próximo vuelo sale en 3 horas.");
+                        break;
+                    }
+                }
+            } else if (eleccion == 2) {
+                asiento = asignarAsiento(asientos, 6, 10);
+                if (asiento != -1) {
+                    imprimirTarjetaEmbarque(asiento, "Económico");
+                    asientosOcupados++;
+                } else {
+                    System.out.println("La sección Económica está llena. ¿Desea ser colocado en Primera Clase? (Sí/No)");
+                    respuesta = teclado.next();
+                    if (respuesta.equalsIgnoreCase("Sí")) {
+                        asiento = asignarAsiento(asientos, 1, 5);
+                        if (asiento != -1) {
+                            imprimirTarjetaEmbarque(asiento, "Primera Clase");
+                            asientosOcupados++;
+                        } else {
+                            System.out.println("Lo siento, el avión está lleno. El próximo vuelo sale en 3 horas.");
+                            break;
+                        }
+                    } else {
+                        System.out.println("El próximo vuelo sale en 3 horas.");
+                        break;
+                    }
+                }
+            } else {
+                System.out.println("Opción no válida. Por favor, seleccione 1 para Primera Clase o 2 para Económico.");
+            }
+        }
+
+        teclado.close();
+    }
+
+    /* Métodos */
+    public static int asignarAsiento(boolean[] asientos, int inicio, int fin) { //Asignamos asientos si hay disponibles
+        for (int i = inicio; i <= fin; i++) {
+            if (!asientos[i]) {
+                asientos[i] = true;
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static void imprimirTarjetaEmbarque(int asiento, String clase) { //"Imprimimos" el ticket del usuario
+        System.out.println("¡Felicitaciones! Ha sido asignado al asiento número " + asiento + " en la sección de " + clase + ".");
+    }
+}
