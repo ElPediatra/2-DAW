@@ -26,7 +26,7 @@
 /* Imports */
 import java.util.Scanner;
 
-public class Ejercicio15 {
+public class Ejercicio3_15 {
     public static void main(String[] args) {
         /* Atributos */
         boolean[] asientos = new boolean[11]; //Se inicializa en false

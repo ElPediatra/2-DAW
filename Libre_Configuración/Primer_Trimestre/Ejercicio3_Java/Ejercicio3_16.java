@@ -19,7 +19,7 @@
  * en la parte inferior de las columnas totalizadas.
  */
 
-public class Ejercicio16 {
+public class Ejercicio3_16 {
     public static void main(String[] args){
 
     }
