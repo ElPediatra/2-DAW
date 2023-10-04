@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <!-- Crea una página web con un script que contenga un objeto de la clase
+    persona, la cual tendrá los siguientes atributos:
+
+        - Nombre: Dimas.
+        - Edad: 28.
+        - Altura: 185.
+    
+    Una vez creado el objeto, se deberá mostrar por consola: "El usuario Dimas
+    tiene 28 años y mide 185 centímetros".
+    Todo ello utilizando atributos de objeto-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Ejercicio Propuesto 2.2 Página 43 </title>
+    </head>
+    <body>
+        <script>
+            //Defino la clase/objeto Persona
+            class Persona {
+                constructor(nombre, edad, altura) {
+                    this.nombre = nombre;
+                    this.edad = edad;
+                    this.altura = altura;
+                }
+    
+                //Método para mostar la información
+                mostrarInformacion() {
+                    window.alert(`El usuario ${this.nombre} tiene ${this.edad} años y mide ${this.altura} centímetros`);
+                }
+            }
+    
+            //Creamos una instancia nueva con los datos que nos han pedido
+            const dimas = new Persona('Dimas', 28, 185);
+    
+            //Muestro la informmación
+            dimas.mostrarInformacion();
+        </script>
+    </body>
+</html>
