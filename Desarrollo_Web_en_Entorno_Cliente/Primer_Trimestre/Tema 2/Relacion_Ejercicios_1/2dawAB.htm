@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resta de dos cadenas de texto</title>
+</head>
+<body>
+    <h1>Resta de dos cadenas de texto</h1>
+    <p>Escribe dos cadenas de texto para restar:</p>
+    <input type="text" id="cadena1" placeholder="Cadena 1">
+    <input type="text" id="cadena2" placeholder="Cadena 2">
+    <button onclick="restarCadenas()">Restar</button>
+    <p>Resultado: <span id="resultado"></span></p>
+
+    <script>
+        function restarCadenas() {
+            var cadena1 = document.getElementById("cadena1").value;
+            var cadena2 = document.getElementById("cadena2").value;
+            
+            if (cadena1 === cadena2) {
+                document.getElementById("resultado").textContent = "Las cadenas son iguales, no se pueden restar.";
+            } else {
+                document.getElementById("resultado").textContent = "No podemos restarlo.";
+            }
+        }
+    </script>
+</body>
+</html>

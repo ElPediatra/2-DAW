@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 2dawA - Alberto Gómez Morales</title>
+</head>
+<body>
+    <h1>Resta de dos números</h1>
+    <p>Escribe 2 numeros para restarlos:</p>
+    <input type="text" id="numero1" placeholder="Número 1">
+    <input type="text" id="numero2" placeholder="Número 2">
+    <button onclick="restarNumeros()">Click para Restar</button>
+    <p>Resultado: <span id="resultado"></span></p>
+
+    <script>
+        function restarNumeros() {
+            var num1 = parseFloat(document.getElementById("numero1").value);
+            var num2 = parseFloat(document.getElementById("numero2").value);
+            if (!isNaN(num1) && !isNaN(num2)) {
+                var resultado = num1 - num2;
+                document.getElementById("resultado").textContent = "La resta es: " + resultado;
+            } else {
+                document.getElementById("resultado").textContent = "Por favor, introduce números válidos.";
+            }
+        }
+    </script>
+</body>
+</html>
