@@ -34,7 +34,7 @@ public class Ejercicio3_16 {
         Scanner teclado = new Scanner(System.in);
 
         while (continuar) {
-            System.out.print("Ingrese el número del vendedor (1-4, o 0 para salir): ");
+            System.out.print("Escribe el número del vendedor (1-4, o 0 para salir): ");
             vendedor = teclado.nextInt();
 
             if (vendedor == 0) {
@@ -42,14 +42,14 @@ public class Ejercicio3_16 {
                 continue;
             }
 
-            System.out.print("Ingrese el número del producto (1-5): ");
+            System.out.print("Escribe el número del producto (1-5): ");
             producto = teclado.nextInt();
 
             if (vendedor >= 1 && vendedor <= 4 && producto >= 1 && producto <= 5) {
-                System.out.print("Ingrese las ventas para el vendedor " + vendedor + " y el producto " + producto + ": ");
+                System.out.print("Escribe la cantidad vendida para el vendedor " + vendedor + " y el producto " + producto + ": ");
                 ventas[producto - 1][vendedor - 1] += teclado.nextDouble();
             } else {
-                System.out.println("Entrada inválida. Por favor, ingrese valores válidos.");
+                System.out.println("Error en el producto/vendedor. Por favor, ingrese valores válidos.");
             }
         }
 
@@ -61,7 +61,7 @@ public class Ejercicio3_16 {
             }
         }
 
-        // Mostrar los resultados en formato tabular
+        // Mostrar los resultados en formato tabular como pide el ejercicio
         System.out.println("Ventas Totales:");
         System.out.println("Producto\tVendedor 1\tVendedor 2\tVendedor 3\tVendedor 4\tTotal Producto");
         for (producto = 0; producto < 5; producto++) {
