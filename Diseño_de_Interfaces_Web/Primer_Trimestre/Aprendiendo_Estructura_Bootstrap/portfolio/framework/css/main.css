@@ -1,46 +1,54 @@
-/* Tamaño de la caja */
-    * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-/* Contenedor principal*/
-.box{
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 100%;
+*{
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
-
-/* Row principales */
-.row{
+.grid {
+    font-family: sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+.row {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
-
-/* Estilo cuerpo inicial */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    background-image: linear-gradient(260deg, #d8913f 0%, #453f46 100%);
+.col-1 {
+    width: 8.33%;
 }
-
-/* Tamaño 12 columnas de bootstrap */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-/* Estilos texto y color */
-h1{
-    text-align: center;
+.col-2 {
+    width: 16.66%;
 }
-
-div {
-    border: solid 2px lightgrey;
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
 }
