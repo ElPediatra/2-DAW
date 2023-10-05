@@ -40,7 +40,7 @@ public class Ejercicio3_15 {
 
         //Bucle para solicitud de asientos
         while (asientosOcupados < 10) {
-            System.out.println("Selecciona el ticket que quieres, escribe '1' para Primera Clase o '2' para Económico:");
+            System.out.println("Elige el ticket que quieres, escribe '1' para Primera Clase o '2' para Económico:");
             eleccion = teclado.nextInt();
 
             if (eleccion == 1) {
@@ -49,7 +49,7 @@ public class Ejercicio3_15 {
                     imprimirTarjetaEmbarque(asiento, "Primera Clase");
                     asientosOcupados++;
                 } else {
-                    System.out.println("La sección de Primera Clase está llena. ¿Quiere que le pongamos en la sección Económico? (Si/No)");
+                    System.out.println("La sección de Primera Clase está llena. ¿Quiere que le cambiemos a la sección Económico? (Si/No)");
                     respuesta = teclado.next();
                     if (respuesta.equalsIgnoreCase("Si")) {
                         asiento = asignarAsiento(asientos, 6, 10);
@@ -71,7 +71,7 @@ public class Ejercicio3_15 {
                     imprimirTarjetaEmbarque(asiento, "Económico");
                     asientosOcupados++;
                 } else {
-                    System.out.println("La sección Económica está llena. ¿Quiere que le pongamos en la sección Primera Clase? (Si/No)");
+                    System.out.println("La sección Económica está llena. ¿Quiere que le cambiemos a la sección Primera Clase? (Si/No)");
                     respuesta = teclado.next();
                     if (respuesta.equalsIgnoreCase("Si")) {
                         asiento = asignarAsiento(asientos, 1, 5);
@@ -88,7 +88,7 @@ public class Ejercicio3_15 {
                     }
                 }
             } else {
-                System.out.println("Opción no válida. Por favor, seleccione 1 para Primera Clase o 2 para Económico.");
+                System.out.println("Opción no válida. Por favor, selecciona 1 para Primera Clase o 2 para Económico.");
             }
         }
 
@@ -107,6 +107,6 @@ public class Ejercicio3_15 {
     }
 
     public static void imprimirTarjetaEmbarque(int asiento, String clase) { //"Imprimimos" el ticket del usuario
-        System.out.println("¡Enhorabuena! Se le ha asignado al asiento número " + asiento + " en la sección de " + clase + ".");
+        System.out.println("¡Enhorabuena! Le hemos asignado el asiento número " + asiento + " en la sección de " + clase + ".");
     }
 }
