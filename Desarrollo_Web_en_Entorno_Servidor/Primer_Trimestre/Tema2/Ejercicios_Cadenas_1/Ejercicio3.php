@@ -1,9 +1,9 @@
 <?php
-$usuario = "mi_nombre-123";
+$usuario = "el_usuario-321";
 
-if (preg_match("/^[a-zA-Z0-9_-]{3,20}$/", $usuario)) {
-    echo "El nombre de usuario es válido.";
+if (preg_match("/^[a-zA-Z0-9_-]{3,20}$/", $usuario)) { //Lo que hemos dado hoy en clase, facilito
+    echo "El nombre de usuario SI es válido.";
 } else {
-    echo "El nombre de usuario no es válido.";
+    echo "El nombre de usuario NO es válido.";
 }
 ?>
