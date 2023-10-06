@@ -1,0 +1,28 @@
+body {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    color: #111;
+    font-family: MajritTx,serif;
+}
+
+h1{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    font-size: 12px;
+}
+
+nav ul {
+    list-style-type: none; /* Quitamos las viñetas de la lista */
+}
+nav li {
+    display: inline; /* Ítems del menú en una línea horizontal */ 
+}
