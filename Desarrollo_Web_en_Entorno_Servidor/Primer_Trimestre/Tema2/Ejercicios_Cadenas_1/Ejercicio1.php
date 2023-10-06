@@ -17,7 +17,7 @@
     </header>
     <main>
     <form method="post">
-        <label for="palabra1">Inserta la primera palabra</label>
+        <label for="palabra1">Escribe una palabra</label>
         <br>
         <input type="text" id="palabra1" name="palabra1">
         <br>
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
     } else if (substr($final_letra1, -2) == substr($final_letra2, -2)) {
        
-        print "Las palabras riman, pero solo un poco";
+        print "Las palabras riman, pero no mucho";
        
     } else {
        
