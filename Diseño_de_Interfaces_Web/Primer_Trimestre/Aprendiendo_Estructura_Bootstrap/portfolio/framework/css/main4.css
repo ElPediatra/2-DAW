@@ -26,3 +26,7 @@ nav ul {
 nav li {
     display: inline; /* Ítems del menú en una línea horizontal */ 
 }
+
+hr {
+    width: 90%;
+}
