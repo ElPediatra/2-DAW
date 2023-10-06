@@ -30,3 +30,9 @@ nav li {
 hr {
     width: 90%;
 }
+
+/*
+.row > *{
+    border-left: 1px solid grey;
+}
+*/
