@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+    <!-- El operadot typeOf permite saber el tipo de una variable. Crea un programa en el que pongas
+    ejemplos de su utilización -->
+<html lang="es">
+<head>
+    <title> Ejemplos de typeOf </title>
+</head>
+<body>
+    <script>
+        //Creo varias variables de ejemplo
+        var numero = 33;
+        var cadena = "Viva el vino";
+        var conjunto = [1, 2, 3, 4, 5];
+        var objeto = { nombre: "Alberto", edad: 29 };
+        var booleano = true;
+        var funcion = function() {
+            console.log("Esto es una función.");
+        };
+
+        var nulo = null;
+        var noDefinido;
+
+        //Utilizo typeof para saber el tipo de cada variable que he creado
+        console.log("Tipo de 'numero': " + typeof numero);
+        console.log("Tipo de 'cadena': " + typeof cadena);
+        console.log("Tipo de 'conjunto': " + typeof conjunto);
+        console.log("Tipo de 'objeto': " + typeof objeto);
+        console.log("Tipo de 'booleano': " + typeof booleano);
+        console.log("Tipo de 'funcion': " + typeof funcion);
+        console.log("Tipo de 'nulo': " + typeof nulo);
+        console.log("Tipo de 'noDefinido': " + typeof noDefinido);
+
+    </script>
+</body>
+</html>
