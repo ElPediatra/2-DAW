@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <!-- Crea un script con algún ejemplo de cómo se pueden sobrescribir variables y funciones globales -->
+<html lang="es">
+    <head>
+        <title> Modificación de variables y funciones globales</title>
+    </head>
+    <body>
+        <script>
+            //Creo una variable y función
+            var variableGlobal = "Soy una variable global";
+            function funcionGlobal() {
+                console.log("Soy una función global");
+            }
+
+            //Modifico la variable y la función
+            variableGlobal = "Ya no pone lo mismo...";
+            function funcionGlobal() {
+                console.log("Me han sobreescrito, vaya...");
+            }
+
+            //Vuelvo a mostar la variable y la función
+            console.log(variableGlobal);
+            funcionGlobal();
+        </script>
+    </body>
+</html>
