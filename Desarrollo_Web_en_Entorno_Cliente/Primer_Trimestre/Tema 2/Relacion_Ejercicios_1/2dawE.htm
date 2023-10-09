@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- El programa es para calcular el área -->
+<!-- Añado las etiquetas <html> <head> y <title> -->
+<html>
+<head>
+    <title>Área de un triángulo</title>
+</head>
+<body>
+
+<script language="javascript"> //Cambio JAVASCRIP por javascript
+    /* 2DAWE.HTM (Cierro esta etiqueta para que no se marque el código como texto) */
+    var a, b;
+    a = prompt("Escribe la base:");
+    b = prompt("Escribe la altura:");
+
+    // Se usa parseFloat() para convertir el texto en números decimales
+    a = parseFloat(a);
+    b = parseFloat(b);
+
+    //Añado una verificación para ver si el número es válido
+    if (!isNaN(a) && !isNaN(b)) {
+        var area = (a * b) / 2;
+        alert("Área = " + area);
+    } else {
+        alert("El número no es válido.");
+    }
+</script> <!-- Cierro el script ya que no se había cerrado -->
+
+</body>
+</html>
