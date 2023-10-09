@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!-- JavaScript puede manejar eventos en una página web para conocer, por ejemplo,
+cuándo el ratón pasa por encima de un elemento. Pon un ejemplo de uso para cada
+uno de los siguientes eventos:
+
+- onmouseover
+- onmouseout
+- onblur -->
+
+<html lang="es">
+    <head>
+        <title>
+            Ejemplo onmouseover - onmouseout - onblur
+        </title>
+        <script>
+            //Función para mostrar el mensaje usando onmouseover
+            function mostrarMensaje() {
+                document.getElementById("mensaje1").style.display = "block";
+            }
+
+            //Función para esconder el mensaje usando onmouseout
+            function ocultarMensaje() {
+                document.getElementById("mensaje1").style.display = "none";
+            }
+
+            //Función para validar el texto con onblur
+            function validarCampo() {
+                var campoTexto = document.getElementById("campoTexto");
+                var mensaje = document.getElementById("mensaje2");
+
+                if (campoTexto.value === "") {
+                    mensaje.textContent = "La casilla no puede estar vacío.";
+                } else {
+                    mensaje.textContent = "";
+                }
+            }
+    </script>
+    </head>
+    <body>
+        <!-- Elemento para eventos onmouseover y onmouseout -->
+        <div onmouseover="mostrarMensaje()" onmouseout="ocultarMensaje()">Pasa el ratón por encima de esta línea</div>
+
+        <!-- Elemento para el evento onblur -->
+        <input type="text" id="campoTexto" onblur="validarCampo()">
+
+        <!-- Mensajes -->
+        <div id="mensaje1" style="display: none;">¡Has pasado el ratón por encima!</div>
+        <div id="mensaje2"></div>
+    </body>
+</html>

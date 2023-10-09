@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<!-- Realiza un script que extraiga el mes y el año de una fecha concreta -->
+
+<html lang="es">
+    <title>
+        Utilizar date para sacar una fecha
+    </title>
+    <body>
+        <script>
+            //Creo una variable con la fecha completa usando Date y saco el mes y el año con las operaciones getMonth y getFullYear
+            var fecha = new Date("2023-10-09");
+            var mes = fecha.getMonth() + 1; // Sumo 1 porque los meses los cuenta de 0 a 11
+            var anio = fecha.getFullYear();
+    
+            //Muestro el mes y año que he sacado de la fecha
+            window.alert("Mes: " + mes + "\nAño: " + anio);
+        </script>
+    </body>
+</html>
