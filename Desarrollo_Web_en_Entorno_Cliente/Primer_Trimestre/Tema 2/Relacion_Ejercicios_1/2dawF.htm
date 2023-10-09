@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Circunferencia y Área de un Círculo</title>
+</head>
+<body>
+
+<script>
+    function calcularCircunferenciaYArea() {
+        //Pido el radio al usuario y lo convertimos en float (número)
+        var radio = prompt("Por favor, ingresa el radio del círculo:");
+        radio = parseFloat(radio);
+
+        //Confirmo que el número sea válido
+        if (!isNaN(radio) && radio > 0) {
+            //Calculo la circunferencia
+            var longitudCircunferencia = 2 * Math.PI * radio;
+
+            //Calculo el area
+            var areaCirculo = Math.PI * Math.pow(radio, 2);
+
+            //Muestro el mensaje, uso toFixed para que salga un numero completo, sin exponenciales
+            alert("Radio del círculo: " + radio.toFixed(2) +
+                  "\nLongitud de la circunferencia: " + longitudCircunferencia.toFixed(2) +
+                  "\nÁrea del círculo: " + areaCirculo.toFixed(2));
+        } else {
+            //Mando mensaje de error si el número no es válido
+            alert("Por favor, ingresa un radio válido (número mayor que 0).");
+        }
+    }
+
+    //Llamo a la función para que se inicie el programa
+    calcularCircunferenciaYArea();
+</script>
+
+</body>
+</html>
