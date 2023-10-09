@@ -29,10 +29,18 @@ nav li {
 
 hr {
     width: 90%;
+    color: grey;
 }
 
-/*
-.row > *{
-    border-left: 1px solid grey;
+.col-6{
+    padding: 10px;
 }
-*/
+
+.col-3{
+    padding: 10px;
+}
+
+.medio{
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}

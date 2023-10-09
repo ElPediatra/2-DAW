@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programa 2dawI</title>
+</head>
+<body>
+    <script>
+        // Pedimos al usuario que ingrese un número en base octal
+        var numeroOctal = prompt("Por favor, ingresa un número en base octal:");
+
+        // Convertimos el número octal a decimal
+        var numeroDecimal = parseInt(numeroOctal, 8);
+
+        // Convertimos el número decimal a binario
+        var numeroBinario = numeroDecimal.toString(2);
+
+        // Mostramos los resultados en la página
+        document.write("<h2>Número en base decimal: " + numeroDecimal + "</h2>");
+        document.write("<h2>Número en base binaria: " + numeroBinario + "</h2>");
+    </script>
+</body>
+</html>
