@@ -1,0 +1,33 @@
+body {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    color: #111;
+    font-family: MajritTx,serif;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+@media (max-width: 568px){
+    .col-8{
+        width: 100%;
+    }
+    .col-4{
+        width: 100%;
+    }
+}
