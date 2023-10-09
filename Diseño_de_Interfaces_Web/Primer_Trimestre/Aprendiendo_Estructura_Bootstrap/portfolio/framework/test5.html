@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <!-- Se debe crear un framework de 12 columnas con zona central. Debes:
-        - Crear la página web de El País utilizando este framework.
+    <!-- Pruebas @media
+        https://es.stackoverflow.com/questions/445501/como-cambiar-imagen-según-resolución
     -->
 
 <head>
@@ -22,17 +22,27 @@
 <article class="row">
     <div class="col-8">
         <h2>Articulo principal</h2>
-        <img src="https://placekitten.com/700/1000" title="principal">
+        <picture>
+            <source src="https://placekitten.com/700/1000" media="(max-width: 1280px)" title="principal">
+            <img src="https://placekitten.com/550/1000" media="(max-width: 768px)" title="principal">
+            <img src="https://placekitten.com/550/1000" media="(max-width: 768px)" title="principal">
+        </picture>
     </div>
     <aside class="col-4">
         <h2> Lateral </h2>
-        <img src="https://placekitten.com/400/1000" title="lateral">
+        <picture>
+            <source srcset="https://placekitten.com/400/1000" media="(max-width: 1280px)" title="lateral">
+            <source srcset="https://placekitten.com/550/1000" media="(max-width: 768px)" title="lateral">
+            <source srcset="https://placekitten.com/700/1000" media="(max-width: 568px)" title="lateral">
+            <img src="https://placekitten.com/550/1000" media="(max-width: 768px)" title="lateral">
+        </picture>
     </aside>
 </article>
 <footer class="row">
     <div class="col-12">
         <h3>Footer</h3>
-        <img src="https://placekitten.com/1100/400" title="footer">
+        <img src="https://placekitten.com/1100/400" media="(max-width: 1280px)" title="footer">
+        <img src="https://placekitten.com/768/400" media="(max-width: 768px)" title="principal">
     </div>
 </footer>
 </body>
