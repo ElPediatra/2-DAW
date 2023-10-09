@@ -5,16 +5,15 @@
 </head>
 <body>
     <script>
-        // Pedimos al usuario que ingrese un número en base octal
+        //Pedimos el número al usuario y lo convierto a decimal
         var numeroOctal = prompt("Por favor, ingresa un número en base octal:");
-
-        // Convertimos el número octal a decimal
         var numeroDecimal = parseInt(numeroOctal, 8);
 
-        // Convertimos el número decimal a binario
+        //Convierto el número de decimal a binario
         var numeroBinario = numeroDecimal.toString(2);
 
-        // Mostramos los resultados en la página
+        //Muestro el resultado en mi página
+        document.write("<h1>Tu número en Octal es: " + numeroOctal + "</h1>");
         document.write("<h2>Número en base decimal: " + numeroDecimal + "</h2>");
         document.write("<h2>Número en base binaria: " + numeroBinario + "</h2>");
     </script>
