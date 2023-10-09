@@ -1,0 +1,7 @@
+/* Quitar los parráfos en pantallas con max-width: 500px */
+
+@media (max-width: 500px){
+    p {
+        display: none;
+    }
+}
