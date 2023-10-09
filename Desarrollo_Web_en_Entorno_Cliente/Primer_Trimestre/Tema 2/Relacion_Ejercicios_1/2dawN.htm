@@ -12,8 +12,8 @@
         //Creamos la función y solicitamos al usuario los números
         function contarYSumarNumeros() {
             var numero = parseInt(prompt("Escribe un número (9999 para terminar):"));
-            if (numero === 9999) { //Confirmamos si es el número de salida, de no ser así aumento el contador y vuelvo a llamar a la función
-                alert("Has escrito " + contador + " números.");
+            if (numero === 9999) { //Confirmamos si es el número de salida, de no ser así aumento el contador y añado el número al toltal de la suma, vuelvo a llamar a la función
+                alert("Has escrito " + contador + " números.\nEl total de todos los números es: " + suma);
             } else {
                 contador++;
                 suma += numero;
