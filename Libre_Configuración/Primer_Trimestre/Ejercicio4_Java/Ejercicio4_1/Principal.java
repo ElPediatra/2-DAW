@@ -12,21 +12,22 @@ package Libre_Configuración.Primer_Trimestre.Ejercicio4_Java.Ejercicio4_1;
 
 public class Principal {
     public static void main(String[] args) {
-        // Crear un objeto Rectangulo
+        /* Creo un rectangulo mediante el constructor */
         Rectangulo miRectangulo = new Rectangulo();
 
-        // Establecer la longitud y anchura
+        /* Asigno Longitud y Anchura */
         miRectangulo.setLongitud(5.0);
         miRectangulo.setAnchura(3.0);
 
-        // Obtener la longitud y anchura
+        /* Cargo la longitud y Anchura en los atributos */
         double longitud = miRectangulo.getLongitud();
         double anchura = miRectangulo.getAnchura();
 
-        // Calcular y mostrar el perímetro y el área
+        /* Saco el perímetro y el área */
         double perimetro = miRectangulo.calcularPerimetro();
         double area = miRectangulo.calcularArea();
 
+        /* Muestro los datos */
         System.out.println("Longitud: " + longitud);
         System.out.println("Anchura: " + anchura);
         System.out.println("Perímetro: " + perimetro);

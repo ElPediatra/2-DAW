@@ -16,9 +16,11 @@
  */
 
 public class CuentaDeAhorros {
+    /* Atributos */
     private static double tasaInteresAnual;
     private double saldoAhorros;
 
+    /* Constructores */
     public CuentaDeAhorros() {
         this.saldoAhorros = 0.0;
     }
@@ -27,6 +29,7 @@ public class CuentaDeAhorros {
         this.saldoAhorros = saldoInicial;
     }
 
+    /* Setter y Getters */
     public double getSaldo() {
         return saldoAhorros;
     }
@@ -39,6 +42,7 @@ public class CuentaDeAhorros {
         tasaInteresAnual = nuevaTasa;
     }
 
+    /* Métodos */
     public void calcularInteresMensual() {
         double interesMensual = saldoAhorros * (tasaInteresAnual / 12) / 100;
         saldoAhorros += interesMensual;

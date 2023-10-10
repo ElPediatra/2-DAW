@@ -11,21 +11,22 @@
 package Libre_Configuración.Primer_Trimestre.Ejercicio4_Java.Ejercicio4_1;
 
 public class Rectangulo {
+    /* Atributos */
     private double longitud;
     private double anchura;
 
-    // Constructor que establece los valores predeterminados
+    /* Constructor */
     public Rectangulo() {
         this.longitud = 1.0;
         this.anchura = 1.0;
     }
 
-    // Métodos establecer y obtener para longitud
+    /* Setter y Getter */
     public void setLongitud(double longitud) {
         if (longitud > 0.0 && longitud < 20.0) {
             this.longitud = longitud;
         } else {
-            System.out.println("Longitud fuera de rango.");
+            System.out.println("Error: Longitud fuera de rango.");
         }
     }
 
@@ -33,12 +34,11 @@ public class Rectangulo {
         return longitud;
     }
 
-    // Métodos establecer y obtener para anchura
     public void setAnchura(double anchura) {
         if (anchura > 0.0 && anchura < 20.0) {
             this.anchura = anchura;
         } else {
-            System.out.println("Anchura fuera de rango.");
+            System.out.println("Error: Anchura fuera de rango.");
         }
     }
 
@@ -46,12 +46,11 @@ public class Rectangulo {
         return anchura;
     }
 
-    // Método para calcular el perímetro del rectángulo
+    /* Métodos */
     public double calcularPerimetro() {
         return 2 * (longitud + anchura);
     }
-
-    // Método para calcular el área del rectángulo
+    
     public double calcularArea() {
         return longitud * anchura;
     }

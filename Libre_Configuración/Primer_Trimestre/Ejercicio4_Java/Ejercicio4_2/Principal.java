@@ -17,24 +17,24 @@
 
 public class Principal {
     public static void main(String[] args) {
-        // Crear dos instancias de CuentaDeAhorros con saldos iniciales
+        /* Constructores */
         CuentaDeAhorros ahorrador1 = new CuentaDeAhorros(2000.00);
         CuentaDeAhorros ahorrador2 = new CuentaDeAhorros(3000.00);
 
-        // Establecer la tasa de interés anual en 4%
+        /*Asigno la tasa de interés anual a 4%*/
         CuentaDeAhorros.modificarTasaInteres(4.0);
 
-        // Calcular el interés mensual y mostrar los saldos iniciales
+        /* Calculo el interés mensual y muestro los saldos iniciales */
         ahorrador1.calcularInteresMensual();
         ahorrador2.calcularInteresMensual();
 
         System.out.println("Saldo de ahorrador1 después del primer mes: " + ahorrador1.getSaldo() + "€");
         System.out.println("Saldo de ahorrador2 después del primer mes: " + ahorrador2.getSaldo() + "€");
 
-        // Establecer la tasa de interés anual en 5%
+        /* Modifico la tasa de interés anual a 5%*/
         CuentaDeAhorros.modificarTasaInteres(5.0);
 
-        // Calcular el interés mensual del siguiente mes y mostrar los saldos
+        /* Calculo el interés mensual del siguiente mes y muesto los saldos*/
         ahorrador1.calcularInteresMensual();
         ahorrador2.calcularInteresMensual();
 
