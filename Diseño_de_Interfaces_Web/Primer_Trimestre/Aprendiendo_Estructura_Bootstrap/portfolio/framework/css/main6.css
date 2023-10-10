@@ -1,0 +1,103 @@
+body {
+    color: #111;
+    font-family: MajritTx,serif;
+    margin: 0;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+.azulOscuro {
+    background-color: blue;
+}
+
+.celeste {
+    background-color: lightblue;
+}
+
+.verdeOscuro {
+    background-color: green;
+}
+
+.rojo {
+    background-color: red;
+}
+
+.naranja {
+    background-color: orangered;
+}
+
+@media (min-width: 450px){
+    .azulOscuro{
+        width: 100%;
+    }
+    .celeste{
+        width: 50%;
+    }
+    .verdeOscuro{
+        width: 50%;
+    }
+    .rojo{
+        width: 100%;
+    }
+    .naranja{
+        width: 100%;
+    }
+}
+
+@media (min-width: 550px){
+    .azulOscuro{
+        width: 100%;
+    }
+    .celeste{
+        width: 50%;
+    }
+    .verdeOscuro{
+        width: 50%;
+    }
+    .rojo{
+        width: 40%;
+    }
+    .naranja{
+        width: 60%;
+    }
+}
+
+@media (min-width: 800px){
+    body{
+        width: 80wh;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100vh;
+    }
+
+    .azulOscuro{
+        width: 100%;
+    }
+    .celeste{
+        width: 50%;
+    }
+    .verdeOscuro{
+        width: 50%;
+    }
+    .rojo{
+        width: 40%;
+    }
+    .naranja{
+        width: 60%;
+    }
+}
