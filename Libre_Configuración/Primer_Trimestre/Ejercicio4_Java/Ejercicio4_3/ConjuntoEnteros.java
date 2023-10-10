@@ -26,36 +26,73 @@
 /* Paquetes */
 package Libre_Configuración.Primer_Trimestre.Ejercicio4_Java.Ejercicio4_3;
 
-public class Principal {
-    public static void main(String[] args) {
+public class ConjuntoEnteros {
+    /* Atributos */
+    private boolean[] conjunto;
 
-        /* Constructores */
-        ConjuntoEnteros conjunto1 = new ConjuntoEnteros();
-        conjunto1.insertarElemento(5);
-        conjunto1.insertarElemento(10);
-        conjunto1.insertarElemento(20);
+    /* Constructor */
+    public ConjuntoEnteros() {
+        conjunto = new boolean[101]; // Inicializa el conjunto con 101 elementos (0 a 100)
+    }
 
-        ConjuntoEnteros conjunto2 = new ConjuntoEnteros();
-        conjunto2.insertarElemento(10);
-        conjunto2.insertarElemento(30);
+    /* Métodos */
+    public boolean esta(int numero) {
+        if (numero >= 0 && numero <= 100) {
+            return conjunto[numero];
+        } else {
+            return false;
+        }
+    }
 
-        /* Muestro mis 2 conjuntos de números */
-        System.out.println("Conjunto 1: " + conjunto1.aStringConjunto());
-        System.out.println("Conjunto 2: " + conjunto2.aStringConjunto());
+    public void insertarElemento(int numero) {
+        if (numero >= 0 && numero <= 100) {
+            conjunto[numero] = true;
+        }
+    }
 
-        /* Junto los 2 objetos */
-        ConjuntoEnteros union = ConjuntoEnteros.union(conjunto1, conjunto2);
-        System.out.println("Unimos el Conjunto 1 y el Conjunto 2: " + union.aStringConjunto());
+    public String aStringConjunto() {
+        StringBuilder resultado = new StringBuilder();
+        boolean primerElemento = true;
 
-        /* Inserto el objeto 2 en el objeto 1 */
-        ConjuntoEnteros interseccion = ConjuntoEnteros.interseccion(conjunto1, conjunto2);
-        System.out.println("Insert del Conjunto 1 y el Conjunto 2: " + interseccion.aStringConjunto());
+        for (int i = 0; i <= 100; i++) {
+            if (conjunto[i]) {
+                if (!primerElemento) {
+                    resultado.append(" ");
+                }
+                resultado.append(i);
+                primerElemento = false;
+            }
+        }
 
-        /* Creo el objeto 3 y lo muestro */
-        ConjuntoEnteros conjunto3 = new ConjuntoEnteros();
-        System.out.println("Conjunto 3: " + conjunto3.aStringConjunto());
+        if (primerElemento) {
+            resultado.append("---"); // Conjunto vacío
+        }
 
-        /* Comparo el objeto 1 con el objeto 2 */
-        System.out.println("¿El Conjunto 1 es igual al Conjunto 2? " + conjunto1.esIgualA(conjunto2));
+        return resultado.toString();
+    }
+
+    public boolean esIgualA(ConjuntoEnteros otroConjunto) {
+        for (int i = 0; i <= 100; i++) {
+            if (conjunto[i] != otroConjunto.esta(i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static ConjuntoEnteros union(ConjuntoEnteros conjunto1, ConjuntoEnteros conjunto2) {
+        ConjuntoEnteros resultado = new ConjuntoEnteros();
+        for (int i = 0; i <= 100; i++) {
+            resultado.conjunto[i] = conjunto1.conjunto[i] || conjunto2.conjunto[i];
+        }
+        return resultado;
+    }
+
+    public static ConjuntoEnteros interseccion(ConjuntoEnteros conjunto1, ConjuntoEnteros conjunto2) {
+        ConjuntoEnteros resultado = new ConjuntoEnteros();
+        for (int i = 0; i <= 100; i++) {
+            resultado.conjunto[i] = conjunto1.conjunto[i] && conjunto2.conjunto[i];
+        }
+        return resultado;
     }
 }
