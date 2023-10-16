@@ -1,0 +1,34 @@
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none; /* Quitamos las viñetas de la lista */
+}
+
+@media (max-width: 550px) {
+    nav {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .col-4{
+        width: 100%;
+    }
+
+    .col-8{
+        width: 100%;
+    }
+
+    nav li {
+        display: inline; /* Ítems del menú en una línea horizontal */ 
+    }
+}
