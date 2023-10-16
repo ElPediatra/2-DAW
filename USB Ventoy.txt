@@ -5,3 +5,4 @@ ISOs a agregar:
 - Boot Repair
 - Parrot
 - Kali Linux
+- Hiren's BootCD PE
