@@ -38,6 +38,7 @@ echo "La primera ocurrencia de 'm' es $posicion_m<br>";
 echo "La primera ocurrencia de 'tiene' es $posicion_tiene<br>";
 echo "La primera ocurrencia desde el final de 'a' es $posicion_a_final<br>";
 echo "La frase desde la aparición de la palabra 'cadena' hasta el final es: $substring_cadena<br>";
+echo "<br>"
 echo "Partes de la cadena:<br>";
 echo "$substring_tiene<br>";
 echo "$substring_desde_12<br>";
