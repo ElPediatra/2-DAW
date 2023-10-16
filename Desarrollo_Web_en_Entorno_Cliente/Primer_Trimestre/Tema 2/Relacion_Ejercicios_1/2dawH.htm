@@ -10,7 +10,7 @@
         var base16 = numero.toString(16);
 
         //Creamos una función para pasarlo a Base 5
-        function decimalToBase5(decimal) {
+        function decimalABase5(decimal) {
             var base5 = "";
             while (decimal > 0) {
                 var remainder = decimal % 5;
@@ -22,7 +22,7 @@
 
         //Devuelvo el número a base decimal y llamamos a la función para pasarlo a base 5
         var decimalValue = parseInt(base16, 16);
-        var base5 = decimalToBase5(decimalValue);
+        var base5 = decimalABase5(decimalValue);
 
         //Mostramos los resultados en la página
         document.write("<h2>Número en base 16: " + base16 + "</h2>");
