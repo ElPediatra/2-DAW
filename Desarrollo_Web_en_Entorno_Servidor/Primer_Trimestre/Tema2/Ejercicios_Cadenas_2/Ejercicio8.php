@@ -32,7 +32,7 @@ $substring_posicion_26 = substr($frase, -26, 6);
 //La cadena empezando en el carácter 4 y terminando en el 7 desde atrás.
 $substring_caracter_4_7_atras = substr($frase, 4, -7);
 
-// Mostrar los resultados
+//Muestro los resultados como me pide el ejercicio
 echo "La primera ocurrencia de 'a' es $posicion_a<br>";
 echo "La primera ocurrencia de 'm' es $posicion_m<br>";
 echo "La primera ocurrencia de 'tiene' es $posicion_tiene<br>";
