@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Lista</title>
+</head>
+<body>
+    <h1> Explicación problema Romualdo </h1>
+    <p>Si se puede crear el array (var milista = ['panadero', 456, [0, 1, 2]];). Es un array válido que tiene tres componentes: una cadena de texto ('panadero'), un número (456) y otro array ([0, 1, 2]). </p>
+    <p>Puede usar el código "var elemento = milista[2][2];"" para acceder a los elementos del array, en este caso accederá al 3º elemento (conjunto de números) y al 3º elemento de ese conjunto (en este caso el 2).</p>
+
+    <h1>Contenido del array milista:</h1>
+    <ul id="mostrarArray">
+    </ul>
+
+    <script>
+        //Creo el array en el script y un contador para que lo recoja
+        var milista = ['panadero', 456, [0, 1, 2]];
+        var contadorArray = document.getElementById('mostrarArray'); //Asigno la variable a la UL para poder mostrar los datos ahí
+        
+        for (var i = 0; i < milista.length; i++) {
+            var listItem = document.createElement('li'); //Creo una lista para mostar los datos del array
+            listItem.textContent = milista[i]; //Uso listItem.textContent para crear un elemento con cada vuelta del bucle para obtener los datos de la posición del array
+            contadorArray.appendChild(listItem); //Muestro el dato del elemento que acabo de crear
+        }
+    </script>
+</body>
+</html>
