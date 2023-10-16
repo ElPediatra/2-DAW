@@ -1,0 +1,7 @@
+ISOs a agregar:
+- Windows 11
+- Ubuntu 22.0.4
+- DLC Boot
+- Boot Repair
+- Parrot
+- Kali Linux
