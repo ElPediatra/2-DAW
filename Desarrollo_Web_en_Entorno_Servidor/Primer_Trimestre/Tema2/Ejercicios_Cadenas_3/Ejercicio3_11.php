@@ -7,6 +7,7 @@ $caracteres = str_split($cadena);
 //Creo un bucle y muestro los caracteres del array
 foreach ($caracteres as $caracter) {
     echo $caracter . " ";
+    echo "<br>";
 }
 
 //También puedo acceder a un elemento en específico por su índice:
