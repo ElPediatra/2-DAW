@@ -9,8 +9,7 @@ public class Fecha {
 
     /* Sub-clase meses */
     private static final String[] MESES = {
-        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
     };
 
     /* Constructores */
@@ -82,7 +81,7 @@ public class Fecha {
         return (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0);
     }
 
-    //Pasar string de mes a texto
+    //Pasar string de mes a numero
     private int convertirMesStringAMesNumero(String mesStr) {
         for (int i = 0; i < MESES.length; i++) {
             if (MESES[i].equalsIgnoreCase(mesStr)) {
