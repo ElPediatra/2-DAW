@@ -27,7 +27,7 @@ public class Fecha {
 
     public Fecha(int diaDelAnio, int anio) {
         this.anio = anio;
-        int dia = 1;
+        //int dia = 1;
         int mes = 0;
         while (diaDelAnio > diasEnMes(mes, anio)) {
             diaDelAnio -= diasEnMes(mes, anio);
