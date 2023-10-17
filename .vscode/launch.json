@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Principal",
             "request": "launch",
+            "mainClass": "Libre_Configuración.Primer_Trimestre.Ejercicio5_Java.Ejercicio5_11.Principal",
+            "projectName": "2-DAW_fded9eb3"
+        },
+        {
+            "type": "java",
+            "name": "Principal",
+            "request": "launch",
             "mainClass": "Principal",
             "projectName": "2-DAW_d082f246"
         },
