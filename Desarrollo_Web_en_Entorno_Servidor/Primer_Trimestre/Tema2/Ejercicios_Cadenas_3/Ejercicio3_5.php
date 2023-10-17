@@ -1,5 +1,5 @@
 <?php
-$cadena = "Hola Mundo"; //Creo la cadena
+$cadena = "Hola Mundo AAA"; //Creo la cadena
 
 // Creo un array con las vocales mayúsculas y minúsculas con el cambio que van a tener
 $sustitucion = [
