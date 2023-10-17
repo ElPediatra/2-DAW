@@ -75,7 +75,7 @@ public class DNI {
         return false;
     }
 
-    //Obtener la letra del DNI
+    //Obtener la letra del NIF
     private static char extraerLetraNIF(String nif) {
         if (nif.length() == 9) {
             return nif.charAt(8);

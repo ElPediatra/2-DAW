@@ -36,14 +36,21 @@ package Libre_Configuración.Primer_Trimestre.Ejercicio5_Java.Ejercicio5_14;
 
 public class Principal {
     public static void main(String[] args){
-        //Creo un objeto DNI y lo muestro
-        DNI dni1 = new DNI(12345678);
-        System.out.println("Número de DNI: " + dni1.getNumeroDni());
-        System.out.println("NIF: " + dni1.getNif());
+        try { //Uso el try and catch para que no pete el programa al intentar cambiar el DNI a NIF
+            //Creo un DNI por el número y lo muestro
+            DNI dni1 = new DNI(12345678);
+            System.out.println("Número de DNI: " + dni1.getNumeroDni());
+            System.out.println("NIF: " + dni1.getNif());
 
-        //Cambio de DNI a NIF
-        dni1.setDNI("87654321H");
-        System.out.println("Número de DNI modificado: " + dni1.getNumeroDni());
-        System.out.println("NIF modificado: " + dni1.getNif());
+            // Cambio el DNI por un NIF
+            dni1.setDNI("87654321H");
+            System.out.println("Número de DNI modificado: " + dni1.getNumeroDni());
+            System.out.println("NIF modificado: " + dni1.getNif());
+
+            //Intento mostar un DNI erroneo
+            dni1.setDNI("87654321X"); // Genera una excepción
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 }
