@@ -75,13 +75,13 @@ public class DNI {
         return false;
     }
 
-    //Obtener la letra del NIF
-    private static char extraerLetraNIF(String nif) {
+    //Obtener la letra del NIF - Lo comento porque no se usa
+    /* private static char extraerLetraNIF(String nif) {
         if (nif.length() == 9) {
             return nif.charAt(8);
         }
         return ' ';
-    }
+    } */
 
     //Obtener el número del DNI
     private static int extraerNumeroDNI(String nif) {
