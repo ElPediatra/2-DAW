@@ -18,8 +18,8 @@ foreach ($caracteres as $caracter) {
 
 //Muestro el resultado
 if ($contieneVocal) {
-    echo "La cadena contiene al menos una vocal.";
+    echo "La cadena si tiene al menos una vocal.";
 } else {
-    echo "La cadena no contiene ninguna vocal.";
+    echo "La cadena no tiene vocales.";
 }
 ?>
