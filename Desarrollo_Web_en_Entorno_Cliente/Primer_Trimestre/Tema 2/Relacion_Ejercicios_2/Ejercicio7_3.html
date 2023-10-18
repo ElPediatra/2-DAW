@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificar numero de Digitos</title>
+</head>
+<body>
+    <h1>Verificar numero de Digitos</h1>
+    <h2> Alberto Gomez Morales - 2º DAW - Desarrollo Web en Entorno Cliente</h2>
+
+    <label for="numero">Ingrese un número (1 a 99):</label>
+    <input type="number" id="numero" min="1" max="99"><br>
+
+    <button onclick="verificarDigitos()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificarDigitos() {
+            //Pillo el número puesto por el usuario
+            const numero = parseInt(document.getElementById("numero").value);
+
+            //Comparo su tamaño para ver si tiene 1 o 2 digitos o no es válido, respondo al usuario
+            if (numero >= 1 && numero <= 9) {
+                document.getElementById("resultado").textContent = "El número tiene un dígito.";
+            } else if (numero >= 10 && numero <= 99) {
+                document.getElementById("resultado").textContent = "El número tiene dos dígitos.";
+            } else {
+                document.getElementById("resultado").textContent = "El número no está en el rango válido (1 a 99).";
+            }
+        }
+    </script>
+</body>
+</html>
