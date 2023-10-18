@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Compra</title>
+    <script>
+        function calcularCompra() {
+            //Consigo el precio y total de los articulos
+            const precio = parseInt(document.getElementById("precio").value);
+            const cantidad = parseInt(document.getElementById("cantidad").value);
+
+            //Calculo el precio total
+            const total = precio * cantidad;
+
+            //Muestro el resultado
+            document.getElementById("total").textContent = total;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Compra</h1>
+    <h2> Alberto Gomez Morales - 2º DAW - Desarrollo Web en Entorno Cliente</h2>
+
+    <label for="precio">Precio del artículo (sin decimales):</label>
+    <input type="number" id="precio" min="0" step="1"><br>
+
+    <label for="cantidad">Cantidad que lleva el cliente:</label>
+    <input type="number" id="cantidad" min="0" step="1"><br>
+
+    <button onclick="calcularCompra()">Total</button>
+
+    <p>El precio total es: <span id="total"></span></p>
+</body>
+</html>

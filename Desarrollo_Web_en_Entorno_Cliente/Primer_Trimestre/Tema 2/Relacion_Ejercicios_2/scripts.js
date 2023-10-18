@@ -11,7 +11,7 @@ function calcularPerimetro() {
 }
 
 //Ejercicio 5.2
-document.getElementById("calcularButton").addEventListener("click", function() {
+document.getElementById("calcular").addEventListener("click", function() {
     //Consigo los numeros que da el usuario
     const num1 = parseFloat(document.getElementById("num1").value);
     const num2 = parseFloat(document.getElementById("num2").value);
@@ -27,4 +27,4 @@ document.getElementById("calcularButton").addEventListener("click", function() {
     //Muestro el resultado por los ids correspondientes
     document.getElementById("sumaResultado").textContent = suma;
     document.getElementById("productoResultado").textContent = producto;
-});
+})
