@@ -1,33 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html> <!-- Uso la plantilla de Bootstrap para organizar el ejercicio-->
 <head>
   <title>Tablas y Desplazamiento de Bits</title>
-    <!-- Required meta tags -->
+    <!-- Meta Tags y Normalize -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-    <!-- Bootstrap CSS v5.2.1 -->
+    <!-- Link al Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  
+    
+    <!-- Link a mi CSS adicional -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Tabla de multiplicar del 7:</h2>
-  <ul id="tablaMultiplicar7"></ul>
-
-  <h2>Tabla de sumar del 8:</h2>
-  <ul id="tablaSumar8"></ul>
-
-  <h2>Tabla de dividir del 9:</h2>
-  <ul id="tablaDividir9"></ul>
-
-  <h2>Operaciones con Desplazamiento de Bits:</h2>
-  <!-- Muestro el resultado -->
-  <p id="resultado1"></p>
-  <p id="resultado2"></p>
-  <p id="resultado3"></p>
-  <p id="resultado4"></p>
+  <header class="row">
+    <div class="col">
+      <h1> Tablas y Desplazamiento de Bits </h1>
+      <h2> Alberto Gomez Morales - 2º DAW - Desarrollo Web en Entorno Cliente </h2>
+    </div>
+  </header>
+  <article class="row">
+    <div class="col">
+      <h3>Tabla de multiplicar del 7:</h3>
+      <ul id="tablaMultiplicar7"></ul>
+    </div>
+    <div class="col">
+      <h3>Tabla de sumar del 8:</h3>
+      <ul id="tablaSumar8"></ul>
+    </div>
+    <div class="col">
+      <h3>Tabla de dividir del 9:</h3>
+      <ul id="tablaDividir9"></ul>
+    </div>
+  </article>
+  <article class="row">
+    <div class="col">
+      <h3>Operaciones con Desplazamiento de Bits:</h3>
+      <!-- Muestro el resultado -->
+      <p id="resultado1"></p>
+      <p id="resultado2"></p>
+      <p id="resultado3"></p>
+      <p id="resultado4"></p>
+    </div>
+  </article>
 
   <script src="script.js"></script> <!-- Link a mi archivo js -->
+
+  <footer class="row">
+    <div class="col">
+      <h4>Fin del ejercicio</h4>
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
 </body>
 </html>
