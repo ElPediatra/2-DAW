@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calcular Suma, Resta, Producto y Division</title>
+    <script>
+        function realizarCalculos() {
+            //Saco los 2 números que me pide el usuario
+            const numero1 = parseFloat(document.getElementById("numero1").value);
+            const numero2 = parseFloat(document.getElementById("numero2").value);
+
+            //Creo un bucle, si el primero es mayor que el segundo, hago suma y resta, en caso contrario o iguales, hago el producto y la división
+            if (numero1 > numero2) {
+                const suma = numero1 + numero2;
+                const resta = numero1 - numero2;
+                document.getElementById("resultado").textContent = "Suma: " + suma + ", Resta: " + resta;
+            } else {
+                const producto = numero1 * numero2;
+                const division = numero1 / numero2;
+                document.getElementById("resultado").textContent = "Producto: " + producto + ", Division: " + division;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcular Suma, Resta, Producto y Division</h1>
+    <h2> Alberto Gomez Morales - 2º DAW - Desarrollo Web en Entorno Cliente</h2>
+
+    <label for="numero1">Escribe el primer número:</label>
+    <input type="number" id="numero1"><br>
+
+    <label for="numero2">Escribe el segundo número:</label>
+    <input type="number" id="numero2"><br>
+
+    <button onclick="realizarCalculos()">Calcular</button>
+
+    <p id="resultado"></p>
+</body>
+</html>
