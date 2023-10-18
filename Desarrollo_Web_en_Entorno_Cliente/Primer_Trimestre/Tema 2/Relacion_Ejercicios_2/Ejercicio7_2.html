@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmar Aprobado 2</title>
+    <script>
+        //Pido la 1º nota
+        var nota1 = prompt('Escribe la nota del primer examen:');
+        nota1 = parseInt(nota1);
+
+        //Pido la 2º nota
+        var nota2 = prompt('Escribe la nota del segundo examen:');
+        nota2 = parseInt(nota2);
+
+        //Pido la 3º nota
+        var nota3 = prompt('Escribe la nota del tercer examen:');
+        nota3 = parseInt(nota3);
+
+        //Calculo la media
+        var suma = nota1 + nota2 + nota3;
+        var media = suma / 3;
+
+        //Veo si es mayor o igual a 7 y respondo si ha aprobado o no
+        if (media > 4) {
+            alert('Apruebas el curso');
+        } else if (media == 4){
+            alert('Regular pero pasas');
+        } else {
+            alert('Te toca repetir');
+        }
+    </script>
+</head>
+<body>
+    <h1>Confirmar Aprobado</h1>
+    <h2> Alberto Gomez Morales - 2º DAW - Desarrollo Web en Entorno Cliente</h2>
+
+    <p>Se ejecutará el programa JS por pop-ups</p>
+</body>
+</html>
