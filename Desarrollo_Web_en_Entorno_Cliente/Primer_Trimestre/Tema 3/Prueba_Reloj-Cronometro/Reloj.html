@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj</title>
+</head>
+<body>
+    <div id="laHora"></div>
+    <script>
+        function crono() {
+            var elCrono;
+            var miFecha = new Date();
+            var horas = miFecha.getHours();
+            var minutos = miFecha.getMinutes();
+            var segundos = miFecha.getSeconds();
+            var ampm;
+
+            if (horas > 12) {
+                ampm = 'pm';
+                horas -= 12;
+            } else {
+                ampm = 'am';
+            }
+
+            if (horas < 10) {
+                horas = '0' + horas;
+            }
+            if (minutos < 10) {
+                minutos = '0' + minutos;
+            }
+            if (segundos < 10) {
+                segundos = '0' + segundos;
+            }
+
+            var texto = document.getElementById('laHora');
+            texto.innerHTML = horas + ':' + minutos + ':' + segundos + ' ' + ampm;
+        }
+
+        window.onload = function () {
+            elCrono = setInterval(crono, 1000);
+        }
+    </script>
+</body>
+</html>
