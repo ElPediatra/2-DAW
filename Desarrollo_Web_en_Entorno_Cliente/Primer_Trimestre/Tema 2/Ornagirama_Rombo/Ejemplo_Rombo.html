@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ejercicio Rombo</title>
+</head>
+
+<body>
+    <div id="caja"></div>
+    <script>
+        var caja = document.getElementById("caja");
+        var limite = 4;
+        //Creciente
+        for (var i = 0; i < limite; i++) {
+            var asterisco = "";
+            var espacioHTML = "";
+            for (var k = 0; k < limite - i - 1; k++) {
+                espacioHTML += "&nbsp&nbsp";
+            }
+            for (var j = 1; j <= 2 * i + 1; j++) {
+                asterisco += "*";
+            }
+            caja.innerHTML = caja.innerHTML + espacioHTML + asterisco + "<br>";
+        }
+        //Decreciente
+        for (var i = limite - 2; i >= 0; i--) {
+            var asterisco = "";
+            var espacioHTML = "";
+            for (var k = 0; k < limite - i - 1; k++) {
+                espacioHTML += "&nbsp&nbsp";
+            }
+            for (var j = 1; j <= 2 * i + 1; j++) {
+                asterisco += "*";
+            }
+            caja.innerHTML = caja.innerHTML + espacioHTML + asterisco + "<br>";
+        }
+    </script>
+</body>
+
+</html>
