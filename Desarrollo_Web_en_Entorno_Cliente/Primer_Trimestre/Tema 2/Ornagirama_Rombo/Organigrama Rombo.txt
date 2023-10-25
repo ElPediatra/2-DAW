@@ -1,0 +1,46 @@
+Iniciar
+│
+├─ Declarar "caja" y "limite"
+│
+├─ Bucle para la parte creciente (comienza de 1 *)
+│   │
+│   ├─ Inicializar "i" a 0
+│   │
+│   ├─ Mientras "i" sea menor que "limite"
+│   │   │
+│   │   ├─ Inicializar "asterisco" y "espacioHTML"
+│   │   │
+│   │   ├─ Bucle para los espacios en blanco
+│   │   │   │
+│   │   │   ├─ Añadir espacios en blanco a "espacioHTML"
+│   │   │
+│   │   ├─ Bucle para los asteriscos
+│   │   │   │
+│   │   │   ├─ Añadir asteriscos a "asterisco"
+│   │   │
+│   │   ├─ Agregar "espacioHTML" y "asterisco" a "caja.innerHTML"
+│   │   │
+│   │   ├─ Incrementar "i"
+│   │
+│
+├─ Bucle para la parte decreciente (termina en 1 *)
+│   │
+│   ├─ Inicializar "i" a "limite - 2"
+│   │
+│   ├─ Mientras "i" sea mayor o igual a 0
+│   │   │
+│   │   ├─ Inicializar "asterisco" y "espacioHTML"
+│   │   │
+│   │   ├─ Bucle para los espacios en blanco
+│   │   │   │
+│   │   │   ├─ Añadir espacios en blanco a "espacioHTML"
+│   │   │
+│   │   ├─ Bucle para los asteriscos
+│   │   │   │
+│   │   │   ├─ Añadir asteriscos a "asterisco"
+│   │   │
+│   │   ├─ Agregar "espacioHTML" y "asterisco" a "caja.innerHTML"
+│   │   │
+│   │   ├─ Decrementar "i"
+│
+├─ Fin del programa
