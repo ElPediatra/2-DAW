@@ -6,17 +6,6 @@
     padding-right: 10px;
 }
 
-/* ******* Página Principal ******* */
-.main {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-/* Article Izquierda Inicio */
-.principalIz {
-    position: relative;
-}
-
 nav{
     font-family: 'Lobster', sans-serif;
 }
