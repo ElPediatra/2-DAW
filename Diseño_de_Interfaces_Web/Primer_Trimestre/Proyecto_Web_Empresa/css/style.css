@@ -8,6 +8,15 @@ body{
     font-family: 'Abel';
 }
 
+a, a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lobster'
+}
+
 /* navbar (fix para el botón del menú)*/
 .navmenu {
     padding-right: 10px;
@@ -20,10 +29,4 @@ nav{
 /* Estilo de fuente para el dropdown */
 li div{
     font-family: 'Abel', sans-serif;
-}
-
-/* h1, h2, h3, h4*/
-
-h1, h2, h3, h4{
-    font-family: 'Lobster'
 }

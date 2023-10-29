@@ -1,15 +1,51 @@
 /* Article Izquierda Inicio */
 .principalIz {
-  position: relative;
-  padding: 0;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
 }
 
 /* Carousel Derecha Inicio */
 .principalDc {
-  padding: 0;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+/* Texto Mapa */
+.pMapa {
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+.pMapa ul {
+  list-style: none;
+}
+
+/* Footer */
+.redes {
+  list-style: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.redes li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.copy {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* Botón Reserva */
+
+/*
 .reservar {
     background-color: #222;
     border-radius: 4px;
@@ -50,3 +86,4 @@
       text-decoration: none;
       color: inherit;
   }
+  */
