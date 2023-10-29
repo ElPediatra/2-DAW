@@ -17,11 +17,6 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Lobster'
 }
 
-/* navbar (fix para el botón del menú)*/
-.navmenu {
-    padding-right: 10px;
-}
-
 nav{
     font-family: 'Lobster', sans-serif;
 }
