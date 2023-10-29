@@ -1,6 +1,13 @@
 /* Normalize */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
+/* General */
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Abel';
+}
+
 /* navbar (fix para el botón del menú)*/
 .navmenu {
     padding-right: 10px;
@@ -13,4 +20,10 @@ nav{
 /* Estilo de fuente para el dropdown */
 li div{
     font-family: 'Abel', sans-serif;
+}
+
+/* h1, h2, h3, h4*/
+
+h1, h2, h3, h4{
+    font-family: 'Lobster'
 }
