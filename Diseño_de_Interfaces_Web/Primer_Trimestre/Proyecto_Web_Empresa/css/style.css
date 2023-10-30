@@ -115,8 +115,8 @@ footer {
     width: 200px;
   }
 
-  .pie{
-    padding-right: 50;
+  .nav-link{
+    font-size:22px;
   }
 
   .auxDerecha{
@@ -130,6 +130,10 @@ footer {
   }
   p {
     font-size: 18px;
+  }
+
+  .nav-link{
+    font-size:24px;
   }
 
   .logo{
