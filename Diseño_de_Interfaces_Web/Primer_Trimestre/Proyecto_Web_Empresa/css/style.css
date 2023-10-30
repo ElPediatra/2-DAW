@@ -1,7 +1,7 @@
 /* Normalize */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'); /* En principio no es necesario ya que lo hace bootstrap */
 
-/* General */
+/* ************ General ************ */
 body{
     background-color: black;
     color: white;
@@ -15,8 +15,15 @@ a, a:hover {
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Lobster';
+    font-size: 18px;
+    max-width: 100%;
 }
 
+hr {
+  border-color: white;
+}
+
+/* Estilo de fuente para el navbar */
 nav{
     font-family: 'Lobster', sans-serif;
 }
@@ -24,6 +31,12 @@ nav{
 /* Estilo de fuente para el dropdown */
 li div{
     font-family: 'Abel', sans-serif;
+}
+
+.carta {
+  background-color: lightgrey;
+  color: black;
+  margin: 10px;
 }
 
 /* Footer */
@@ -43,5 +56,75 @@ li div{
     padding-bottom: 10px;
   }
 
+/* ************ Página inico.html ************ */
 
-/* @Medias */
+/* Article Izquierda Inicio */
+.principalIz {
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+/* Carousel Derecha Inicio */
+.principalDc {
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+/* Texto Mapa */
+.pMapa {
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+.pMapa ul {
+  list-style: none;
+}
+
+/* ************ Página somos.html ************ */
+
+ /* Carta de los trabajadores */
+.principalC{
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+.carta {
+  background-color: lightgrey;
+  color: black;
+  margin: 10px;
+}
+
+/* ************ @Medias ************ */
+@media (min-width: 768px) { /* Breakpoint para pantallas medianas */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+  }
+
+  .pie{
+    padding-right: 50;
+  }
+
+  .auxDerecha{
+    border-left: 1px solid;
+  }
+}
+
+@media (min-width: 992px) { /* Breakpoint para pantallas grandes */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
