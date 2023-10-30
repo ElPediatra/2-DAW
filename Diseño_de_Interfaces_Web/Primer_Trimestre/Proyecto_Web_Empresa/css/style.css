@@ -1,10 +1,16 @@
-/* Normalize */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'); /* En principio no es necesario ya que lo hace bootstrap */
+/* Normalize y Autoprefixer (Ya lo hace bootstrap, por lo que no sería necesario */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
 /* ************ General ************ */
+
+:root{
+  --colorFondo: rgb(0,0,0);
+  --colorLetra: #fff;
+}
+
 body{
-    background-color: black;
-    color: white;
+    background-color: var(--colorFondo);
+    color: var(--colorLetra);
     font-family: 'Abel';
 }
 
@@ -30,7 +36,7 @@ nav{
 }
 
 /* Estilo de fuente para el dropdown */
-li div{
+nav li div{
     font-family: 'Abel', sans-serif;
 }
 
