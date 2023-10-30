@@ -118,7 +118,40 @@ footer {
 }
 
 /* ************ Página productos.html ************ */
-/* Estilos generales */
+/* Lista de Productos */
+
+.imgProducto {
+  height: 300px;
+  width: 400px;
+}
+
+.foto {
+  position: relative;
+  margin-top: 10px;
+}
+
+.foto img {
+  display: block;
+  margin: 0 auto;
+}
+
+.foto .titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+}
+
+.foto a:hover img {
+  opacity: 0.7;
+}
+
+.foto a:hover .titulo {
+  color: white;
+}
+
+/* Promociones */
 .promociones {
   display: flex;
   justify-content: space-between;
