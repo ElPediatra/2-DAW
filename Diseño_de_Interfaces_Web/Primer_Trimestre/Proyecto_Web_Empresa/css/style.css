@@ -25,3 +25,20 @@ nav{
 li div{
     font-family: 'Abel', sans-serif;
 }
+
+/* Footer */
+.redes {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .redes li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .copy {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
