@@ -19,8 +19,9 @@ h1, h2, h3, h4, h5, h6{
     max-width: 100%;
 }
 
-hr {
-  border-color: white;
+/* Estilo para la imagen-logo de la web*/
+.logo {
+  width: 150px;
 }
 
 /* Estilo de fuente para el navbar */
@@ -33,13 +34,12 @@ li div{
     font-family: 'Abel', sans-serif;
 }
 
-.carta {
-  background-color: lightgrey;
-  color: black;
-  margin: 10px;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
 }
 
-/* Footer */
 .redes {
     list-style: none;
     padding-top: 10px;
@@ -97,7 +97,7 @@ li div{
 }
 
 .carta {
-  background-color: lightgrey;
+  background-color: #fff;
   color: black;
   margin: 10px;
 }
@@ -111,12 +111,16 @@ li div{
     font-size: 16px;
   }
 
+  .logo{
+    width: 200px;
+  }
+
   .pie{
     padding-right: 50;
   }
 
   .auxDerecha{
-    border-left: 1px solid;
+    border-left: 1px solid grey;
   }
 }
 
@@ -126,5 +130,9 @@ li div{
   }
   p {
     font-size: 18px;
+  }
+
+  .logo{
+    width: 250px;
   }
 }
