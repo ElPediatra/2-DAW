@@ -65,10 +65,60 @@
       </div>
     </nav>
   </header>
-  <!-- *** Fin del Header *** -->
+<!-- *** Fin del Header *** -->
 
-  <!-- *** Main Web *** -->
+<!-- *** Main Web *** -->
 <main>
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center text-center g-2">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <h3> Nuestros productos</h3>
+      </div>
+    </div>
+
+    <div class="row">
+    <!-- Slide de productos -->
+      <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Uno"></li>
+          <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Dos"></li>
+          <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Tres"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <img src="img/Bar.png" class="w-100 d-block" alt="Uno">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Title</h3>
+              <p>Description</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="holder.js/900x500/auto/#666:#444/text:Second slide" class="w-100 d-block" alt="Dos">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Title</h3>
+              <p>Description</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="holder.js/900x500/auto/#666:#444/text:Third slide" class="w-100 d-block" alt="Tres">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Title</h3>
+              <p>Description</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+    </div>
+  
+  </div>
 </main>
 
 <!-- *** Footer *** -->
