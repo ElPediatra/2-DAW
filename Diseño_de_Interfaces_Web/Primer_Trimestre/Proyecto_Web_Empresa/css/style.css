@@ -3,8 +3,6 @@
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
-*
-* He pasado mi código por un detector de autoprefixer, pero no son necesarios cambios
 */
 
 /* Normalize y Autoprefixer (Ya lo hace bootstrap, por lo que no sería necesario */
@@ -24,7 +22,8 @@ body{
 }
 
 img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 a, a:hover {
@@ -143,7 +142,9 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: transparent;
 }
 
@@ -157,8 +158,12 @@ footer {
 
 /* Promociones */
 .promociones {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 20px;
 }
 
@@ -167,7 +172,11 @@ footer {
   padding: 20px;
   width: 30%;
   text-align: center;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 /* Aplico fondos diferentes a cada promoción con nth-child */
@@ -185,7 +194,9 @@ footer {
 
 /* Aplico un estilo al pasar el ratón por encima */
 .promocion:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .promocion p {
