@@ -45,22 +45,3 @@ li div{
 
 
 /* @Medias */
-@media (min-width: 769px) {
-    body {
-      font-size: 16px; /* Cambia el tamaño de fuente a 16px */
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-size: 24px; /* Cambia el tamaño de fuente de los encabezados a 24px cuando la pantalla es igual o más ancha que 768px */
-      }
-}
-
-@media (min-width: 993px) {
-    body {
-      font-size: 20px; /* Cambia el tamaño de fuente a 18px */
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-size: 28px; /* Cambia el tamaño de fuente de los encabezados a 24px cuando la pantalla es igual o más ancha que 768px */
-      }
-  }
