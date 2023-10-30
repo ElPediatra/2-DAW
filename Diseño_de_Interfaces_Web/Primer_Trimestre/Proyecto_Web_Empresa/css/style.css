@@ -23,6 +23,10 @@ body{
     font-family: 'Abel';
 }
 
+img {
+  object-fit: cover;
+}
+
 a, a:hover {
     text-decoration: none;
     color: inherit;
