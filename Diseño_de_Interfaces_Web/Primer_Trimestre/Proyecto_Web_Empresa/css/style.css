@@ -1,3 +1,12 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*
+* He pasado mi código por un detector de autoprefixer, pero no son necesarios cambios
+*/
+
 /* Normalize y Autoprefixer (Ya lo hace bootstrap, por lo que no sería necesario */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
@@ -103,10 +112,57 @@ footer {
 }
 
 .carta {
-  background-color: #fff;
-  color: black;
+  background-color: var(--colorLetra);
+  color: var(--colorFondo);
   margin: 10px;
 }
+
+/* ************ Página productos.html ************ */
+/* Estilos generales */
+.promociones {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.promocion {
+  border: 5px solid var(--colorLetra);
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+/* Aplico fondos diferentes a cada promoción con nth-child */
+.promocion:nth-child(1) {
+  background-color: lightcoral;
+}
+
+.promocion:nth-child(2) {
+  background-color: lightgreen;
+}
+
+.promocion:nth-child(3) {
+  background-color: lightsalmon;
+}
+
+/* Aplico un estilo al pasar el ratón por encima */
+.promocion:hover {
+  transform: scale(1.05);
+}
+
+.promocion p {
+  font-size: 14px;
+  color: var(--colorFondo);
+}
+
+/* Estilo para las imágenes */
+.promocion img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
 
 /* ************ @Medias ************ */
 @media (min-width: 768px) { /* Breakpoint para pantallas medianas */
