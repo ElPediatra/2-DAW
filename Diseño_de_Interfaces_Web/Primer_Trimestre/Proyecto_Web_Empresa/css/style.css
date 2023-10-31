@@ -120,6 +120,20 @@ footer {
   margin: 10px;
 }
 
+/* Estilos para @container box - NO SE EJECUTAN */
+
+/* .containerAux {
+  container-type: inline-size; W3S Validator --  Error: container-type: Property container-type doesn't exist.
+  container-name: trabajadores; W3S Validator -- Error: container-name: Property container-name doesn't exist.
+} 
+
+.card h2 {
+  font-size: 1em;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+*/
+
 /* ************ Página productos.html ************ */
 /* Lista de Productos */
 
@@ -248,5 +262,18 @@ footer {
 
   .logo{
     width: 250px;
+  }
+}
+
+/* ************ @Container ************ */
+/* He probado a comprobarlo en W3S y me indica Unrecognized at-rule @container. Lo aplico para probar a cambiar el tamaño de letra, pero no me carga en ningún navegador
+@container trabajadores (min-width: 768px) { W3S Validator -- Error: Unrecognized at-rule @container
+  .card {
+    font-size: 2em;
+    grid-template-columns: 1fr;
+  }
+
+  .card h2 {
+    font-size: max(1.5em, 1.23em + 2cqi);
   }
 }
