@@ -1,0 +1,31 @@
+.elemento1 {
+    width: 300px;
+    height: 100px;
+    background: red;
+    color: white;
+    transform: rotate(45deg);
+}
+
+.elemento2 {
+    width: 300px;
+    height: 100px;
+    background: blue;
+    color: white;
+    transform: translate(25px, 150px);
+}
+
+.elemento3 {
+    width: 300px;
+    height: 100px;
+    background: green;
+    color: white;
+    transform: scale(2);
+}
+
+.elemento4 {
+    width: 300px;
+    height: 100px;
+    background: orange;
+    color: white;
+    transform: rotate(5deg) scale(2) translate(25px, 150px);
+}
