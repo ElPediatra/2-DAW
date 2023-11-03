@@ -1,0 +1,13 @@
+@keyframes backgroundChange {
+    from {background-color: yellow;}
+    to {background-color: green;}
+}
+
+div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    animation-name: backgroundChange;
+    animation-duration: 3s;
+}
