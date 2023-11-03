@@ -1,0 +1,13 @@
+button {
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    background-color: lightblue;
+    margin: 200px;
+    transition-property: background-color;
+    transition-duration: 3s;
+}
+
+button:hover {
+    background-color: lightcoral;
+}
