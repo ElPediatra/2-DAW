@@ -10,6 +10,7 @@
  * utilizar el método calcularPagos para determinar el pago para cada cliente.
  */
 
+ /* Imports */
  import java.util.Scanner;
  
  public class Ejercicio_6_Ficha4 {
