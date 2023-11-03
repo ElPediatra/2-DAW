@@ -1,0 +1,14 @@
+button {
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    background-color: lightblue;
+    margin: 200px;
+    transition: background-color 2s;
+    transition-delay: 2s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button:hover {
+    background-color: lightcoral;
+}
