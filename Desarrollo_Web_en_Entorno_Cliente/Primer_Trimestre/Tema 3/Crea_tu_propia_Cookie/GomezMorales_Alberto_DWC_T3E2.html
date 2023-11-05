@@ -1,19 +1,62 @@
 <html>
-    <head></head>
+    <head>
+        <title> Cookies Alberto Gomez Morales </title>
+    </head>
     <body>
-
-        <!-- EN PROCESO -->
         <script>
-            function crearCookie(){
-
-            document.cookie="usuario=Alberto";
-
-            var nombreUsuario=prompt("Introduce el nombre de usuario");
-            document.cookie=nombreUsuario;
+            //Creo la cookie para el nombre y lo pido al usuario
+            function crearCookie(){           
+                var nombreUsuario = prompt("Introduce el nombre de usuario");
+                document.cookie = "usuario=" + encodeURIComponent(nombreUsuario);
             }
-        </script>
 
-    <button type="button" onclick="crearCookie()"> Crear una cookie </button>
-    <button type="button" onclick='alert(document.cookie)'> Ver las Cookies </button>
+            //Aumento el número de visitas
+            function aumentarVisitas() {
+                var visitas = obtenerVisitas();
+                visitas = visitas + 1;
+                document.cookie = "visitas=" + visitas;
+            }
+
+            //Busco el número de visitas para añadirlo al mensaje general del botón
+            function obtenerVisitas() {
+                var visitasCookie = document.cookie.split('; ').find(cookie => cookie.startsWith("visitas="));
+                
+                if (visitasCookie) {
+                    return parseInt(visitasCookie.split('=')[1]);
+                    }
+                return 0;
+                }
+            
+            //Llamo a esta función para obtener el "nombre" del usuario, marcando en la llamada que es "usuario" e indico que el nombre va después de =
+            function obtenerCookie(nombre) {
+                var cookies = document.cookie.split('; ');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].split('=');
+                    if (cookie[0] === nombre) {
+                        return decodeURIComponent(cookie[1]);
+                    }
+                }
+                return '';
+            }
+
+            //Función para mostar las cookies
+            function mostrarCookies() {
+                var usuarioCookie = obtenerCookie("usuario");
+                var visitasCookie = obtenerVisitas();
+                alert("Usuario: " + usuarioCookie + "\nTotal de visitas: " + visitasCookie);
+            }
+
+            //Pido borrar las cookies
+            function borrarCookies() {
+                document.cookie = "usuario=; expires=Sat, 6 Aug 2020 00:00:00 UTC";
+                document.cookie = "visitas=; expires=Sat, 6 Aug 2020 00:00:00 UTC";
+            }
+
+            aumentarVisitas(); //Llamo a la función automaticamente al carga la página para que añada la visita
+        </script>
+    
+        <button type="button" onclick="crearCookie()">Crear una cookie</button>
+        <button type="button" onclick="mostrarCookies()">Ver Cookies</button>
+        <button type="button" onclick="borrarCookies()">Borrar Cookies</button>
     </body>
 </html>

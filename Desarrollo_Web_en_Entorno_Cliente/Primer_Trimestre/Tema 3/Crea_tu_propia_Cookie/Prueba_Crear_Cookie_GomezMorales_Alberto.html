@@ -1,0 +1,14 @@
+<html>
+    <head> Cookies </head>
+    <body>
+        <script>
+            function crearCookie(){                
+                var nombreUsuario = prompt("Introduce el nombre de usuario");
+                document.cookie = "usuario=" + encodeURIComponent(nombreUsuario);
+            }
+        </script>
+    
+        <button type="button" onclick="crearCookie()">Crear una cookie</button>
+        <button type="button" onclick='alert(document.cookie)'>Ver las Cookies</button>
+    </body>
+</html>
