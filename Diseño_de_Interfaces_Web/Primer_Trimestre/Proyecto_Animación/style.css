@@ -1,3 +1,4 @@
+/* General */
 body {
     background-image: url(img/fondo.webp);
     background-size: cover;
@@ -19,6 +20,7 @@ img {
     height: 150px;
 }
 
+/* Asigno las animaciones y configuro la posición de las imágenes */
 .Pez1 {
     position: absolute;
     top: 50%;
@@ -72,18 +74,7 @@ img {
     animation-iteration-count: infinite;
 }
 
-/* Asigno las animaciones */
-.Pez1 {
-
-}
-
-.Pez2 {
-    animation-name: moverPez2;
-    animation-duration: 3s;
-}
-
-
-
+/* Animaciones */
 @keyframes moverPez1 {
     0% {
         left: -100px;
