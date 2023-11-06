@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    overflow: hidden;
 }
 
 .container {
@@ -80,7 +81,7 @@ img {
         left: -100px;
       }
       100% {
-        left: calc(100% - 200px); /* Cambia el valor para controlar la velocidad y la distancia */
+        left: 100%; /* Cambia el valor para controlar la velocidad y la distancia */
       }
   }
   
@@ -89,7 +90,7 @@ img {
         left: -100px;
       }
       100% {
-        left: calc(100% - 200px); /* Cambia el valor para controlar la velocidad y la distancia */
+        left: 100%; /* Cambia el valor para controlar la velocidad y la distancia */
       }
   }
 
