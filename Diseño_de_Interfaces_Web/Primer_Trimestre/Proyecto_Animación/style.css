@@ -1,0 +1,136 @@
+body {
+    background-image: url(img/fondo.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+img {
+    max-width: 200px;
+    height: 150px;
+}
+
+.Pez1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-name: moverPez1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.Pez2 {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    animation-name: moverPez2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.Burbuja1 {
+    position: absolute;
+    bottom: 0; /* Mover desde la parte inferior */
+    left: 10%;
+    transform: translateY(100%); /* Transformación para iniciar desde la parte inferior */
+    animation-name: moverBurbuja1;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.Burbuja2 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(100%);
+    animation-name: moverBurbuja2;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.Burbuja3 {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    transform: translateY(100%);
+    animation-name: moverBurbuja3;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Asigno las animaciones */
+.Pez1 {
+
+}
+
+.Pez2 {
+    animation-name: moverPez2;
+    animation-duration: 3s;
+}
+
+
+
+@keyframes moverPez1 {
+    0% {
+        left: -100px;
+      }
+      100% {
+        left: calc(100% - 200px); /* Cambia el valor para controlar la velocidad y la distancia */
+      }
+  }
+  
+  @keyframes moverPez2 {
+    0% {
+        left: -100px;
+      }
+      100% {
+        left: calc(100% - 200px); /* Cambia el valor para controlar la velocidad y la distancia */
+      }
+  }
+
+  @keyframes moverBurbuja1 {
+    0% {
+        top: 100%; /* Mover desde la parte inferior */
+        transform: translateY(0); /* Transformación para terminar en la parte superior */
+    }
+    100% {
+        top: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes moverBurbuja2 {
+    0% {
+        top: 100%;
+        transform: translateY(0);
+    }
+    100% {
+        top: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes moverBurbuja3 {
+    0% {
+        top: 100%;
+        transform: translateY(0);
+    }
+    100% {
+        top: 0;
+        transform: translateY(-100%);
+    }
+}
