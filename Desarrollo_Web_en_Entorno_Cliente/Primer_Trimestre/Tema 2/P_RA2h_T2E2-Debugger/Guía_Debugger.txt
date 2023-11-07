@@ -1,0 +1,21 @@
+1º Abrimos el archivo html del rombo.
+2º Lo pasamos a Chrome.
+3º Abrimos las DevTools en el navegador.
+
+Para:
+    - Visualizar el valor de 3 variables.
+4º        Abrimos la consola y selecionamos la variable que
+          queramos ver.
+    - Crear al menos 2 breakpoint (puntos de ruptura).
+5º       * Seleccionamos la línea en la que queremos
+         crear el breakpoint.
+6º       * Al ejecutarse el programa se parará en
+         nuestro breakpoint pudiendo revisar los valores.
+7º       * Le damos a play y continua el programa
+         hasta el siguiente Breakpoint.
+    - Crear al menos un breakpoint condicional.
+        * Crear un breakpoint y con el click derecho 
+        seleccionamos añadir una regla adicional
+        (por ejemplo que i sea igual a 2, porque
+        el limite es 4).
+    
