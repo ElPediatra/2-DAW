@@ -16,6 +16,7 @@
 }
 
 main {
+    /* Editado de https://github.com/CodeCrafter11/css-projects/tree/main/animated-background */
   background: -moz-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
   background: -webkit-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #26c9f2 66%, #ffa079 100%);
   background: linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
@@ -294,9 +295,12 @@ footer {
     font-size: max(1.5em, 1.23em + 2cqi);
   }
 }
-
 */
 
+/********** Keyframes **********/
+
+/* Animación main (con -webkit- t -moz- */
+/* Editado de https://github.com/CodeCrafter11/css-projects/tree/main/animated-background */
 @-webkit-keyframes Gradient {
 	0% {
 		background-position: 0 50%
