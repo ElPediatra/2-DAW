@@ -163,6 +163,29 @@ footer {
   list-style: none;
 }
 
+/* Llamo a la animación del mapa */
+.imgMapa:hover {
+  position: relative;
+  -webkit-animation: moverMapa 1s linear infinite;
+          animation: moverMapa 1s linear infinite;
+}
+
+@-webkit-keyframes moverMapa {
+  0% { -webkit-transform: translate(0, 0) rotate(0deg); transform: translate(0, 0) rotate(0deg); }
+  25% { -webkit-transform: translate(5px, 5px) rotate(5deg); transform: translate(5px, 5px) rotate(5deg); }
+  50% { -webkit-transform: translate(0, 0) rotate(0eg); transform: translate(0, 0) rotate(0eg); }
+  75% { -webkit-transform: translate(-5px, 5px) rotate(-5deg); transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { -webkit-transform: translate(0, 0) rotate(0deg); transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes moverMapa {
+  0% { -webkit-transform: translate(0, 0) rotate(0deg); transform: translate(0, 0) rotate(0deg); }
+  25% { -webkit-transform: translate(5px, 5px) rotate(5deg); transform: translate(5px, 5px) rotate(5deg); }
+  50% { -webkit-transform: translate(0, 0) rotate(0eg); transform: translate(0, 0) rotate(0eg); }
+  75% { -webkit-transform: translate(-5px, 5px) rotate(-5deg); transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { -webkit-transform: translate(0, 0) rotate(0deg); transform: translate(0, 0) rotate(0deg); }
+}
+
 /* ************ Página somos.html ************ */
 
  /* Carta de los trabajadores */
