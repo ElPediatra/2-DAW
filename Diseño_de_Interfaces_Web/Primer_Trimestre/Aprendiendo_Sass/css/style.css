@@ -1,5 +1,21 @@
+/* Marcando el nombre con _ al comienzo no lo compila*/
 * {
-  background-color: red;
+  margin: 0;
+  padding: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
+body {
+  background: #f4f4f4;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  background: #333;
+  color: #f4f4f4;
+  padding: 1rem;
+}
+header h1 {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
