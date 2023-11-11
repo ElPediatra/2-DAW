@@ -1,4 +1,6 @@
+/* Importo los datos de las variables del archivo oculto (_variables.scss) */
 /* Marcando el nombre con _ al comienzo no lo compila*/
+/* Aplico los estilos que voy a querer en el css */
 * {
   margin: 0;
   padding: 0;

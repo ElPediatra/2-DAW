@@ -1,5 +1,7 @@
+/* Importo los datos de las variables del archivo oculto (_variables.scss) */
 @import 'variables';
 
+/* Aplico los estilos que voy a querer en el css */
 *{
     margin: 0;
     padding: 0;
@@ -22,4 +24,5 @@ header {
     }
 }
 
-.section {}
+.section {
+}
