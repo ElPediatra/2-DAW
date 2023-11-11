@@ -1,6 +1,6 @@
 /* Alberto Gómez Morales - 2º DAW - Libre Configuración
  * 
- * Usando Java. Escriba un método llamado cuadradoDeAsteriscos que muestre un cuadrado
+ * Escriba un método llamado cuadradoDeAsteriscos que muestre un cuadrado
  * relleno (el mismo número de filas y columnas) de asteriscos cuyo lado de especifique
  * en el parámetro entero lado. Por ejemplo, si lado es 4, el método debe mostrar:
  * 
