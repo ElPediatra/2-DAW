@@ -3,8 +3,8 @@ ser 8 o 9 si es un teléfono fijo o 6 o 7 si es móvil. -->
 
 <?php
 
-    $movil = 654 65 65 65;
-    $fijo = 950 48 10 00;
+    $movil = "654 65 65 65";
+    $fijo = "950 48 10 00";
 
     //Defino los datos que pueden tener las posiciones (en este caso 6,7,8 y 9 para la primeraposicion y cada 2 posiciones tienen que ser decimales)
     // con \s marco los espacios y con \d{número} la cantidad de digitos que puede haber
