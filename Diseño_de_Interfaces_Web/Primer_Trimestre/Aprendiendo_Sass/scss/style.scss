@@ -25,4 +25,32 @@ header {
 }
 
 .section {
+    padding: 3rem;
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    &-a {
+        background: $primary-color;
+        color: #ffff;
+    }
+
+    &-b {
+        background: $secondary-color;
+        color: #ffff;
+    }
+}
+
+/* Opcional - Simple para el <a>
+a {
+    color: #333;
+    &:hover {
+        color: coral;
+    }
+}
+*/
+
+%btn-shared {
+    display: inline-block;
 }

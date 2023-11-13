@@ -20,4 +20,28 @@ header {
 }
 header h1 {
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.section {
+  padding: 3rem;
+}
+.section h3 {
+  font-size: 2rem;
+}
+.section-a {
+  background: steelblue;
+  color: white;
+}
+.section-b {
+  background: skyblue;
+  color: white;
+}
+
+/* Opcional - Simple para el <a>
+a {
+    color: #333;
+    &:hover {
+        color: coral;
+    }
+}
+*//*# sourceMappingURL=style.css.map */
