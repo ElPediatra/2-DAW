@@ -24,7 +24,7 @@ function generarSecuencia() {
     }
 
     //Devuelto texto de los valores
-    secuencia = secuencia.slice(0, -2); // Eliminar la última coma y espacio
+    secuencia = secuencia.slice(0, -2); // Elimino la última coma el espacio del texto
     document.getElementById("resultado").innerText = secuencia;
   } else {
     alert("Por favor, escribe un número entero positivo."); //Devuelvo mensaje de error
