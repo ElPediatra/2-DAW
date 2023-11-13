@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fibonacci Recursivo - Alberto Gómez Morales </title>
+  <title>Secuencia de Fibonacci Recursiva - Albert Gómez Morales </title>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Secuencia de Fibonacci - Método Recursivo</h1>
-  
-  <label for="inputN">Escribe el número de veces que quieras que se ejecute (1...4...10....200 veces):</label>
-  <input type="number" id="inputN" min="1" value="10"> <!-- Le pido el valor y lo envío -->
 
-  <button onclick="generarSecuencia()">Generar Fibonacci</button>
+  <h2>Secuencia de Fibonacci Recursiva</h2>
 
-  <p id="salida"></p>
-  <script src="index.js"></script>
+  <label for="cantidad">Escribe la cantidad de veces que quieres que se ejecute: </label>
+  <input type="number" id="cantidad" min="1" placeholder="Escribe un número">
+
+  <button onclick="generarSecuencia()">Generar Secuencia</button>
+
+  <p id="resultado"></p>
+
 </body>
 </html>
