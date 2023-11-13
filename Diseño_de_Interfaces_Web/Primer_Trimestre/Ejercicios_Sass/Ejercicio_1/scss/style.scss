@@ -1,0 +1,64 @@
+@import 'variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontstack;
+}
+
+body {
+  line-height: 1.6;
+  padding: 20px;
+}
+
+#container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: $primary_dark;
+}
+
+nav {
+  ul {
+    display: flex;
+
+    li {
+      list-style: none;
+      background-color: $primary;
+      color: $primary_dark;
+      width: 500px;
+      height: 40px;
+      padding-top: 10px;
+      text-align: center;
+      border: 1px solid $primary_dark;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      &:hover {
+        background-color: $primary_dark;
+        font-weight: bold;
+        color: $primary;
+        transition: 1s;
+      }
+    }
+  }
+
+  main {
+    ul {
+      margin-left: 20px;
+    }
+  }
+
+/* Media */
+  @media screen and (max-width: 650px) {
+    ul {
+      flex-direction: column;
+    }
+  }
+}
