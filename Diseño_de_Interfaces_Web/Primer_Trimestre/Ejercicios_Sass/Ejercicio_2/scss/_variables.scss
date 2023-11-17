@@ -4,3 +4,4 @@ $medium: 768px;
 $rojo: red;
 $azul: blue;
 $verde: green;
+$invertido: lighten(invert($color), 20%);
