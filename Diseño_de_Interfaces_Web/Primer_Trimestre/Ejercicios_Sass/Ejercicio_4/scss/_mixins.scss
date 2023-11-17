@@ -1,0 +1,11 @@
+@mixin frame($thickness: 3px, $style: solid, $color-border: #000, $color-bg: #eee, $padding: 10px, $radius: 15px) {
+    border: $thickness $style $color-border;
+    background-color: $color-bg;
+    padding: $padding;
+    border-radius: $radius;
+
+    &:hover {
+        box-shadow: 0.75px 0.75px 10px rgba(0, 0, 0, 0.75);
+        transform: translate(5px, 5px);
+    }
+}

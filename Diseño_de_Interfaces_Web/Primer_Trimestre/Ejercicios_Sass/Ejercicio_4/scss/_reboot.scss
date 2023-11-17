@@ -1,0 +1,29 @@
+body {
+    font-family: Geneva, sans-serif;
+    background-color: #ccc;
+    color: #000;
+}
+
+article {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}

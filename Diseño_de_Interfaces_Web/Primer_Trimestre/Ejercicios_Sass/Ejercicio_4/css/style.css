@@ -1,1 +1,112 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  font-family: Geneva, sans-serif;
+  background-color: #ccc;
+  color: #000;
+}
+
+article {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+article h1 {
+  border: 3px solid #000;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 15px;
+}
+article h1:hover {
+  box-shadow: 0.75px 0.75px 10px rgba(0, 0, 0, 0.75);
+  transform: translate(5px, 5px);
+}
+
+section img:nth-child(1) {
+  border: 3px solid #000;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 15px;
+}
+section img:nth-child(1):hover {
+  box-shadow: 0.75px 0.75px 10px rgba(0, 0, 0, 0.75);
+  transform: translate(5px, 5px);
+}
+
+section img:nth-child(2) {
+  border: 3px dotted #000;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 15px;
+}
+section img:nth-child(2):hover {
+  box-shadow: 0.75px 0.75px 10px rgba(0, 0, 0, 0.75);
+  transform: translate(5px, 5px);
+}
+
+section img:nth-child(3) {
+  border: 3px solid mediumseagreen;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 15px;
+}
+section img:nth-child(3):hover {
+  box-shadow: 0.75px 0.75px 10px rgba(0, 0, 0, 0.75);
+  transform: translate(5px, 5px);
+}
+
+section img:nth-child(4) {
+  border: 6px solid #b8181b;
+  background-color: #e7d5c2;
+  padding: 20px;
+  border-radius: 40px;
+}
+section img:nth-child(4):hover {
+  box-shadow: 0.75px 0.75px 10px rgba(0, 0, 0, 0.75);
+  transform: translate(5px, 5px);
+}
+
+section img:nth-child(5) {
+  border: 6px dashed rgb(109, 85, 106);
+  background-color: peru;
+  padding: 20px;
+  border-radius: 50%;
+}
+section img:nth-child(5):hover {
+  box-shadow: 0.75px 0.75px 10px rgba(0, 0, 0, 0.75);
+  transform: translate(5px, 5px);
+}
+
+section img:nth-child(6) {
+  border: 3px none none;
+  background-color: #aac5d9;
+  padding: 20px;
+  border-radius: 50%;
+}
+section img:nth-child(6):hover {
+  box-shadow: 0.75px 0.75px 10px rgba(0, 0, 0, 0.75);
+  transform: translate(5px, 5px);
+}
+
+@media (min-width: 800px) {
+  section img {
+    flex: 0 1 calc(25% - 20px);
+  }
+}/*# sourceMappingURL=style.css.map */
