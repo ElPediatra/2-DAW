@@ -1,0 +1,43 @@
+/* Variables para el Ejercicio 2*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+#container {
+  color: red;
+  background-color: #ff6666;
+  font-size: 14px;
+  margin: 14px;
+  padding: 14px;
+  line-height: 21px;
+  border: 5px solid red;
+  /* Media */
+}
+@media screen and (max-width: 576px) {
+  #container {
+    color: blue;
+    background-color: #6666ff;
+    font-size: 16px;
+    margin: 16px;
+    padding: 16px;
+    line-height: 24px;
+    border: 5px solid blue;
+  }
+}
+@media screen and (min-width: 768px) {
+  #container {
+    color: green;
+    background-color: #00e600;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    line-height: 30px;
+    border: 5px solid green;
+  }
+}/*# sourceMappingURL=style.css.map */
