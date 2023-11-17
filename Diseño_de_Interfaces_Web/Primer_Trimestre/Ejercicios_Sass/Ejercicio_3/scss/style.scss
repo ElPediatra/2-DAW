@@ -1,0 +1,27 @@
+/* Ejercicio 3
+
+Instructions:
+Make 3 new partials: _variables.scss, _mixins.scss and _reboot.scss
+In your main file style.scss, you import the Google font 'Anton' and these 3 partials (in the correct order)
+_variables.scss
+    Declare 3 variables $fontstack-titles ('Anton' with a suitable fallback font) , $fontstack-text (Verdana with fallback font) and $small (600px)
+_mixins.scss
+    Copy the mixin layout (from Exercise 2) to this file
+_reboot.scss
+    - Add a universal reset
+    - body:
+        + font: $fontstack-text
+        + layout based on white and 1rem for extra small screens (< 600px)
+        + layout based on black and 1.25rem for small screens or larger (>= 600px)
+    - main heading:
+        + font: $fontstack-titles with size 1.75rem
+        + some padding at the bottom
+    - paragraphs (in article)
+        + some padding at the bottom
+    - links in all states:
+        + block elements with a width of 130px
+        + font: $fontstack-titles
+        + layout based on black and 1rem (remove the margin on the left!)
+    - links when hovered:
+        + layout based on dimgray and 1rem
+*/
