@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: $fontstack-text;
+    @include layout(white, 1rem);
+
+    @media (min-width: $small) {
+        @include layout(black, 1.25rem);
+    }
+}
+
+h1 {
+    font: $fontstack-titles;
+    font-size: 1.75rem;
+    padding-bottom: 20px;
+}
+
+article p {
+    padding-bottom: 20px;
+}
+
+a {
+    display: block;
+    width: 130px;
+    font: $fontstack-titles;
+    @include layout(black, 1rem);
+    margin-left: 0;
+
+    &:hover {
+        @include layout(dimgray, 1rem);
+    }
+}

@@ -1,27 +1,61 @@
-/* Ejercicio 3
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-Instructions:
-Make 3 new partials: _variables.scss, _mixins.scss and _reboot.scss
-In your main file style.scss, you import the Google font 'Anton' and these 3 partials (in the correct order)
-_variables.scss
-    Declare 3 variables $fontstack-titles ('Anton' with a suitable fallback font) , $fontstack-text (Verdana with fallback font) and $small (600px)
-_mixins.scss
-    Copy the mixin layout (from Exercise 2) to this file
-_reboot.scss
-    - Add a universal reset
-    - body:
-        + font: $fontstack-text
-        + layout based on white and 1rem for extra small screens (< 600px)
-        + layout based on black and 1.25rem for small screens or larger (>= 600px)
-    - main heading:
-        + font: $fontstack-titles with size 1.75rem
-        + some padding at the bottom
-    - paragraphs (in article)
-        + some padding at the bottom
-    - links in all states:
-        + block elements with a width of 130px
-        + font: $fontstack-titles
-        + layout based on black and 1rem (remove the margin on the left!)
-    - links when hovered:
-        + layout based on dimgray and 1rem
-*//*# sourceMappingURL=style.css.map */
+body {
+  font: Verdana, sans-serif;
+  color: white;
+  background-color: black;
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  line-height: 1.5rem;
+  border: 5px solid white;
+}
+@media (min-width: 600px) {
+  body {
+    color: black;
+    background-color: white;
+    font-size: 1.25rem;
+    margin: 1.25rem;
+    padding: 1.25rem;
+    line-height: 1.875rem;
+    border: 5px solid black;
+  }
+}
+
+h1 {
+  font: "Anton", sans-serif;
+  font-size: 1.75rem;
+  padding-bottom: 20px;
+}
+
+article p {
+  padding-bottom: 20px;
+}
+
+a {
+  display: block;
+  width: 130px;
+  font: "Anton", sans-serif;
+  color: black;
+  background-color: white;
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  line-height: 1.5rem;
+  border: 5px solid black;
+  margin-left: 0;
+}
+a:hover {
+  color: dimgray;
+  background-color: #969696;
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  line-height: 1.5rem;
+  border: 5px solid dimgray;
+}/*# sourceMappingURL=style.css.map */
