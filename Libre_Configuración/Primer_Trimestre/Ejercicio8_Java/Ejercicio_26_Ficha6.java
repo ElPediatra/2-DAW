@@ -28,10 +28,10 @@ public class Ejercicio_26_Ficha6 {
             boolean adivinado = false;
 
             System.out.println("¡Bienvenido a 'Adivina el número'!");
-            System.out.println("Se ha generado un número entre 1 y 1000. ¡Adivina cuál es!");
+            System.out.println("Hemos generado un número entre 1 y 1000. ¡Adivina cuál es!");
 
             while (!adivinado) {
-                System.out.print("Ingresa tu intento: ");
+                System.out.print("Escribe un número: ");
                 intento = teclado.nextInt();
 
                 if (intento == numeroAdivinar) {
