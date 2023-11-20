@@ -1,0 +1,10 @@
+@each $name, $color in $color-map {
+    .box-#{$name} {
+       color: $color;
+       background-color: rgba($color, 0.15);
+       border: 1px solid darken($color, 10%);
+       padding: 1rem;
+       margin-bottom: 1rem;
+       border-radius: 0.25rem;
+    }
+   }

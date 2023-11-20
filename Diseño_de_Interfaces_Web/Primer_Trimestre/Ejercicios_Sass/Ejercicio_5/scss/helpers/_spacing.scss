@@ -1,0 +1,49 @@
+@for $i from 0 through 5 {
+    .p-#{$i} {
+       padding: $i/3 rem;
+    }
+    .px-#{$i} {
+       padding-left: $i/3 rem;
+       padding-right: $i/3 rem;
+    }
+    .py-#{$i} {
+       padding-top: $i/3 rem;
+       padding-bottom: $i/3 rem;
+    }
+    .pt-#{$i} {
+       padding-top: $i/3 rem;
+    }
+    .pr-#{$i} {
+       padding-right: $i/3 rem;
+    }
+    .pb-#{$i} {
+       padding-bottom: $i/3 rem;
+    }
+    .pl-#{$i} {
+       padding-left: $i/3 rem;
+    }
+   
+    .m-#{$i} {
+       margin: $i/3 rem;
+    }
+    .mx-#{$i} {
+       margin-left: $i/3 rem;
+       margin-right: $i/3 rem;
+    }
+    .my-#{$i} {
+       margin-top: $i/3 rem;
+       margin-bottom: $i/3 rem;
+    }
+    .mt-#{$i} {
+       margin-top: $i/3 rem;
+    }
+    .mr-#{$i} {
+       margin-right: $i/3 rem;
+    }
+    .mb-#{$i} {
+       margin-bottom: $i/3 rem;
+    }
+    .ml-#{$i} {
+       margin-left: $i/3 rem;
+    }
+   }
