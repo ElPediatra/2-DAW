@@ -1,0 +1,17 @@
+/*.bg-primary-50 , .bg-danger-90 ,...
+ * Add a new partial helpers/_background.scss
+ * Use a nested iteration (@for within @each or vice versa) to generate
+ * the classes .bg-primary-X , .bg-danger-X , ... with X equal to 0, 10,
+ * 20, ..., 100.
+ * - The background-color should be set to specified color, with an alpha
+ * value of X/100.
+ */
+
+@each $class, $color in $color-map {
+  @for $i from 0 through 10 {
+    $percentage: $i * 10;
+  .bg-#{$class}-#{$percentage} {
+      background-color: rgba($color, $percentage / 100);
+    }
+  }
+}

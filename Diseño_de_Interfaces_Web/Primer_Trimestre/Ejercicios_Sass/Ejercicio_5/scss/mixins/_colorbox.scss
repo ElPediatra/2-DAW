@@ -1,0 +1,19 @@
+/* Afterwards, try moving the "box doce" to a mixin color-box in
+ * mixins/_colorbox.scss
+ * - Import this new partial mixins/_colorbox.scss at the correct
+ *   place in style.scss.
+ * - The mixin color-box should have (at least) one parameter for the
+ *   $color (but you might add differtent parameters as well)
+ */
+
+@import '../variables';
+
+@mixin color-box($color) {
+    background-color: rgba($color, 0.15);
+    color: $color;
+    border: 1px solid lighten($color, -10%);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+  }
+  

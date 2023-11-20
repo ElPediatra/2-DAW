@@ -11,13 +11,15 @@
  *   - Add a border-radius of 0.25rem.
  */
 
-@each $class, $color in $color-map {
-  .box-#{$class} { //Cambio el elemento a box
-    color: $color; //Cojo el color que me incluyen como el color de texto
-    background-color: rgba($color, 0.15); //Uso el color indicado y le aplico un alpha (transparencia) de 0.15
-    border: 1px solid adjust-color($color, $lightness: -10%); //Aplico un borde del mismo color un 10% más oscuro
-    padding: 1rem; //Aplico padding como se pide
-    margin-bottom: 1rem; //Aplico margin-bottom como se pide
-    border-radius: 0.25rem; //Aplico border-radius como se solicita
+@import '../variables';
+
+ @each $class, $color in $color-map {
+  .box-#{$class} {
+    color: $color;
+    background-color: rgba($color, 0.15);
+    border: 1px solid adjust-color($color, $lightness: -10%);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
   }
 }
