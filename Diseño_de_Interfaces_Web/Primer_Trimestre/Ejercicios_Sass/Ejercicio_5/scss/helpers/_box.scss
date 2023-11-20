@@ -1,0 +1,23 @@
+/*
+ * Use an @each rule to define the classes .bopx-primary , .box-danger
+ * , ... which change an element into a "box" with colors defined in $color-map.
+ *
+ *   - The text color equals the specified color.
+ *   - The background-color equals the specified color, but with an alpha value of
+ *     0.15.
+ *   - Add a solid, 1px border in the specified color, but with an adjusted $lightness
+ *     of -10%.
+ *   - Add a padding and margin-bottom of 1rem.
+ *   - Add a border-radius of 0.25rem.
+ */
+
+@each $class, $color in $color-map {
+  .box-#{$class} { //Cambio el elemento a box
+    color: $color; //Cojo el color que me incluyen como el color de texto
+    background-color: rgba($color, 0.15); //Uso el color indicado y le aplico un alpha (transparencia) de 0.15
+    border: 1px solid adjust-color($color, $lightness: -10%); //Aplico un borde del mismo color un 10% más oscuro
+    padding: 1rem; //Aplico padding como se pide
+    margin-bottom: 1rem; //Aplico margin-bottom como se pide
+    border-radius: 0.25rem; //Aplico border-radius como se solicita
+  }
+}

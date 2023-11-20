@@ -1,31 +1,15 @@
-$color-map: (
-    "gray-50": #f7fafc,
-    "white-90": rgba(255, 255, 255, 0.9),
-    "info-40": rgba(59, 130, 246, 0.4),
-    "info-30": rgba(59, 130, 246, 0.3)
-);
+// Import fonts & icons
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 
-body {
-    background-color: map-get($color-map, "gray-50");
-}
+// Configuration
+@import "variables";
+@import "reset";
 
-main {
-    background-color: map-get($color-map, "white-90");
-    padding: 16px;
-}
+// Layout & components
+@import "type";
+@import "grid";
 
-.box-success {
-    background-color: #c1f5a5;
-    padding: 16px;
-    border-radius: 4px;
-}
-
-.bg-info-40 {
-    background-color: map-get($color-map, "info-40");
-    padding: 16px;
-}
-
-.bg-info-30 {
-    background-color: map-get($color-map, "info-30");
-    padding: 16px;
-}
+//Helpers
+@import "helpers/text";
+@import "helpers/border";
