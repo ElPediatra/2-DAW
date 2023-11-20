@@ -1,14 +1,16 @@
-$bg-gray-50: #f7fafc;
-$bg-white-90: rgba(255, 255, 255, 0.9);
-$bg-info-40: rgba(59, 130, 246, 0.4);
-$bg-info-30: rgba(59, 130, 246, 0.3);
+$color-map: (
+    "gray-50": #f7fafc,
+    "white-90": rgba(255, 255, 255, 0.9),
+    "info-40": rgba(59, 130, 246, 0.4),
+    "info-30": rgba(59, 130, 246, 0.3)
+);
 
 body {
-    background-color: $bg-gray-50;
+    background-color: map-get($color-map, "gray-50");
 }
 
 main {
-    background-color: $bg-white-90;
+    background-color: map-get($color-map, "white-90");
     padding: 16px;
 }
 
@@ -19,11 +21,11 @@ main {
 }
 
 .bg-info-40 {
-    background-color: $bg-info-40;
+    background-color: map-get($color-map, "info-40");
     padding: 16px;
 }
 
 .bg-info-30 {
-    background-color: $bg-info-30;
+    background-color: map-get($color-map, "info-30");
     padding: 16px;
 }
