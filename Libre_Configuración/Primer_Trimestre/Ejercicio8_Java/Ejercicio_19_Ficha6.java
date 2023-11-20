@@ -1,6 +1,7 @@
 /* Alberto Gómez Morales - 2º DAW - Libre Configuración
  * 
-/* Se dice que un número entero es un número perfecto si sus factores, incluyendo 1
+/* 
+ * Se dice que un número entero es un número perfecto si sus factores, incluyendo 1
  * (pero no el número entero), al sumarse dan como resultado el número entero. Por
  * ejemplo, 6 es un número perfecto ya que 6 = 1 + 2 + 3. Escriba un método llamado
  * perfecto que determine si el parámetro número es un número perfecto. Use este método
