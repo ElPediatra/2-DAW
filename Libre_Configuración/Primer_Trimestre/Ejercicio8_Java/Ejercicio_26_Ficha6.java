@@ -19,7 +19,7 @@ import java.util.Scanner;
 
 public class Ejercicio_26_Ficha6 {
         public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         String respuesta;
 
         do {
@@ -32,7 +32,7 @@ public class Ejercicio_26_Ficha6 {
 
             while (!adivinado) {
                 System.out.print("Ingresa tu intento: ");
-                intento = scanner.nextInt();
+                intento = teclado.nextInt();
 
                 if (intento == numeroAdivinar) {
                     System.out.println("¡Felicidades! Adivinaste el número.");
@@ -45,10 +45,10 @@ public class Ejercicio_26_Ficha6 {
             }
 
             System.out.print("¿Deseas jugar otra vez? (s/n): ");
-            respuesta = scanner.next();
+            respuesta = teclado.next();
         } while (respuesta.equalsIgnoreCase("s"));
 
         System.out.println("¡Gracias por jugar! Hasta luego.");
-        scanner.close();
+        teclado.close();
     }
 }
