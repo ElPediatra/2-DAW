@@ -1,7 +1,0 @@
-@each $name, $color in $color-map {
-    @for $i from 0 through 100 {
-       .bg-#{$name}-#{$i} {
-         background-color: rgba($color, $i/100);
-       }
-    }
-   }
