@@ -18,7 +18,7 @@ import java.util.Scanner;
 
 public class Ejercicio_22_Ficha6 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         int caraCount = 0;
         int cruzCount = 0;
         
@@ -29,7 +29,7 @@ public class Ejercicio_22_Ficha6 {
             System.out.println("1. Lanzar moneda");
             System.out.println("2. Salir");
             
-            int opcion = scanner.nextInt();
+            int opcion = teclado.nextInt();
             
             if (opcion == 1) {
                 boolean resultado = tirar();
@@ -52,16 +52,16 @@ public class Ejercicio_22_Ficha6 {
         System.out.println("Cara: " + caraCount + " veces");
         System.out.println("Cruz: " + cruzCount + " veces");
         
-        scanner.close();
+        teclado.close();
     }
     
     public static boolean tirar() {
         double random = Math.random();
         
         if (random >= 0.5) {
-            return true; // Cruz
+            return true; //Cruz
         } else {
-            return false; // Cara
+            return false; //Cara
         }
     }
 }
