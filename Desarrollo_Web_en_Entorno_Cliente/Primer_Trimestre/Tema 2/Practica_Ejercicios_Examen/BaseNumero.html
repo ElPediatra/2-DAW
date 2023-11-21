@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Base</title>
+</head>
+<body>
+    <h1>Convertidor de Base</h1>
+    <label for="numeroAqui">Escribe un número:</label>
+    <input type="number" id="numeroAqui">
+
+    <label for="baseAqui">Escribe a que base quieres pasar el número:</label>
+    <select id="baseAqui">
+        <option value="2">Binario</option>
+        <option value="8">Octal</option>
+        <option value="10" selected>Decimal</option>
+        <option value="16">Hexadecimal</option>
+    </select>
+
+    <button onclick="convertirNumero()">Convertir</button>
+    
+    <p id="resultado"></p>
+
+    <script src="BaseNumero.js"></script>
+</body>
+</html>
