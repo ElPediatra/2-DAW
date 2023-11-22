@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.breadcrumb {
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+}
+.breadcrumb .breadcrumb-item {
+  padding: 0 0.75rem;
+}
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: #6c757d;
+  padding: 0 0.75rem;
+  content: "·";
+}/*# sourceMappingURL=style.css.map */
