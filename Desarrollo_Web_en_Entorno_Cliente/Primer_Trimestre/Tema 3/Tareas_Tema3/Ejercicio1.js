@@ -1,3 +1,5 @@
+/* Ejercicio 1 - Página 97 - Alberto Gómez Morales */
+
 // Obtener la hora actual
 var horaActual = new Date().getHours();
 
