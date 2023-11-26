@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 7 - Alberto Gómez Morales</title>
+  </head>
 <body>
   <!-- Botón para llamar al método "saluda()" -->
   <button onclick="persona.saluda()">Saluda</button>
@@ -11,23 +12,6 @@
   <!-- Botón para llamar al método "bio()" -->
   <button onclick="persona.bio()">Biografía</button>
 
-  <script>
-    var persona = {
-      name: ['Rafa', 'Nadal'], // Nombre de la persona
-      age: 30, // Edad de la persona
-      gender: 'masculino', // Género de la persona
-      interests: ['tenis', 'futbol'], // Intereses de la persona
-
-      // Método para mostrar la biografía de la persona
-      bio: function() {
-        alert(this.name[0] + ' ' + this.name[1] + ' tiene ' + this.age + ' años y le gusta el ' + this.interests[0] + ' y el ' + this.interests[1] + '.');
-      },
-
-      // Método para saludar
-      saluda: function() {
-        alert('Hola, me llamo ' + this.name[0] + '.');
-      }
-    };
-  </script>
+  <script src="Ejercicio7.js"></script>
 </body>
 </html>

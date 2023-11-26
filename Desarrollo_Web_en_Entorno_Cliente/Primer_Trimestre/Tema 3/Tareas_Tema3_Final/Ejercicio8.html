@@ -3,35 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perrillos y Ciudades</title>
+  <title>Ejercicio 8 - Alberto Gómez Morales </title>
 </head>
 <body>
-  <script>
-    // Definición del array "perrillos" con nombres de perros
-    var perrillos = ["Rocket", "Flash", "Bella", "Slugger"];
-    console.log(perrillos.toString());
-
-    // Definición de la cadena "ciudades" con nombres de ciudades
-    var ciudades = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
-    perrillos = ciudades.split(',');
-    console.log(perrillos.toString());
-
-    // Eliminar elementos que contengan una "C" (mayúscula o minúscula)
-    for (var i = 0; i < perrillos.length; i++) {
-      if (perrillos[i].toLowerCase().includes('c')) {
-        perrillos.splice(i, 1);
-        i--;
-      }
-    }
-    console.log(perrillos.toString());
-
-    // Combinar nombres de perros y ciudades en el array "perrillos"
-    perrillos.unshift('Rocket', 'Flash', 'Bella', 'Slugger');
-    console.log(perrillos.toString());
-
-    // Agregar "Estepona" al principio del array "perrillos"
-    perrillos.unshift('Estepona');
-    console.log(perrillos.toString());
-  </script>
+  <script src="Ejercicio8.js"></script>
 </body>
 </html>
+

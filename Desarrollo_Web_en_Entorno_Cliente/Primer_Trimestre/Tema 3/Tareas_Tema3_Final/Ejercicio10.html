@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creación y Mostrado de Cookies</title>
+  <title>Ejercicio 10 - Alberto Gómez Morales</title>
 </head>
 <body>
   <h1>Creación y Mostrado de Cookies</h1>
@@ -14,33 +14,6 @@
   <h2>Cookies creadas:</h2>
   <ul id="cookieList"></ul>
 
-  <script>
-    function crearCookies() {
-      // Crear las cookies
-      document.cookie = "miCookie1=Contenido de la primera cookie";
-      document.cookie = "miCookie2=Contenido de la segunda cookie";
-
-      // Mostrar las cookies creadas
-      mostrarCookies();
-    }
-
-    function mostrarCookies() {
-      var cookieList = document.getElementById("cookieList");
-      cookieList.innerHTML = "";
-
-      // Obtener todas las cookies
-      var cookies = document.cookie.split(";");
-
-      // Recorrer las cookies y agregarlas a la lista
-      for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i].trim();
-        var nombre = cookie.split("=")[0];
-        var contenido = cookie.split("=")[1];
-        var listItem = document.createElement("li");
-        listItem.textContent = nombre + ": " + contenido;
-        cookieList.appendChild(listItem);
-      }
-    }
-  </script>
+  <script src="Ejercicio10.js"></script>
 </body>
 </html>

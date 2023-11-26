@@ -1,3 +1,4 @@
+//Creo la funcion del objeto (Construtor)
 function Coche(modelo, color, kms, combustible) {
     this.modelo = modelo;
     this.color = color;
@@ -5,6 +6,7 @@ function Coche(modelo, color, kms, combustible) {
     this.combustible = combustible;
 }
 
+//Creo 2 objetos
 var miCoche = new Coche("Mercedes E330", "negro", 120000, "diésel");
 var tuCoche = new Coche("BMW 318", "blanco", 210000, "gasolina");
 
