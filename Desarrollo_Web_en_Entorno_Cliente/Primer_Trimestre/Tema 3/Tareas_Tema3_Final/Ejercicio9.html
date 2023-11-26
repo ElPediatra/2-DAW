@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Búsqueda de CP y Ciudad</title>
+</head>
+<body>
+  <!-- Campo de texto para ingresar el texto de búsqueda -->
+  <input type="text" id="searchText" placeholder="Ingresa el texto de búsqueda">
+
+  <!-- Botón para realizar la búsqueda -->
+  <button onclick="buscar()">Buscar</button>
+
+  <!-- Párrafo donde se mostrarán los resultados -->
+  <p id="result"></p>
+
+  <script>
+    // Array con elementos en el formato "CP; Ciudad"
+    var elementos = ["28924; Estepona", "28001; Madrid", "08001; Barcelona", "41001; Sevilla", "46001; Valencia"];
+
+    function buscar() {
+      // Obtener el texto de búsqueda ingresado por el usuario
+      var textoBusqueda = document.getElementById("searchText").value.toLowerCase();
+
+      // Buscar coincidencias en el array de elementos
+      var resultados = elementos.filter(function(elemento) {
+        var partes = elemento.split("; ");
+        var cp = partes[0];
+        var ciudad = partes[1].toLowerCase();
+        return cp.includes(textoBusqueda) || ciudad.includes(textoBusqueda);
+      });
+
+      // Mostrar los resultados
+      var resultadoHTML = "";
+      if (resultados.length > 0) {
+        resultadoHTML = resultados.join("<br>");
+      } else {
+        resultadoHTML = "No se encontraron resultados.";
+      }
+      document.getElementById("result").innerHTML = resultadoHTML;
+    }
+  </script>
+</body>
+</html>

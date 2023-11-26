@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensajes de Navidad</title>
+</head>
+<body>
+  <h1>Mensajes de Navidad</h1>
+  <ul></ul>
+  <script>
+    // Obtener la referencia al elemento <ul> en el DOM
+    var list = document.querySelector('ul');
+
+    // Definir un array de saludos
+    var saludos = ['Feliz cumpleaños!', 'Feliz navidades a todos', 'Te deseo una feliz navidad', 'En Navidades nos vamos de fiesta', 'Pasa un buen fin de semana'];
+
+    // Recorrer el array de saludos
+    for (var i = 0; i < saludos.length; i++) {
+      // Obtener el saludo actual del array
+      var input = saludos[i];
+
+      // Verificar si el saludo contiene la palabra "Navidad"
+      if (input.indexOf('Navidad') !== -1) {
+        // Si contiene la palabra "Navidad", agregar el saludo a la lista
+        var result = input;
+        var listItem = document.createElement('li');
+        listItem.textContent = result;
+        list.appendChild(listItem);
+      }
+    }
+  </script>
+</body>
+</html>
