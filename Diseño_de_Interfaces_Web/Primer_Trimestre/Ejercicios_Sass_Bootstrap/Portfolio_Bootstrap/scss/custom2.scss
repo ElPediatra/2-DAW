@@ -10,17 +10,17 @@
 
 /* Uso !default para marcar mis valores por defecto en estas variables */
 /* Aumento el tamaño del container md en un 10%, de 80 a 90 */
-$container-md: 90% !default;
+$container-md: 90%;
 
 /* Creo mi breakpoint */
-$agm-breakpoint: 600px !default;
+$agm-breakpoint: 600px;
 
 /* Actualizo los breakpoints añadiendo el mío entra el sm y md */
 $grid-breakpoints: (
   sm: 500px,
-  agm: $custom-breakpoint,
+  agm: $agm-breakpoint,
   md: 768px,
-) !default;
+);
 
 /* Aplico efectos css para verlo en la web */
 
