@@ -12,6 +12,6 @@ function buscarUltimaPosicion() {
     //Busco la última posición de la palabra usando LastIndexOf()
     var ultimaPosicion = frase.toLowerCase().lastIndexOf(palabra.toLowerCase());
 
-    //Mostrar el resultado
+    //Muestro el resultado
     document.getElementById('resultado').innerText = `La última posición de "${palabra}" es: ${ultimaPosicion}`;
 }
