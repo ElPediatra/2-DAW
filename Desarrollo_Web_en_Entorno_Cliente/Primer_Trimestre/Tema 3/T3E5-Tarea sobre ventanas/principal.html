@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+   <html lang="es">
+      <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta name="author" content="Alberto Gómez Morales">
+         <title>P&aacute;gina con Javascript</title>
+         <script src="script.js" defer></script> <!--Defer para que se ejecute todo el rato con la ventana abierta-->
+      </head>
+   <body>
+      <h1> &Eacute;sta es la p&aacute;gina principal</h1>
+      <h2> Alberto G&oacute;mez Morales </h2>
+
+      <button onclick="abrirVentana();">Abrir Ventana</button><br>
+      <button onclick="cerrarVentanaSecundaria();">Cerrar Ventana Secundaria</button><br>
+      <button onclick="pedirCoordenadas();">Pedir Coordenadas</button><br>
+
+      <label for="colorSelector">Seleccionar Colores:</label>
+         <select id="colorSelector">
+            <option value="red">Rojo</option>
+            <option value="green">Verde</option>
+            <option value="blue">Azul</option>
+         </select>
+      <button onclick="seleccionarColores();">Aplicar Colores</button><br>
+
+      <button onclick="aplicarFocus();">Aplicar Focus</button><br>
+      <button onclick="aplicarBlur();">Aplicar Blur</button><br>
+      <button onclick="tiempoActivacion();">Tiempo de Activación</button><br>
+      <button onclick="textoVentana();">Texto en Ventana</button><br>
+      <button onclick="estiloTextoVentana();">Estilo de Texto en Ventana</button><br>
+   </body>
+</html>
+
