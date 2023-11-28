@@ -11,23 +11,13 @@
       <h1> &Eacute;sta es la p&aacute;gina principal</h1>
       <h2> Alberto G&oacute;mez Morales </h2>
 
-      <button onclick="abrirVentana();">Abrir Ventana</button><br>
-      <button onclick="cerrarVentanaSecundaria();">Cerrar Ventana Secundaria</button><br>
-      <button onclick="pedirCoordenadas();">Pedir Coordenadas</button><br>
+       <!-- Botón para abrir la página secundaria -->
+       <button id="abrirSecundaria" onclick="abrirPaginaSecundaria()">Abrir Página Secundaria</button> <br>
 
-      <label for="colorSelector">Seleccionar Colores:</label>
-         <select id="colorSelector">
-            <option value="red">Rojo</option>
-            <option value="green">Verde</option>
-            <option value="blue">Azul</option>
-         </select>
-      <button onclick="seleccionarColores();">Aplicar Colores</button><br>
+       <!-- Botón para cerrar la página secundaria si está abierta -->
+       <button id="cerrarSecundaria" onclick="cerrarPaginaSecundaria()">Cerrar Página Secundaria</button> <br><br>
 
-      <button onclick="aplicarFocus();">Aplicar Focus</button><br>
-      <button onclick="aplicarBlur();">Aplicar Blur</button><br>
-      <button onclick="tiempoActivacion();">Tiempo de Activación</button><br>
-      <button onclick="textoVentana();">Texto en Ventana</button><br>
-      <button onclick="estiloTextoVentana();">Estilo de Texto en Ventana</button><br>
+       <!-- Botón para solicitar y aplicar las coordenadas -->
+      <button id="solicitarCoordenadas" onclick="solicitarCoordenadas()">Solicitar Coordenadas</button> <br><br>
    </body>
 </html>
-
