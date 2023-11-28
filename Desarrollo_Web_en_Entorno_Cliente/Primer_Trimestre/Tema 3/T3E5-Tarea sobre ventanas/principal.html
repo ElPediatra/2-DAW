@@ -7,17 +7,41 @@
          <title>P&aacute;gina con Javascript</title>
          <script src="script.js" defer></script> <!--Defer para que se ejecute todo el rato con la ventana abierta-->
       </head>
-   <body>
-      <h1> &Eacute;sta es la p&aacute;gina principal</h1>
-      <h2> Alberto G&oacute;mez Morales </h2>
 
-       <!-- Botón para abrir la página secundaria -->
-       <button id="abrirSecundaria" onclick="abrirPaginaSecundaria()">Abrir Página Secundaria</button> <br>
+<body>
+   <h1> &Eacute;sta es la p&aacute;gina principal</h1>
+   <h2> Alberto G&oacute;mez Morales </h2>
+   
+   <!-- Botón para abrir la ventana secundaria -->
+   <button onclick="abrirVentanaSecundaria();">Abrir Ventana Secundaria</button>
+   <br>
+   
+   <!-- Botón para cerrar la ventana secundaria -->
+   <button onclick="cerrarVentanaSecundaria();">Cerrar Ventana Secundaria</button>
+   <br>
 
-       <!-- Botón para cerrar la página secundaria si está abierta -->
-       <button id="cerrarSecundaria" onclick="cerrarPaginaSecundaria()">Cerrar Página Secundaria</button> <br><br>
+   <!-- Botón para obtener y aplicar coordenadas -->
+   <button onclick="aplicarCoordenadas();">Aplicar Coordenadas</button>
+   <br>
 
-       <!-- Botón para solicitar y aplicar las coordenadas -->
-      <button id="solicitarCoordenadas" onclick="solicitarCoordenadas()">Solicitar Coordenadas</button> <br><br>
-   </body>
+   <!-- Selector de color para cambiar el color de fondo de la ventana secundaria -->
+   <label for="colorSelector">Selecciona el color de fondo:</label>
+   <input type="color" id="colorSelector">
+   <button onclick="cambiarColorFondo();">Cambiar Color de Fondo</button>
+   <br>
+
+   <!-- Botones para focus y blur -->
+   <button onclick="enfocarVentana();">Focus en Ventana Secundaria</button>
+   <button onclick="quitarEnfoqueVentana();">Quitar Enfoque en Ventana Secundaria</button>
+   <br>
+   
+   <!-- Botón para establecer el tiempo de actividad -->
+   <button onclick="establecerTiempoActividad();">Establecer Tiempo de Actividad</button>
+   <br>
+
+   <!-- Botón para establecer el texto y estilo en la ventana secundaria -->
+   <button onclick="establecerTextoEstilo();">Establecer Texto y Estilo</button>
+   <br>
+
+</body>
 </html>
