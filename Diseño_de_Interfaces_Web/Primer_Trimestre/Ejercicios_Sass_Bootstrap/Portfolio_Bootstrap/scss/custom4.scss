@@ -3,6 +3,9 @@
 
 // Include any default variable overrides here (though functions won't be available)
 
+/* Cambio el color del placeholder para que el texto también sea gris como el resto */
+$input-placeholder-color: grey;
+
 /* Añado mi código para editar el breadcrumb (aquí arriva porque son las variables) */
 @import "../bootstrap/scss/bootstrap.scss";
 

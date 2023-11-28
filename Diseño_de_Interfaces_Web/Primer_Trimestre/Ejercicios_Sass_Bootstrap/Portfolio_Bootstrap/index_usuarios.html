@@ -7,60 +7,175 @@
     <title>Bootstrap user list</title>
 </head>
 <body class="bg-dark">
+
     <div class="container">
-        <div class="row">
+
+        <!-- Cabecera -->
+        <header class="row">
+            <!-- Titulo -->
+            <div class="col">
+                <h1 class="text-secondary">Users</h1>
+            </div>
+
+            <div class="row">
+                <!-- Buscador -->
+                <div class="col-4">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 bg-dark text-secondary border-secondary" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>  
+                
+                <!-- Menú -->
+                <div class="col-8 d-flex justify-content-end text-primary">
+                      <nav class="navbar">
+                        <ol class="nav nav-pills">
+                          <li class="nav-item"><a class="nav-link" href="#">Reputation</a></li>
+                          <li class="nav-item"><a class="nav-link bg-primary text-white" href="#" role="button" aria-expanded="false">New Users</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Editors</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Moderators</a></li>
+                        </ol>
+                      </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Cartas -->
+        <article class="row">
+
             <!-- Carta1 -->
             <div class="col">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 bg-dark text-secondary border-secondary" style="max-width: 540px;">
                     <div class="row g-0">
                       <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
+                        <img src="https://placekitten.com/400/400" class="img-fluid rounded-circle" alt="Lelah">
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <h5 class="card-title">John Doe</h5>
+                          <p class="card-text">Troy, MI</p>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Nature</a>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Travel</a>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Sports</a>
                         </div>
                       </div>
                     </div>
                   </div>
             </div>
+
             <!-- Carta2 -->
             <div class="col">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 bg-dark text-secondary border-secondary" style="max-width: 540px;">
                     <div class="row g-0">
                       <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
+                        <img src="https://placekitten.com/400/400" class="img-fluid rounded-circle" alt="Lelah">
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <h5 class="card-title">Lelah Nichols</h5>
+                          <p class="card-text">Fort Worth, TX</p>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Electronics</a>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Tech</a>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Music</a>
                         </div>
                       </div>
                     </div>
                   </div>
             </div>
+
             <!-- Carta3 -->
             <div class="col">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 bg-dark text-secondary border-secondary" style="max-width: 540px;">
                     <div class="row g-0">
                       <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
+                        <img src="https://placekitten.com/400/400" class="img-fluid rounded-circle" alt="Annie">
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <h5 class="card-title">Annie Rice</h5>
+                          <p class="card-text">Troy, MI</p>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Electronics</a>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Tech</a>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Music</a>
                         </div>
                       </div>
                     </div>
                   </div>
             </div>
-        </div>
+        </article>
+
+        <article class="row">
+            <!-- Carta4 -->
+            <div class="col">
+                <div class="card mb-3 bg-dark text-secondary border-secondary" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="https://placekitten.com/400/400" class="img-fluid rounded-circle" alt="Lelah">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Thomas Sinew</h5>
+                          <p class="card-text">Lynn, MA</p>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Vintage</a>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Clothes</a>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Sports</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <!-- Carta5 -->
+            <div class="col">
+                <div class="card mb-3 bg-dark text-secondary border-secondary" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="https://placekitten.com/400/400" class="img-fluid rounded-circle" alt="Lelah">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Brianna Haylee</h5>
+                          <p class="card-text">Boston, MA</p>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Software</a>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Design</a>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">UI/UX</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <!-- Carta6 -->
+            <div class="col">
+                <div class="card mb-3 bg-dark text-secondary border-secondary" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="https://placekitten.com/400/400" class="img-fluid rounded-circle" alt="Annie">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">James Hall</h5>
+                          <p class="card-text">Austin, TX</p>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Dance</a>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Fashion</a>
+                          <a href="#" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Music</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </article>
+
+        <article class="row">
+            <!-- Cambiar página -->
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link bg-secondary text-white border-secondary" href="#" disabled>Previous</a></li>
+                <li class="page-item"><a class="page-link bg-primary text-white border-secondary" href="#">1</a></li>
+                <li class="page-item"><a class="page-link bg-dark border-secondary" href="#">2</a></li>
+                <li class="page-item"><a class="page-link bg-dark border-secondary" href="#">3</a></li>
+                <li class="page-item"><a class="page-link bg-dark border-secondary" href="#">Next</a></li>
+            </ul>
+        </article>
+
     </div>
 </body>
 </html>
