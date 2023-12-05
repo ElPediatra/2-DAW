@@ -1,3 +1,6 @@
+/*
+ * Genera una rifa con premios aleatorios.
+ */
 function generarRifa() {
     let rifa = new Array(1000).fill(0);
     let premios = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000];

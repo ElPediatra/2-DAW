@@ -1,3 +1,9 @@
+/*
+ * Genera tres vectores a partir de un vector inicial.
+ * El vector 1 se llena con números aleatorios del 1 al 500.
+ * El vector 2 contiene los números menores a 250 del vector 1.
+ * El vector 3 contiene los números mayores o iguales a 250 del vector 1.
+ */
 function generarVectores() {
     let vector1 = [];
     let vector2 = [];

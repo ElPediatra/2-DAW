@@ -1,3 +1,7 @@
+/*
+ * Genera un vector de números aleatorios y realiza operaciones con sus elementos.
+ */
+
 function generarVector() {
     let vector = [];
     for (let i = 0; i < 5; i++) {
