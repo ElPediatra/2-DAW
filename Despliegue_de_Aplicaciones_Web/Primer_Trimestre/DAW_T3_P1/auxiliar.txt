@@ -1,0 +1,5 @@
+Controlador Ubuntu Server:
+    Nombre: ens18
+    IP: 192.168.20.28
+    IP WS: 192.168.20.58
+    Grupo DNS: daw13.net
