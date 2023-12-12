@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Atrás</title>
+    <script type="text/javascript" src="cronometro.js"></script>
+</head>
+<body>
+    <h1>Cuenta Atrás - Alberto Gómez Morales</h1>
+    <label for="horas">Horas:</label>
+    <input type="number" id="horas" min="0" value="0"><br><br>
+    <label for="minutos">Minutos:</label>
+    <input type="number" id="minutos" min="0" max="59" value="0"><br><br>
+    <label for="segundos">Segundos:</label>
+    <input type="number" id="segundos" min="0" max="59" value="0"><br><br>
+    <button onclick="empezarCuenta()">Iniciar Cuenta Atrás</button>
+    <div id="cuenta_atras"></div>
+</body>
+</html>
