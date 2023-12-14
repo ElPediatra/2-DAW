@@ -33,7 +33,12 @@
       <div class="container-fluid">
         <!-- Logo de la Empresa -->
         <a class="navbar-brand" href="inicio.html">
-          <img src="img/Logo-Vacio.webp" class="rounded-pill logo" alt="Logo">
+          <!-- Pongo 2 imagenes al ser un logo vacío, mantengo el formato de webp y png-->
+          <picture class="rounded-pill logo">
+            <source srcset="img/Logo-Vacio.webp" type="image/webp">
+            <source srcset="img/Logo-Vacio.png" type="image/jpeg">
+            <img src="img/Logo-Vacio.png" alt="Logo" class="rounded-pill logo">
+          </picture>
         </a>
         <!-- Menú Desplegable -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
