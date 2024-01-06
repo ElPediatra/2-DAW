@@ -1,8 +1,0 @@
-Usar <picture> + <source srcset> para cambiar las imagenes de la web.
-
-Varios formatos y tamaños
-    - webp
-    - avif
-    - png
-    - jpg (por defecto para navegadores viejos)
-    - svg

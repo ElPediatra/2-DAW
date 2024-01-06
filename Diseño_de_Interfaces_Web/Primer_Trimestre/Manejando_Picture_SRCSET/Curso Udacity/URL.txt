@@ -1,0 +1,2 @@
+URL Curso Udacity:
+    - https://www.udacity.com/course/responsive-images--ud882
