@@ -33,10 +33,28 @@
       <div class="container-fluid">
         <!-- Logo de la Empresa -->
         <a class="navbar-brand" href="inicio.html">
-          <!-- Pongo 2 imagenes al ser un logo vacío, mantengo el formato de webp y png-->
           <picture class="rounded-pill logo">
-            <source srcset="img/Logo-Vacio.webp" type="image/webp">
-            <source srcset="img/Logo-Vacio.png" type="image/jpeg">
+            <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+            <source srcset="img/Logo-Vacio-S.webp" type="image/webp" media="(max-width: 575.98px)">
+            <source srcset="img/Logo-Vacio-S.avif" type="image/avif" media="(max-width: 575.98px)">
+            <source srcset="img/Logo-Vacio-S.jpg" type="image/jpg" media="(max-width: 575.98px)">
+            
+            <!-- Imagen para pantallas medianas (md) -->
+            <source srcset="img/Logo-Vacio-M.webp" type="image/webp" media="(min-width: 576px) and (max-width: 767.98px)">
+            <source srcset="img/Logo-Vacio-M.avif" type="image/avif" media="(min-width: 576px) and (max-width: 767.98px)">
+            <source srcset="img/Logo-Vacio-M.jpg" type="image/jpg" media="(min-width: 576px) and (max-width: 767.98px)">
+            
+            <!-- Imagen para pantallas grandes (lg) -->
+            <source srcset="img/Logo-Vacio-L.webp" type="image/webp" media="(min-width: 768px) and (max-width: 991.98px)">
+            <source srcset="img/Logo-Vacio-L.avif" type="image/avif" media="(min-width: 768px) and (max-width: 991.98px)">
+            <source srcset="img/Logo-Vacio-L.jpg" type="image/jpg" media="(min-width: 768px) and (max-width: 991.98px)">
+            
+            <!-- Imagen para pantallas extra grandes (xl) -->
+            <source srcset="img/Logo-Vacio-XL.webp" type="image/webp" media="(min-width: 992px)">
+            <source srcset="img/Logo-Vacio-XL.avif" type="image/avif" media="(min-width: 992px)">
+            <source srcset="img/Logo-Vacio-XL.jpg" type="image/jpg" media="(min-width: 992px)">
+            
+            <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
             <img src="img/Logo-Vacio.png" alt="Logo" class="rounded-pill logo">
           </picture>
         </a>
@@ -97,31 +115,107 @@
 
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
-                <picture class="img-fluid img-thumbnail">
-                  <source srcset="img/Bar2.webp" type="image/webp">
-                  <source srcset="img/Bar2.jpg" type="image/jpeg">
-                  <img src="img/Bar2.jpg" alt="Primero" class="img-fluid img-thumbnail">
+                <picture>
+                  <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                  <source srcset="img/Bar2-S.webp" type="image/webp" media="(max-width: 575.98px)">
+                  <source srcset="img/Bar2-S.avif" type="image/avif" media="(max-width: 575.98px)">
+                  <source srcset="img/Bar2-S.jpg" type="image/jpg" media="(max-width: 575.98px)">
+            
+                  <!-- Imagen para pantallas medianas (md) -->
+                  <source srcset="img/Bar2-M.webp" type="image/webp" media="(min-width: 576px) and (max-width: 767.98px)">
+                  <source srcset="img/Bar2-M.avif" type="image/avif" media="(min-width: 576px) and (max-width: 767.98px)">
+                  <source srcset="img/Bar2-M.jpg" type="image/jpg" media="(min-width: 576px) and (max-width: 767.98px)">
+            
+                  <!-- Imagen para pantallas grandes (lg) -->
+                  <source srcset="img/Bar2-L.webp" type="image/webp" media="(min-width: 768px) and (max-width: 991.98px)">
+                  <source srcset="img/Bar2-L.avif" type="image/avif" media="(min-width: 768px) and (max-width: 991.98px)">
+                  <source srcset="img/Bar2-L.jpg" type="image/jpg" media="(min-width: 768px) and (max-width: 991.98px)">
+            
+                  <!-- Imagen para pantallas extra grandes (xl) -->
+                  <source srcset="img/Bar2-XL.webp" type="image/webp" media="(min-width: 992px)">
+                  <source srcset="img/Bar2-XL.avif" type="image/avif" media="(min-width: 992px)">
+                  <source srcset="img/Bar2-XL.jpg" type="image/jpg" media="(min-width: 992px)">
+            
+                  <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                  <img src="img/Bar2-L.jpg" alt="Primero" class="img-fluid img-thumbnail">
                 </picture>
               </div>
               <div class="carousel-item">
-                <picture class="img-fluid img-thumbnail">
-                  <source srcset="img/Bar.webp" type="image/webp">
-                  <source srcset="img/Bar.jpg" type="image/jpeg">
-                  <img src="img/Bar.jpg" alt="Segundo" class="img-fluid img-thumbnail">
+                <picture>
+                  <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                  <source srcset="img/Bar-S.webp" type="image/webp" media="(max-width: 575.98px)">
+                  <source srcset="img/Bar-S.avif" type="image/avif" media="(max-width: 575.98px)">
+                  <source srcset="img/Bar-S.jpg" type="image/jpg" media="(max-width: 575.98px)">
+            
+                  <!-- Imagen para pantallas medianas (md) -->
+                  <source srcset="img/Bar-M.webp" type="image/webp" media="(min-width: 576px) and (max-width: 767.98px)">
+                  <source srcset="img/Bar-M.avif" type="image/avif" media="(min-width: 576px) and (max-width: 767.98px)">
+                  <source srcset="img/Bar-M.jpg" type="image/jpg" media="(min-width: 576px) and (max-width: 767.98px)">
+            
+                  <!-- Imagen para pantallas grandes (lg) -->
+                  <source srcset="img/Bar-L.webp" type="image/webp" media="(min-width: 768px) and (max-width: 991.98px)">
+                  <source srcset="img/Bar-L.avif" type="image/avif" media="(min-width: 768px) and (max-width: 991.98px)">
+                  <source srcset="img/Bar-L.jpg" type="image/jpg" media="(min-width: 768px) and (max-width: 991.98px)">
+            
+                  <!-- Imagen para pantallas extra grandes (xl) -->
+                  <source srcset="img/Bar-XL.webp" type="image/webp" media="(min-width: 992px)">
+                  <source srcset="img/Bar-XL.avif" type="image/avif" media="(min-width: 992px)">
+                  <source srcset="img/Bar-XL.jpg" type="image/jpg" media="(min-width: 992px)">
+            
+                  <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                  <img src="img/Bar-L.jpg" alt="Segundo" class="img-fluid img-thumbnail">
                 </picture>                
               </div>
               <div class="carousel-item">
-                <picture class="img-fluid img-thumbnail">
-                  <source srcset="img/Dorm.webp" type="image/webp">
-                  <source srcset="img/Dorm.jpg" type="image/jpeg">
-                  <img src="img/Dorm.jpg" alt="Tercero" class="img-fluid img-thumbnail">
+                <picture>
+                  <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                  <source srcset="img/Dorm-S.webp" type="image/webp" media="(max-width: 575.98px)">
+                  <source srcset="img/Dorm-S.avif" type="image/avif" media="(max-width: 575.98px)">
+                  <source srcset="img/Dorm-S.jpg" type="image/jpg" media="(max-width: 575.98px)">
+            
+                  <!-- Imagen para pantallas medianas (md) -->
+                  <source srcset="img/Dorm-M.webp" type="image/webp" media="(min-width: 576px) and (max-width: 767.98px)">
+                  <source srcset="img/Dorm-M.avif" type="image/avif" media="(min-width: 576px) and (max-width: 767.98px)">
+                  <source srcset="img/Dorm-M.jpg" type="image/jpg" media="(min-width: 576px) and (max-width: 767.98px)">
+            
+                  <!-- Imagen para pantallas grandes (lg) -->
+                  <source srcset="img/Dorm-L.webp" type="image/webp" media="(min-width: 768px) and (max-width: 991.98px)">
+                  <source srcset="img/Dorm-L.avif" type="image/avif" media="(min-width: 768px) and (max-width: 991.98px)">
+                  <source srcset="img/Dorm-L.jpg" type="image/jpg" media="(min-width: 768px) and (max-width: 991.98px)">
+            
+                  <!-- Imagen para pantallas extra grandes (xl) -->
+                  <source srcset="img/Dorm-XL.webp" type="image/webp" media="(min-width: 992px)">
+                  <source srcset="img/Dorm-XL.avif" type="image/avif" media="(min-width: 992px)">
+                  <source srcset="img/Dorm-XL.jpg" type="image/jpg" media="(min-width: 992px)">
+            
+                  <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                  <img src="img/Dorm-L.jpg" alt="Tercero" class="img-fluid img-thumbnail">
                 </picture>             
               </div>
               <div class="carousel-item">
-                <picture class="img-fluid img-thumbnail">
-                  <source srcset="img/Casino.webp" type="image/webp">
-                  <source srcset="img/Casino.jpg" type="image/jpeg">
-                  <img src="img/Casino.jpg" alt="Cuarto" class="img-fluid img-thumbnail">
+                <picture>
+                  <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                  <source srcset="img/Casino-S.webp" type="image/webp" media="(max-width: 575.98px)">
+                  <source srcset="img/Casino-S.avif" type="image/avif" media="(max-width: 575.98px)">
+                  <source srcset="img/Casino-S.jpg" type="image/jpg" media="(max-width: 575.98px)">
+            
+                  <!-- Imagen para pantallas medianas (md) -->
+                  <source srcset="img/Casino-M.webp" type="image/webp" media="(min-width: 576px) and (max-width: 767.98px)">
+                  <source srcset="img/Casino-M.avif" type="image/avif" media="(min-width: 576px) and (max-width: 767.98px)">
+                  <source srcset="img/Casino-M.jpg" type="image/jpg" media="(min-width: 576px) and (max-width: 767.98px)">
+            
+                  <!-- Imagen para pantallas grandes (lg) -->
+                  <source srcset="img/Casino-L.webp" type="image/webp" media="(min-width: 768px) and (max-width: 991.98px)">
+                  <source srcset="img/Casino-L.avif" type="image/avif" media="(min-width: 768px) and (max-width: 991.98px)">
+                  <source srcset="img/Casino-L.jpg" type="image/jpg" media="(min-width: 768px) and (max-width: 991.98px)">
+            
+                  <!-- Imagen para pantallas extra grandes (xl) -->
+                  <source srcset="img/Casino-XL.webp" type="image/webp" media="(min-width: 992px)">
+                  <source srcset="img/Casino-XL.avif" type="image/avif" media="(min-width: 992px)">
+                  <source srcset="img/Casino-XL.jpg" type="image/jpg" media="(min-width: 992px)">
+            
+                  <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                  <img src="img/Casino-L.jpg" alt="Cuarto" class="img-fluid img-thumbnail">
                 </picture>                
               </div>
             </div>
@@ -153,10 +247,29 @@
       </div>
       <!-- Imagen / Mapa -->
       <div class="col-sm-12 col-md-6 col-lg-6">
-        <picture class="img-fluid img-thumbnail imgMapa">
-          <source srcset="img/Mist-Ward_29_4.webp" type="image/webp">
-          <source srcset="img/Mist-Ward_29_4.jpg" type="image/jpeg">
-          <img src="img/Mist-Ward_29_4.jpg" alt="Limsa Map" class="img-fluid img-thumbnail imgMapa">
+        <picture>
+            <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+            <source srcset="img/Mist-Ward_29_4-S.webp" type="image/webp" media="(max-width: 575.98px)">
+            <source srcset="img/Mist-Ward_29_4-S.avif" type="image/avif" media="(max-width: 575.98px)">
+            <source srcset="img/Mist-Ward_29_4-S.jpg" type="image/jpg" media="(max-width: 575.98px)">
+      
+            <!-- Imagen para pantallas medianas (md) -->
+            <source srcset="img/Mist-Ward_29_4-M.webp" type="image/webp" media="(min-width: 576px) and (max-width: 767.98px)">
+            <source srcset="img/Mist-Ward_29_4-M.avif" type="image/avif" media="(min-width: 576px) and (max-width: 767.98px)">
+            <source srcset="img/Mist-Ward_29_4-M.jpg" type="image/jpg" media="(min-width: 576px) and (max-width: 767.98px)">
+      
+            <!-- Imagen para pantallas grandes (lg) -->
+            <source srcset="img/Mist-Ward_29_4-L.webp" type="image/webp" media="(min-width: 768px) and (max-width: 991.98px)">
+            <source srcset="img/Mist-Ward_29_4-L.avif" type="image/avif" media="(min-width: 768px) and (max-width: 991.98px)">
+            <source srcset="img/Mist-Ward_29_4-L.jpg" type="image/jpg" media="(min-width: 768px) and (max-width: 991.98px)">
+      
+            <!-- Imagen para pantallas extra grandes (xl) -->
+            <source srcset="img/Mist-Ward_29_4-XL.webp" type="image/webp" media="(min-width: 992px)">
+            <source srcset="img/Mist-Ward_29_4-XL.avif" type="image/avif" media="(min-width: 992px)">
+            <source srcset="img/Mist-Ward_29_4-XL.jpg" type="image/jpg" media="(min-width: 992px)">
+      
+            <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+          <img src="img/Mist-Ward_29_4-L.jpg" alt="Limsa Map" class="img-fluid img-thumbnail imgMapa">
         </picture>        
       </div>
     </div>
@@ -187,11 +300,30 @@
 
         <div class="col">
             <div class="logo">
-              <picture class="rounded-pill logo">
-                <source srcset="img/Logo-Vacio.webp" type="image/webp">
-                <source srcset="img/Logo-Vacio.png" type="image/jpeg">
+              <picture>
+                <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                <source srcset="img/Logo-Vacio-S.webp" type="image/webp" media="(max-width: 575.98px)">
+                <source srcset="img/Logo-Vacio-S.avif" type="image/avif" media="(max-width: 575.98px)">
+                <source srcset="img/Logo-Vacio-S.jpg" type="image/jpg" media="(max-width: 575.98px)">
+            
+                <!-- Imagen para pantallas medianas (md) -->
+                <source srcset="img/Logo-Vacio-M.webp" type="image/webp" media="(min-width: 576px) and (max-width: 767.98px)">
+                <source srcset="img/Logo-Vacio-M.avif" type="image/avif" media="(min-width: 576px) and (max-width: 767.98px)">
+                <source srcset="img/Logo-Vacio-M.jpg" type="image/jpg" media="(min-width: 576px) and (max-width: 767.98px)">
+            
+                <!-- Imagen para pantallas grandes (lg) -->
+                <source srcset="img/Logo-Vacio-L.webp" type="image/webp" media="(min-width: 768px) and (max-width: 991.98px)">
+                <source srcset="img/Logo-Vacio-L.avif" type="image/avif" media="(min-width: 768px) and (max-width: 991.98px)">
+                <source srcset="img/Logo-Vacio-L.jpg" type="image/jpg" media="(min-width: 768px) and (max-width: 991.98px)">
+            
+                <!-- Imagen para pantallas extra grandes (xl) -->
+                <source srcset="img/Logo-Vacio-XL.webp" type="image/webp" media="(min-width: 992px)">
+                <source srcset="img/Logo-Vacio-XL.avif" type="image/avif" media="(min-width: 992px)">
+                <source srcset="img/Logo-Vacio-XL.jpg" type="image/jpg" media="(min-width: 992px)">
+            
+                <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
                 <img src="img/Logo-Vacio.jpg" alt="Logo-Vacio" class="rounded-pill logo">
-              </picture>              
+              </picture>
             </div>
         </div>
         <div class="col copy">
