@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Practica RA4_abcde</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Título -->
+    <h2>Prueba Practica RA4_abcde</h2>
+    <h3>Alberto Gómez Morales</h3>
+
+    <!-- Primer Botón, confirmar clase usuario y dar opción a cambiar contraseña (se guardará también la hora de acceso) -->
+    <p>Formulario de Usuario:</p>
+    <button onclick="ventana1Abrir()">
+        Abrir
+    </button>
+    <button onclick="ventana1Cerrar()">
+        Cerrar
+    </button>
+    <br>
+    <br>
+
+    <!-- Segundo Botón, array de números y array de seleccionados -->
+    <p> Seleccionar una cantidad de números aleatorios y escoger la cantidad quieres seleccionar de ellos (de manera aleatoria):</p>
+    <p> <strong>1º Desplegable:</strong> Cantidad total de números (entre 50 y 60).</p>
+    <p> <strong>2º Desplegable:</strong> Cantidad de números a seleccionar (entre 6 y 9).</p>
+    <button onclick="ventana2Abrir()">
+        Abrir
+    </button>
+    <button onclick="ventana2Cerrar()">
+        Cerrar
+    </button>
+        <!-- Desplegables en SELECT como se pide en el ejercicio -->
+        <select name="CantidadLista" id="seleccion1">
+            <option value="50">50</option>
+            <option value="51">51</option>
+            <option value="52">52</option>
+            <option value="53">53</option>
+            <option value="54">54</option>
+            <option value="55">55</option>
+            <option value="56">56</option>
+            <option value="57">57</option>
+            <option value="58">58</option>
+            <option value="59">59</option>
+            <option value="60">60</option>
+        </select>
+
+        <select name="CantidadSeleccion" id="seleccion2">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+    <br>
+    <br>
+
+    <!-- Mostar lista de impares de los seleccionados ordenados de mayor a menor -->
+    <p> Mostrar una lista de números impares ordenados de la lista de números seleccionados:</p>
+    <button onclick="ventana3Abrir()">
+        Abrir
+    </button>
+    <button onclick="ventana3Cerrar()">
+        Cerrar
+    </button>
+    <br>
+    <br>
+
+    <!-- Mostrar la contraseña actual del usuario y la fecha del último acceso -->
+    <p> Mostar contraseña del usuario y último acceso:</p>
+    <button onclick="ventana4Abrir()">
+        Abrir
+    </button>
+    <button onclick="ventana4Cerrar()">
+        Cerrar
+    </button>
+</body>
+</html>
