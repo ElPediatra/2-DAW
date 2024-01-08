@@ -36,8 +36,8 @@ function ventana1Abrir() {
     ventana1.document.write('<form id="formulario">Usuario: <input type="text" id="nombre"><br>Contraseña: <input type="password" id="contrasena"><br>Nueva Contraseña: <input type="password" id="nuevaContrasena"><br><input type="submit" value="Enviar"></form>');
 
     //Capturo los datos del formulario creado
-    ventana1.document.getElementById('formulario').onsubmit = function(e) {
-        e.preventDefault();
+    ventana1.document.getElementById('formulario').onsubmit = function(datos) {
+        datos.preventDefault();
         var nombre = ventana1.document.getElementById('nombre').value;
         var contrasena = ventana1.document.getElementById('contrasena').value;
         var nuevaContrasena = ventana1.document.getElementById('nuevaContrasena').value;
