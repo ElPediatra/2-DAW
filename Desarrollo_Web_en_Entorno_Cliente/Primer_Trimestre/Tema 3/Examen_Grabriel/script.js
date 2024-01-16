@@ -44,11 +44,11 @@ function ventana1Abrir() {
 
         //Comparo si la contraseña es válida y doy opción a cambiarla
         if (usuario.autenticar(nombre, contrasena)) {
-            alert('Datos correctos, ¿Deseas cambiar la contraseña?');
+            ventana1.document.write('<br><p>Datos correctos, ¿Deseas cambiar la contraseña?</p>');
             usuario.cambiarContrasena(nuevaContrasena);
             fechaHora = new Date();
         } else { //Mando mensaje de error, contraseña no válida
-            alert('Datos incorrectos ¿Quieres intentarlo de nuevo?');
+            ventana1.document.write('<br><p>Datos incorrectos ¿Quieres intentarlo de nuevo?</p>');
         }
     };
 
