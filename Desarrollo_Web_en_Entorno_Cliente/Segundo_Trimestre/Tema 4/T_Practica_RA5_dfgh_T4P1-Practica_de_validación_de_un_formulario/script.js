@@ -10,6 +10,7 @@ window.onload = function() {
     var fecha = document.getElementById('fecha');
     var telefono = document.getElementById('telefono');
     var hora = document.getElementById('hora');
+    var formulario = document.getElementById('formulario'); //Variable para la confirmación del formulario
 
     //Creo una variable para capturar los errores
     var errores = document.getElementById('errores');
@@ -34,6 +35,8 @@ window.onload = function() {
     telefono.addEventListener('blur', validarTelefono);
     //Creo un event listener para validar el campo "hora" cuando no esté en foco, llamando a la función para validarlo
     hora.addEventListener('blur', validarHora);
+    //creo un event listener para el envío del formulario que llame a la función para confirmar su envío
+    formulario.addEventListener('submit', confirmarEnvio);
 }
 
 //Función para cambiar el texto a mayúscula
@@ -183,5 +186,16 @@ function validarHora(event) {
     } else {
         //Si se ha corregido el campo, borro el mensaje de error
         errores.textContent = '';
+    }
+}
+
+//Función para validar el envío del formulario
+function confirmarEnvio(event) {
+    //Muestro un mensaje para confirmar el envío
+    var confirmacion = confirm('¿Estás seguro de que quieres enviar el formulario?');
+
+    //Si lo cancela, paro el envío del formulario
+    if (!confirmacion) {
+        event.preventDefault();
     }
 }
