@@ -1,0 +1,1 @@
+Completa el siguiente código con una función en javascript que me permita leer el  grosor del borde de la tabla mediante un botón.
