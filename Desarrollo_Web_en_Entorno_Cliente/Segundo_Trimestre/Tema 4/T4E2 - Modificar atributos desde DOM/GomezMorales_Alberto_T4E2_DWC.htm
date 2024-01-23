@@ -7,7 +7,8 @@
       </title>
       <script src="script.js"></script>
    </head>
-   <body>
+
+   <body onLoad="crearNodoTabla();">
 
       <table width="300" align="left" id="tabla1" border="2">
          <tr height="100">
@@ -48,9 +49,9 @@
       <p>
       </p>
 
-      <br>
-
-      <button onclick="grosorBorde()">Obtener grosor del borde</button>
+      <button onclick="grosorBorde()">Decir grosor</button>
+      <button onclick="aumentarBorde()">Aumentar grosor</button>
+      <button onclick="BajarBorde()">Bajar grosor</button>
 
    </body>
 </html>

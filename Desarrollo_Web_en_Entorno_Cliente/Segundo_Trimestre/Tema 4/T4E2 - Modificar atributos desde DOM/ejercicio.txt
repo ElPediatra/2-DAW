@@ -1,0 +1,9 @@
+Amplia el siguiente código con  funciones en javascript que me permita leer el 
+
+grosor, aumentar y reducir  del borde de la tabla,   mediante su  botón correspondiente.
+
+Envíalo con el siguiente formato:
+
+
+
+Apellidos_Nombre_T4E2_DWC.HTML
