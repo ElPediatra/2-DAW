@@ -1,0 +1,7 @@
+Amplia el siguiente código con  funciones en javascript que me permita mediante un botón cambiar el atributo correspondiente y
+cuando pasemos el ratón por encima de la imagen nos aparezca su descripción.  Igualmente crea otro botón para eliminar dicho
+atributo.
+
+Envíalo con el siguiente formato:
+
+Apellidos_Nombre_T4E3_DWC
