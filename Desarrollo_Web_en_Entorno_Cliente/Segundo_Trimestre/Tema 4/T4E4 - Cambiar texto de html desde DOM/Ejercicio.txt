@@ -1,0 +1,5 @@
+Amplia el siguiente código con  funciones en javascript que me permita mediante un botón cambiar el texto de cabecera de la tabla.
+Cuando pulsemos el botón, el texto de este debe de cambiar de "Cambiar cabecera " a "Restaurar cabecera"..
+
+Envíalo con el siguiente formato:
+Apellidos_Nombre_T4E4_DWC
