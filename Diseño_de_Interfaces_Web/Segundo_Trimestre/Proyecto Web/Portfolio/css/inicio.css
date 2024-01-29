@@ -1,0 +1,41 @@
+
+
+/* Carousel imagenes*/
+.carousel-item {
+    padding-top: 2rem;
+    height: 65vh;
+    width: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Article */
+
+.principal {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.principal h3, h4 {
+    color:#16DB65
+}
+
+/* Botón */
+.btn-primary {
+    background-color: #0D2818;
+    border-color: #04471C;
+    color: #16DB65;
+}
+
+.btn-primary:hover {
+    border-color:#0D2818;
+    background-color: #16DB65;
+    color: #ffff;
+}
+
