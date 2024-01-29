@@ -39,3 +39,12 @@
     color: #ffff;
 }
 
+/* Mapa */
+.mapa {
+    background-color: #0D2818;
+}
+
+
+.mapa img {
+    margin-top: 1rem;
+}
