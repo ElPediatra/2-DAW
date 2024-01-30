@@ -1,0 +1,129 @@
+Realiza una web con un programa en javascript que realice lo siguiente:
+
+1. (2 puntos) Crea una página web con el titulo : "Prueba Practica RA4_abcde-Recuperación" junto a tu nombre, donde muestres botones para abrir 3 ventanas y justo debajo el correspondiente botón para cerrar cada ventana.
+Ventana 1 de 300x 300 pixeles en la parte superior izquierda y color verde claro.
+Ventana 2 de 300 x 300 pixeles en la parte superior derecha y de color azul claro.
+Ventana 3 de 300 x 300 pixeles en la parte inferior central y de color rosa.
+Además debemos poder seleccionar mediante dos controles select los siguientes
+datos.
+
+Numero a escoger de una lista1 entre 5 y 10
+Numero de valores aleatorios a escoger de una lista2 entre 20 y 30.
+Un botón para mostrar la lista de valores escogidos en la lista2. Debes utilizar
+arrays y funciones creadas por el usuario2(3 puntos)
+
+2. (3 puntos) En la ventana 1 debe de mostrar un formulario con los siguientes
+campos:
+
+Usuario: _________ Contraseña: __________ Repita Contraseña: ___________
+
+donde nos solicite un nombre y una contraseña si no se ha introducido nunca
+o se ha borrado desde la ventana 2. El usuario debe ser de solo caracteres
+(5 caracteres) en minúscula y la contraseña solo números (4 cifras).
+Si no introduces la misma contraseña correcta te mostrará un mensaje diciendo:
+
+contraseña incorrecta. Las dos contraseñas deben de ser iguales.
+
+Si introduces la contraseña correcta te mostrará un mensaje diciendo:
+
+Usuario y contraseña creados correctamente
+
+Debes utilizar un objeto denominado usuario (con sus propiedades) y que permita
+autenticar a la persona junto con un método para crear la contraseña.
+
+3.  (2,5 puntos) En la ventana 2 debes mostrar el usuario y contraseña actuales
+y un botón para borrar la contraseña vigente. cuando se pulse debe de aparecer
+en la ventana el mensaje:
+
+Contraseña borrada correctamente. Debes de introducirla de nuevo.
+
+se cerrara la ventana trascurridos 5 segundos
+
+4. (2,5 puntos) En la ventana 3 debes mostrar una cuenta atrás, desde el numero
+escogido en la lista1 hasta cero. Puedes utilizar el código que se facilita en
+el anexo para implementarlo. Cuando termine muestra los valores pares de la
+lista2 escogia en el apartado 1.Debes utilizar arrays y funciones creadas por
+el usuario
+
+Anexo
+
+<!doctype html>
+
+<html>
+
+<head>
+
+<title></title>
+
+<script type="text/javascript">
+
+window.addEventListener('load', inicio, false);
+
+var reloj;
+
+function inicio() {
+
+reloj=setInterval(procesar,1000);
+
+document.getElementById('boton1').addEventListener('click',presionBoton,false);
+
+}
+
+function procesar() {
+
+var nro=parseInt(document.getElementById('cronometro').innerHTML);
+
+nro++;
+
+document.getElementById('cronometro').innerHTML=nro;
+
+}
+
+function presionBoton() {
+
+if (document.getElementById('boton1').value=='detener') {
+
+clearInterval(reloj);
+
+document.getElementById('boton1').value='continuar';
+
+}
+
+else {
+
+reloj=setInterval(procesar,1000);
+
+document.getElementById('boton1').value='detener';
+
+}
+
+}
+
+</script>
+
+<style>
+
+#cronometro {
+
+font-size:50px;
+
+color:#0a0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<span id="cronometro">0</span>
+
+<br>
+
+<input type="button" id="boton1" value="detener">
+
+</body>
+
+</html>
+
