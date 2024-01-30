@@ -1,0 +1,16 @@
+
+/* Cajas de Productos */
+.caja1 {
+    padding: 1rem;
+    background-color: #ffff;
+}
+
+.caja2 {
+    padding: 1rem;
+    background-color: #8EBDB6;
+}
+
+/* Imagenes Productos */
+.producto {
+    width: 80%; height: 300px; border-radius: 21px 21px 0 0;
+}

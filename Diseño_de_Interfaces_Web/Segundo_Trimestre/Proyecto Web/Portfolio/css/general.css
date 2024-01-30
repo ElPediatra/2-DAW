@@ -7,7 +7,6 @@ body {
     background-color: #ece1c3;
 }
 
-
 h1 {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	color:#3e838c;
@@ -24,12 +23,12 @@ p {
 	color: black;
 }
 
-img {
-	-o-object-fit: cover;
-	   object-fit: cover;
+/* Header */
+.logo {
+	width: 100px;
+	height: 100px;
   }
 
-/* Header */
 .navbar-dark {
 	background-color: #063940;
 }
