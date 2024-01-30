@@ -1,4 +1,7 @@
-
+/* Cabecera */
+.cabecera {
+    padding-top: 5rem;
+}
 
 /* Carousel imagenes*/
 .carousel-item {
@@ -22,26 +25,22 @@
     padding-right: 4rem;
 }
 
-.principal h3, h4 {
-    color:#16DB65
-}
-
 /* Botón */
 .btn-primary {
-    background-color: #0D2818;
-    border-color: #04471C;
-    color: #16DB65;
+    background-color: #063940;
+    border-color: #195e63;
+    color: #3e838c;
 }
 
 .btn-primary:hover {
-    border-color:#0D2818;
-    background-color: #16DB65;
+    border-color:#063940;
+    background-color: #3e838c;
     color: #ffff;
 }
 
 /* Mapa */
 .mapa {
-    background-color: #0D2818;
+    background-color: #063940;
 }
 
 
