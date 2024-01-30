@@ -47,54 +47,58 @@
       <!-- Imagen Principal -->
       <main>
         <div class="container">
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
+          <section class="row">
+            <article class="col-lg-12 col-md-12 col-sm-12">
               <h1 class="text-center cabecera"><strong>BIENVENIDOS A KING SALAD</strong></h1>
-            </div>
-            <div class="col-lg-12 col-md-12">
-              <img src="img/Inicio/restaurante3.jpg" class="img-fluid img-thumbnail" alt="Imagen 3">
-            </div>
-          </div>
+            </article>
+            <article class="col-lg-12 col-md-12">
+              <picture> 
+                <source media="(min-width: 992px)" srcset="img/Inicio/restaurante3-L.webp 800w">
+                <source media="(min-width: 768px)" src="img/Inicio/restaurante3-M.webp 600w">
+                <source media="(min-width: 576px)" src="img/Inicio/restaurante3-S.webp 400w">
+                <img src="img/Inicio/restaurante3-L.jpg" class="img-fluid img-thumbnail" alt="Imagen 3">
+              </picture>
+            </article>
+          </section>
         </div>
 
-        <article class="container principal">
-          <div class="row">
-            <hr>
-            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+        <div class="container principal">
+          <section class="row">
+            <article class="col-lg-6 col-md-6 col-sm-12 text-center">
               <h3><strong> ¿LA ENSALADA DE SIEMPRE? ERROR.</strong></h3>
               <p><strong>OLVIDA TODO LO QUE ESTÁS IMAGINANDO Y PRUEBA UN NUEVO CONCEPTO. MÁS SABROSO, MENOS ABURRIDO Y CON EL QUE SIEMPRE QUERRÁS REPETIR. NO SOMOS UN COMPLEMENTO, NOS GUSTA SER LAS PROTAGONISTAS DE TU COMIDA. Y ES QUE SI ALGO TENEMOS CLARO ES QUE DESPUÉS DE PROBAR NUESTRAS ENSALADAS NO PODRÁS DEJAR DE PENSAR EN NOSOTROS. ¿PREPARADO?</strong></p>
               <h4><strong> MIRA QUE PINTA </strong></h4>
               <p><a class="btn btn-lg btn-primary" href="menu.html" role="button"><strong>VER CARTA</a></strong></p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            </article>
+            <article class="col-lg-6 col-md-6 col-sm-12 justify-content-center text-center">
               <h3 class="text-center"><strong> ¿QUÉ SON LAS "SADLADS"?</strong></h3>
-              <div class="ratio ratio-16x9">
-                <iframe src="video/pecman_meme.mp4" title="Las SADLADS" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-
-          <hr>
-
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+              <video width="320" height="240" controls>
+                <source src="video/pecman_meme.webm" type="video/webm">
+                <source src="video/pecman_meme.mp4" type="video/mp4">
+              Tu navegador no soporta este video.
+              </video>
+            </article>
+          </section>
+          
+          <section class="row">
+            <article class="col-lg-12 col-md-12 col-sm-12 text-center">
               <h3><strong>TE LLEVAMOS LA COMIDA A CASA</strong></h3>
               <p><a class="btn btn-lg btn-primary" href="https://glovoapp.com/es/es/barcelona/greensland-barcelona/" role="button"><strong>PEDIR AHORA</a></strong></p>
               <p><strong>O PUEDES VENIR A PROBARLAS A NUESTRO LOCAL</strong></p>
-            </div>
-            <div class="col-2"></div>
-            <div class="col-lg-8 col-md-8 col-sm-8 mapa text-center">
+            </article>
+            <article class="col-2"></article>
+            <article class="col-lg-8 col-md-8 col-sm-8 mapa text-center">
               <img src="img/Inicio/mapa.svg" class="img-fluid" alt="mapa"><br><br>
-            </div>
-            <div class="col-2"></div>
-            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+            </article>
+            <article class="col-2"></article>
+            <article class="col-lg-12 col-md-12 col-sm-12 text-center">
               <br>
               <p><strong>TRAVESSERA DE GRÀCIA, 34<br>08021 BARCELONA</strong></p>
               <br>
               <p><strong>Lunes A DOMINGO:<br>12:00 – 16:00</strong></p>
-            </div>
-          </div>
-        </article>
+            </article>
+          </section>
+        </div>
       </main>
 
       <footer>

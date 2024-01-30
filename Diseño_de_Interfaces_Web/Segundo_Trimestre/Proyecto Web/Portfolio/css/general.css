@@ -42,11 +42,11 @@ p {
 }
 
 /* Footer */
-section {
+#footer {
     padding: 60px 0;
 }
 
-section .section-title {
+#footer .section-title {
     text-align: center;
     color: #063940;
     margin-bottom: 50px;
