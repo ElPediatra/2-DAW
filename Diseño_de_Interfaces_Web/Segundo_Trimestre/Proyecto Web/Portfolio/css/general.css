@@ -23,6 +23,13 @@ p {
 	color: black;
 }
 
+img {
+	width: 100vw;
+	position: relative;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
 /* Header */
 .logo {
 	width: 100px;
