@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-var url = "DWS.json";
+var url = "DWS.txt";
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var listaWebs = JSON.parse(this.responseText);

@@ -1,143 +1,18 @@
 {
-	"Desarrollo Web en Entorno Servidor": [
-
-	{
-	"id": "RA1",
-	"textoRA": "Selecciona las arquitecturas y tecnologías de programación Web en entorno servidor, analizando sus capacidades y características propias.",
-	"criterios": {
-		"a": "Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente Web.",
-		"b": "Se han reconocido las ventajas que proporciona la generación dinámica de páginas Web y sus diferencias con la inclusión de sentencias de guiones en el interior de las páginas Web.",
-		"c": "Se han identificado los mecanismos de ejecución de código en los servidores Web.",
-		"d": "Se han reconocido las funcionalidades que aportan los servidores de aplicaciones y su integración con el navegador Web.",
-		"e": "Se han identificado y caracterizado los principales lenguajes y tecnologías relacionados con la programación Web en entorno servidor.",
-		"f": "Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación en entorno servidor.",
-		"g": "Se han reconocido y evaluado las herramientas de programación en entorno servidor."
-		},
-		"peso": "5%"
-	},
-
-	{
-  	"id": "RA2",
-  	"textoRA": "Escribe sentencias ejecutables por un servidor Web reconociendo y aplicando procedimientos de integración del código en lenguajes de marcas.",
-  	"criterios": {
-	    "a": "Se han reconocido los mecanismos de generación de páginas Web a partir de lenguajes de marcas con código embebido.",
-	    "b": "Se han identificado las principales tecnologías asociadas.",
-	    "c": "Se han utilizado etiquetas para la inclusión de código en el lenguaje de marcas.",
-	    "d": "Se ha reconocido la sintaxis del lenguaje de programación que se ha de utilizar.",
-	    "e": "Se han escrito sentencias simples y se han comprobado sus efectos en el documento resultante.",
-	    "f": "Se han utilizado directivas para modificar el comportamiento predeterminado.",
-	    "g": "Se han utilizado los distintos tipos de variables y operadores disponibles en el lenguaje.",
-	    "h": "Se han identificado los ámbitos de utilización de las variables."
-  	},
-  	"peso": "13%"
-	},
-
-	{
-  	"id": "RA3",
-  	"textoRA": "Escribe bloques de sentencias embebidos en lenguajes de marcas, seleccionando y utilizando las estructuras de programación.",
-  	"criterios": {
-	    "a": "Se han utilizado mecanismos de decisión en la creación de bloques de sentencias.",
-	    "b": "Se han utilizado bucles y se ha verificado su funcionamiento.",
-	    "c": "Se han utilizado «arrays» para almacenar y recuperar conjuntos de datos.",
-	    "d": "Se han creado y utilizado funciones.",
-	    "e": "Se han utilizado formularios Web para interactuar con el usuario del navegador Web.",
-	    "f": "Se han empleado métodos para recuperar la información introducida en el formulario.",
-	    "g": "Se han añadido comentarios al código."
-  	},
-  	"peso": "16%"
-	},
-
-	{
-  	"id": "RA4",
-  	"textoRA": "Desarrolla aplicaciones Web embebidas en lenguajes de marcas analizando e incorporando funcionalidades según especificaciones.",
-  	"criterios": {
-	    "a": "Se han identificado los mecanismos disponibles para el mantenimiento de la información que concierne a un cliente Web concreto y se han señalado sus ventajas.",
-	    "b": "Se han utilizado sesiones para mantener el estado de las aplicaciones Web.",
-	    "c": "Se han utilizado «cookies» para almacenar información en el cliente Web y para recuperar su contenido.",
-	    "d": "Se han identificado y caracterizado los mecanismos disponibles para la autentificación de usuarios.",
-	    "e": "Se han escrito aplicaciones que integren mecanismos de autentificación de usuarios.",
-	    "f": "Se han realizado adaptaciones a aplicaciones Web existentes como gestores de contenidos u otras.",
-	    "g": "Se han utilizado herramientas y entornos para facilitar la programación, prueba y depuración del código."
-  	},
-  	"peso": "12%"
-	},
-
-	{
-  	"id": "RA5",
-  	"textoRA": "Desarrolla aplicaciones Web identificando y aplicando mecanismos para separar el código de presentación de la lógica de negocio.",
-  	"criterios": {
-	    "a": "Se han identificado las ventajas de separar la lógica de negocio de los aspectos de presentación de la aplicación.",
-	    "b": "Se han analizado tecnologías y mecanismos que permiten realizar esta separación y sus características principales.",
-	    "c": "Se han utilizado objetos y controles en el servidor para generar el aspecto visual de la aplicación Web en el cliente.",
-	    "d": "Se han utilizado formularios generados de forma dinámica para responder a los eventos de la aplicación Web.",
-	    "e": "Se han identificado y aplicado los parámetros relativos a la configuración de la aplicación Web.",
-	    "f": "Se han escrito aplicaciones Web con mantenimiento de estado y separación de la lógica de negocio.",
-	    "g": "Se han aplicado los principios de la programación orientada a objetos.",
-	    "h": "Se ha probado y documentado el código."
-  	},
-  	"peso": "11%"
-	},
-
-	{
-  	"id": "RA6",
-  	"textoRA": "Desarrolla aplicaciones de acceso a almacenes de datos, aplicando medidas para mantener la seguridad y la integridad de la información.",
-  	"criterios": {
-	    "a": "Se han analizado las tecnologías que permiten el acceso mediante programación a la información disponible en almacenes de datos.",
-    	"b": "Se han creado aplicaciones que establezcan conexiones con bases de datos.",
-    	"c": "Se ha recuperado información almacenada en bases de datos.",
-    	"d": "Se ha publicado en aplicaciones Web la información recuperada.",
-    	"e": "Se han utilizado conjuntos de datos para almacenar la información.",
-    	"f": "Se han creado aplicaciones Web que permitan la actualización y la eliminación de información disponible en una base de datos.",
-    	"g": "Se han utilizado transacciones para mantener la consistencia de la información.",
-    	"h": "Se han probado y documentado las aplicaciones."
-  	},
-  	"peso": "19,5%"
-	},
-
-	{
-	  "id": "RA7",
-	  "textoRA": "Desarrolla servicios Web analizando su funcionamiento e implantando la estructura de sus componentes.",
-	  "criterios": {
-		"a": "Se han reconocido las características propias y el ámbito de aplicación de los servicios Web.",
-		"b": "Se han reconocido las ventajas de utilizar servicios Web para proporcionar acceso a funcionalidades incorporadas a la lógica de negocio de una aplicación.",
-		"c": "Se han identificado las tecnologías y los protocolos implicados en la publicación y utilización de servicios Web.",
-		"d": "Se ha programado un servicio Web.",
-		"e": "Se ha creado el documento de descripción del servicio Web.",
-		"f": "Se ha verificado el funcionamiento del servicio Web.",
-		"g": "Se ha consumido el servicio Web."
-	  },
-	  "peso": "12%"
-	},
-
-	{
-  	"id": "RA8",
-  	"textoRA": "Genera páginas Web dinámicas analizando y utilizando tecnologías del servidor Web que añadan código al lenguaje de marcas.",
-  	"criterios": {
-	    "a": "Se han identificado las diferencias entre la ejecución de código en el servidor y en el cliente Web.",
-	    "b": "Se han reconocido las ventajas de unir ambas tecnologías en el proceso de desarrollo de programas.",
-	    "c": "Se han identificado las librerías y las tecnologías relacionadas con la generación por parte del servidor de páginas Web con guiones embebidos.",
-	    "d": "Se han utilizado estas tecnologías para generar páginas Web que incluyan interacción con el usuario en forma de advertencias y peticiones de confirmación.",
-	    "e": "Se han utilizado estas tecnologías, para generar páginas Web que incluyan verificación de formularios.",
-	    "f": "Se han utilizado estas tecnologías para generar páginas Web que incluyan modificación dinámica de su contenido y su estructura.",
-	    "g": "Se han aplicado estas tecnologías en la programación de aplicaciones Web."
-  	},
-  	"peso": "7%"
-	},
-
-	{
-  	"id": "RA9",
-  	"textoRA": "Desarrolla aplicaciones Web híbridas seleccionando y utilizando librerías de código y repositorios heterogéneos de información.",
-  	"criterios": {
-	    "a": "Se han reconocido las ventajas que proporciona la reutilización de código y el aprovechamiento de información ya existente.",
-	    "b": "Se han identificado librerías de código y tecnologías aplicables en la creación de aplicaciones Web híbridas.",
-	    "c": "Se ha creado una aplicación Web que recupere y procese repositorios de información ya existentes.",
-	    "d": "Se han creado repositorios específicos a partir de información existente en Internet y en almacenes de información.",
-	    "e": "Se han utilizado librerías de código para incorporar funcionalidades específicas a una aplicación Web.",
-	    "f": "Se han programado servicios y aplicaciones Web utilizando como base información y código generados por terceros.",
-	    "g": "Se han probado, depurado y documentado las aplicaciones generadas."
-  	},
-  	"peso": "4,5%"
-	}
-
-	]
+  "Desarrollo Web en Entorno Servidor": [
+    {
+      "id": "RA1",
+      "textoRA": "Selecciona las arquitecturas y tecnologías de programación Web en entorno servidor, analizando sus capacidades y características propias.",
+      "criterios": {
+        "a": "Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente Web.",
+        "b": "Se han reconocido las ventajas que proporciona la generación dinámica de páginas Web y sus diferencias con la inclusión de sentencias de guiones en el interior de las páginas Web.",
+        "c": "Se han identificado los mecanismos de ejecución de código en los servidores Web.",
+        "d": "Se han reconocido las funcionalidades que aportan los servidores de aplicaciones y su integración con el navegador Web.",
+        "e": "Se han identificado y caracterizado los principales lenguajes y tecnologías relacionados con la programación Web en entorno servidor.",
+        "f": "Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación en entorno servidor.",
+        "g": "Se han reconocido y evaluado las herramientas de programación en entorno servidor."
+      },
+      "peso": "5%"
+    }
+  ]
 }
