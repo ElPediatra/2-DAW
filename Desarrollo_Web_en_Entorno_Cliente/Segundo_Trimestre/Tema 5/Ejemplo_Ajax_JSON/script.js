@@ -1,3 +1,5 @@
+/* Alberto Gomez Morales - 2º DAW - Desarrollo Web en Cliente */
+
 //Variables
 var resultado = document.getElementById("info");
 var selectRA = document.getElementById("selectRA");
@@ -15,6 +17,7 @@ function ajax_get_json()
     xmlhttp.onreadystatechange = function(){
         if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
             datos = JSON.parse(xmlhttp.responseText);
+            //Busco por las IDs de los RAs y pongo su texto
             for (var i in datos){
                 for (var j in datos[i]){
                     var option = document.createElement("option");
@@ -39,11 +42,6 @@ function mostrarCriterios() {
         resultado.innerHTML += i + ": " + criterios[i] + "<br/>";
     }
     resultado.innerHTML += "Peso: " + peso;
-}
-
-//Escondo los criterios de evaluación
-function borrarCriterios() {
-    resultado.innerHTML = "";
 }
 
 //Lo pongo para que se cargue directamente al cargar la página
