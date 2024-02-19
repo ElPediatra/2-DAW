@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON/AJAX - Alberto Gomez Morales</title>
+</head>
+
+<body>
+<!-- <button onclick="ajax_get_json()"> Mostrar Datos</button> -->
+<h1> Desarrollo Web en Entorno Servidor </h1>
+<h3> Selecciona un RA para ver sus criterios </h3>
+<select id="selectRA" onchange="mostrarCriterios()"></select>
+<br>
+<br>
+<button onclick="mostrarCriterios()">Mostrar Criterios</button>
+<button onclick="borrarCriterios()">Borrar Criterios</button>
+<br>
+<br>
+<div id = "info"></div>
+<script src="script.js"></script>
+</body>
+</html>
