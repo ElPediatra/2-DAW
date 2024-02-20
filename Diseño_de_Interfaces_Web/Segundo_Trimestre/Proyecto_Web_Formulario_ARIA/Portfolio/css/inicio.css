@@ -1,0 +1,36 @@
+/* Cabecera */
+.cabecera {
+    padding-top: 5rem;
+}
+
+/* Article */
+
+.principal {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+/* Botón */
+.btn-primary {
+    background-color: #063940;
+    border-color: #195e63;
+    color: #3e838c;
+}
+
+.btn-primary:hover {
+    border-color:#063940;
+    background-color: #3e838c;
+    color: #ffff;
+}
+
+/* Mapa */
+.mapa {
+    background-color: #063940;
+}
+
+
+.mapa img {
+    margin-top: 1rem;
+}
