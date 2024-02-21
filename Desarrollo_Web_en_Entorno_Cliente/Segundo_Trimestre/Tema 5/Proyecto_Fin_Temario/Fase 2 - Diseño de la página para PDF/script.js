@@ -1,48 +1,33 @@
 /* Alberto Gomez Morales - 2º DAW - Desarrollo Web en Cliente */
 
 //Variables
-var resultado = document.getElementById("info");
 var selectRA = document.getElementById("selectRA");
+var selectCriterio = document.getElementById("selectCriterio");
 var datos;
+var loginForm = document.getElementById("loginForm");
+var mainContent = document.getElementById("mainContent");
+var professorName = document.getElementById("professorName");
 
-function ajax_get_json()
-{
-    var xmlhttp;
-    if(window.XMLHttpRequest){
-        xmlhttp = new XMLHttpRequest();
-    }else{ 
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
+function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
 
-    xmlhttp.onreadystatechange = function(){
-        if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
-            datos = JSON.parse(xmlhttp.responseText);
-            //Busco por las IDs de los RAs y pongo su texto
-            for (var i in datos){
-                for (var j in datos[i]){
-                    var option = document.createElement("option");
-                    option.text = datos[i][j].id + ": " + datos[i][j].textoRA;
-                    option.value = j;
-                    selectRA.add(option);
-                }
-            }
-        }
+    // Verificar las credenciales del usuario
+    if ((username == "administrador" && password == "admin") || (username == "profesor" && password == "profe")) {
+        // Si las credenciales son correctas, oculta el formulario de inicio de sesión y muestra el contenido principal
+        loginForm.style.display = "none";
+        mainContent.style.display = "block";
+        // Muestra el nombre del profesor
+        var name = document.createElement("p");
+        name.textContent = "Profesor: " + professorName.value;
+        mainContent.prepend(name);
+        // Después de 1 minuto, vuelve a mostrar el formulario de inicio de sesión
+        setTimeout(function() {
+            loginForm.style.display = "block";
+            mainContent.style.display = "none";
+        }, 60000);
+    } else {
+        // Si las credenciales son incorrectas, muestra un mensaje de error
+        alert("Usuario o contraseña incorrectos");
     }
-    xmlhttp.open("GET", "datos.json", true);
-    xmlhttp.send();
 }
-
-//Muestro los criterios seleccionados en el select
-function mostrarCriterios() {
-    var index = selectRA.value;
-    var criterios = datos["Desarrollo Web en Entorno Servidor"][index].criterios;
-    var peso = datos["Desarrollo Web en Entorno Servidor"][index].peso;
-    resultado.innerHTML = "";
-    for (var i in criterios){
-        resultado.innerHTML += i + ": " + criterios[i] + "<br/>";
-    }
-    resultado.innerHTML += "Peso: " + peso;
-}
-
-//Lo pongo para que se cargue directamente al cargar la página
-window.onload = ajax_get_json;

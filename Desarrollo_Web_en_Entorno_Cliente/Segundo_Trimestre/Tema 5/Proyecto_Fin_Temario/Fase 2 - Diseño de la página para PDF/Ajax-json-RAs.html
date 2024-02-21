@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSON/AJAX - Alberto Gomez Morales</title>
 </head>
-
 <body>
-<!-- <button onclick="ajax_get_json()"> Mostrar Datos</button> -->
-<h1> Desarrollo Web en Entorno Servidor </h1>
-<h3> Selecciona un RA para ver sus criterios </h3>
-<select title="Los RAs" id="selectRA" onchange="mostrarCriterios()"></select>
-<br>
-<br>
-<div id = "info"></div>
-<script src="script.js"></script>
+    <div id="loginForm">
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <input type="text" id="professorName" placeholder="Nombre del Profesor">
+        <button onclick="login()">Iniciar sesión</button>
+    </div>
+    <div id="mainContent" style="display: none;">
+        <h1> Desarrollo Web en Entorno Servidor </h1>
+        <h3> Selecciona un RA para ver sus criterios </h3>
+        <select title="Los RAs" id="selectRA" onchange="mostrarCriterios()"></select>
+        <br>
+        <select id="selectCriterio"></select>
+        <br>
+        <br>
+        <div id = "info"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
