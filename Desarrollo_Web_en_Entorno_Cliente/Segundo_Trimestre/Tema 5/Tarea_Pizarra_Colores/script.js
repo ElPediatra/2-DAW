@@ -52,12 +52,7 @@ window.onload = function() {
 
     //Pongo eventos "mousedown" y "mouseup" en la tabla para activar y desactivar el pincel y que muestre el mensaje correspondiente
     tabla.addEventListener('mousedown', function(e) {
-        pintar = true;
-        document.getElementById('pincel').textContent = 'PINCEL ACTIVADO';
-    });
-
-    tabla.addEventListener('mouseup', function(e) {
-        pintar = false;
-        document.getElementById('pincel').textContent = 'PINCEL DESACTIVADO';
+        pintar = !pintar; // Esto alternará el valor de pintar cada vez que se haga clic
+        document.getElementById('pincel').textContent = pintar ? 'PINCEL ACTIVADO' : 'PINCEL DESACTIVADO';
     });
 };
