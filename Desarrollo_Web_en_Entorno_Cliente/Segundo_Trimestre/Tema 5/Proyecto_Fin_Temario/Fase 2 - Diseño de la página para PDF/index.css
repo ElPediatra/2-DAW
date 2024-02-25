@@ -1,0 +1,28 @@
+.imagenes {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .imagenes img {
+    width: 10%;
+    height: auto;
+  }
+  
+  .centrado {
+    text-align: center;
+  }
+  
+  table {
+    margin: auto;
+  }
+
+  .tablaRAs {
+    width: 80%;
+    border-collapse: collapse;
+  }
+
+  #tablaRAs td {
+    border: 1px solid black;
+    padding: 10px;
+    width: 100px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title> Proyecto Fase 2 - Alberto Gómez Morales </title>
+    <script src="login.js" defer></script>
+    <script src="json.js" defer></script>
+</head>
+<body>
+  <div class="centrado">
+    <div class="imagenes">
+      <img src="img/junta.jpg" alt="Junta de Andalucía">
+      <img src="img/murgi.png" alt="IES Murgi">
+    </div>
+    <h1>Unidad Didáctica</h1>
+    <h2>Módulo: Desarrollo Web en Entorno Servidor</h2>
+    <h3>Profesor: <input type="text" name="profesor" id="nombreProfe"></h3>
+    <div class="seccion-login">
+      <button id="botonUsuario">Cargar Datos</button><br>
+      <button id="botonAdmin">Acceso Admin</button><br><br>
+      <table>
+        <tr>
+          <td>Usuario:</td>
+          <td><input type="text" name="usuario" id="campoUsuario"></td>
+        </tr>
+        <tr>
+          <td>Contraseña:</td>
+          <td><input type="password" name="contraseña" id="contrasena"></td>
+        </tr>
+      </table><br><br><hr><br><br><br><br><hr><br><br>
+    </div>
+
+    <table id="tablaRAs">
+        <tr>
+            <td>Objetivo:</td>
+            <td><input type="text" name="objetivo" placeholder="Escribe el objetivo aquí"></td>
+        </tr>
+        <tr>
+            <td>RA:</td>
+            <td><select name="ra" id="losRA"></select></td>
+            <td><button>Añadir RA</button></td>
+            <td><button>Quitar RA</button></td>
+            <td><input type="text" name="peso" placeholder="Peso del RA %"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Criterio</td>
+            <td><select name="criterio" id="losCriterios"></select></td>
+            <td><button>Añadir Cr.</button></td>
+            <td><button>Quitar Cr.</button></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Tipo Tarea</td>
+            <td>Nombre de la Tarea:</td>
+            <td><input type="text" name="tarea" placeholder="Escribe el nombre de la tarea aquí"></td>
+        </tr>
+        <tr>
+            <td>Contenido</td>
+            <td>Nombre:</td>
+            <td><input type="text" name="nombre" placeholder="Escribe el nombre del contenido aquí"></td>
+            <td>Fuente:</td>
+            <td><input type="text" name="fuente" placeholder="Escribe la fuente del contenido aquí"></td>
+        </tr>          
+    </table><br><br>
+
+    <div id="resultado"></div>
+
+    <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
+    <input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF" />
+  </div>
+</body>
+</html>
