@@ -1,8 +1,0 @@
-1 - Visualización JSON en desplegable (FASE 1 - HECHA)
-2 - Habilitar CORS para JSON --> Poder escojer el archivo JSON
-3 - Diseño de la página para PDF
-    + Desplegable de los RAs
-        - Porcentaje (a poner por el usuario)
-        - Seleccionar un criterio del RA del desplegable
-        - Nombre de la actividad
-        - Botón + (añadir nueva línea) y - (quitar línea)
