@@ -1,0 +1,13 @@
+/* Formulario */
+.estado_persona-option {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+form {
+    padding-bottom: 20px;
+}
+
+form div {
+    padding: 5px;
+}

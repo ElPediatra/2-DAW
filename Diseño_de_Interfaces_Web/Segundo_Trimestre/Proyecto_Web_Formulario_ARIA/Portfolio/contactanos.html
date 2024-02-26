@@ -13,7 +13,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
         <!-- Mi CSS -->
         <link href="css/general.css" rel="stylesheet"/>
-        <link href="css/inicio.css" rel="stylesheet"/>
+        <link href="css/contactanos.css" rel="stylesheet"/>
 
         <!-- Links Fuentes -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,87 +29,110 @@
             <!-- Menú Cabecera -->
             <header>
                 <nav class="navbar navbar-dark">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="inicio.html"><img src="img/logo2-vacio.png" class="logo" alt="logo"/></a>
-                        <h2><strong>King Salads</strong></h2>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item text-center">
-                                    <a class="nav-link active" aria-current="page" href="inicio.html"><strong>Inicio</strong></a>
-                                </li>
-                                <li class="nav-item text-center">
-                                    <a class="nav-link active" aria-current="page" href="menu.html"><strong>Menu</strong></strong></a>
-                                </li>
-                            </ul>
-                        </div>
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="inicio.html"><img src="img/logo2-vacio.webp" class="logo" alt="logo"/></a>
+                    <h1 id="cabecera"><strong>King Salads</strong></h1>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item text-center">
+                          <a class="nav-link active" aria-current="page" href="inicio.html"><strong>Inicio</strong></a>
+                        </li>
+                        <li class="nav-item text-center">
+                          <a class="nav-link active" aria-current="page" href="menu.html"><strong>Menu</strong></a>
+                        </li>
+                        <li class="nav-item text-center">
+                          <a class="nav-link active" aria-current="page" href="contactanos.html"><strong>Contáctanos</strong></a>
+                        </li>
+                      </ul>
                     </div>
+                  </div>
                 </nav>
-            </header>
+              </header>
 
+            <!-- Formulario de contacto -->
             <div class="container principal">
                 <section class="row">
-                    <article class="col-lg-12 col-md-12 col-sm-12">
-                        <h2>Formulario de Contacto</h2>
-                        <form action="/submit_contact" method="post">
-                            <div>
-                                <label for="name">Nombre:</label>
-                                <input type="text" id="name" name="user_name" aria-required="true" aria-label="Nombre">
+                    <article class="col-lg-12 col-md-12 col-sm-12 text-center text-xs-center text-sm-center text-md-center">
+                            <h1>Formulario de Contacto</h1>
+                            <h2>¿Quieres trabajar con nosotros?</h2>
+                            <p><strong>¡Rellena este formulario para ponerte en contacto con nosotros!</strong></p>
+                            <form action="/submit_contact" method="post">
+                              <h3> Datos Personales</h3>
+                              <div>
+                                  <label for="nombre"><strong>Nombre:</strong></label>
+                                  <input type="text" id="nombre" name="nombre_usuario" aria-required="true" aria-label="Nombre" placeholder="Introduce tu nombre" required>
+                              </div>
+                              <div>
+                                  <label for="apellido"><strong>Apellidos:</strong></label>
+                                  <input type="text" id="apellido" name="apellido_usuario" aria-required="true" aria-label="Apellido" placeholder="Introduce tus apellidos" required>
+                              </div>
+                              <div>
+                                  <label for="genero"><strong>Género:</strong></label>
+                                  <select class="text-center" id="genero" name="genero_usuario" aria-required="true" aria-label="Género" required>
+                                      <option value="">Selecciona...</option>
+                                      <option value="Masculino">Masculino</option>
+                                      <option value="Femenino">Femenino</option>
+                                      <option value="Otro">Otro</option>
+                                      <option value="No contesta">Prefiero no responder</option>
+                                  </select>
+                              </div>
+                              <div>
+                                  <label for="fechaNacimiento"><strong>Fecha de Nacimiento:</strong></label>
+                                  <input type="date" id="fechaNacimiento" name="nacimiento_usuario" aria-required="true" aria-label="Fecha de Nacimiento" required>
+                              </div>
+                              <div>
+                                <label for="estado_persona"><strong>Estado Civil:</strong></label><br>
+                                <div class="estado_persona-option">
+                                    <input type="radio" id="soltero" name="estado_persona" value="Soltero">
+                                    <label for="soltero"><strong>Soltero/a</strong></label>
+                                </div>
+                                <div class="estado_persona-option">
+                                    <input type="radio" id="casado" name="estado_persona" value="Casado">
+                                    <label for="casado"><strong>Casado/a</strong></label>
+                                </div>
+                                <div class="estado_persona-option">
+                                    <input type="radio" id="divorciado" name="estado_persona" value="Divorciado">
+                                    <label for="divorciado"><strong>Divorciado/a</strong></label>
+                                </div>
+                                <div class="estado_persona-option">
+                                    <input type="radio" id="viudo" name="estado_persona" value="Viudo">
+                                    <label for="viudo"><strong>Viudo/a</strong></label>
+                                </div>
+                              </div>
+                          
+                              <h3> Datos de Contacto</h3>
+                              <div>
+                                  <label for="direccion"><strong>Dirección:</strong></label>
+                                  <input type="text" id="direccion" name="direccion_usuario" aria-required="true" aria-label="Dirección" placeholder="Introduce tu dirección" required>
+                              </div>
+                              <div>
+                                <label for="mail"><strong>Correo:</strong></label>
+                                <input type="email" id="mail" name="mail_usuario" aria-required="true" aria-label="Correo" placeholder="Introduce tu correo" required>
                             </div>
                             <div>
-                                <label for="mail">E-mail:</label>
-                                <input type="email" id="mail" name="user_mail" aria-required="true" aria-label="E-mail">
+                                <label for="telefono"><strong>Teléfono:</strong></label>
+                                <input type="tel" id="telefono" name="telefono_usuario" aria-required="true" aria-label="Teléfono" placeholder="Introduce tu teléfono" required>
+                            </div>
+                            <h3> Información Adicional</h3>
+                            <div>
+                                <label for="mensaje"><strong>Mensaje:</strong></label>
+                                <textarea id="mensaje" name="mensaje_usuario" aria-required="true" aria-label="Mensaje" placeholder="Introduce tu mensaje"></textarea>
                             </div>
                             <div>
-                                <label for="phone">Teléfono:</label>
-                                <input type="tel" id="phone" name="user_phone" aria-required="false" aria-label="Teléfono">
+                                <label for="cv"><strong>Currículum:</strong></label>
+                                <input type="file" id="cv" name="cv_usuario" aria-required="true" aria-label="Currículum" required>
                             </div>
                             <div>
-                                <label for="address">Dirección:</label>
-                                <input type="text" id="address" name="user_address" aria-required="false" aria-label="Dirección">
-                            </div>
-                            <div>
-                                <label for="dob">Fecha de Nacimiento:</label>
-                                <input type="date" id="dob" name="user_dob" aria-required="false" aria-label="Fecha de Nacimiento">
-                            </div>
-                            <div>
-                                <label for="gender">Género:</label>
-                                <select id="gender" name="user_gender" aria-required="false" aria-label="Género">
-                                    <option value="">Selecciona...</option>
-                                    <option value="male">Masculino</option>
-                                    <option value="female">Femenino</option>
-                                    <option value="other">Otro</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="marital_status">Estado Civil:</label><br>
-                                <input type="checkbox" id="single" name="marital_status" value="single">
-                                <label for="single">Soltero/a</label><br>
-                                <input type="checkbox" id="married" name="marital_status" value="married">
-                                <label for="married">Casado/a</label><br>
-                                <input type="checkbox" id="divorced" name="marital_status" value="divorced">
-                                <label for="divorced">Divorciado/a</label><br>
-                                <input type="checkbox" id="widowed" name="marital_status" value="widowed">
-                                <label for="widowed">Viudo/a</label><br>
-                            </div>
-                            <div>
-                                <label for="subject">Asunto:</label>
-                                <input type="text" id="subject" name="user_subject" aria-required="true" aria-label="Asunto">
-                            </div>
-                            <div>
-                                <label for="msg">Mensaje:</label>
-                                <textarea id="msg" name="user_message" aria-required="true" aria-label="Mensaje"></textarea>
+                                <input type="checkbox" id="notificaciones" name="notificacion_usuario" value="yes">
+                                <label for="notificaciones"><strong>Deseo recibir notificaciones</strong></label>
                             </div>
                             <div class="button">
-                                <button type="submit">Enviar</button>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="notifications" name="user_notifications" value="yes">
-                                <label for="notifications">Deseo recibir notificaciones</label>
-                            </div>
-                        </form>
+                                <button class="btn btn-lg btn-primary" type="submit">Enviar</button>
+                            </div>                            
+                            </form>
                     </article>
                 </section>
             </div>
@@ -120,7 +143,7 @@
               <div class="container">
                 <div class="row text-center text-xs-center text-sm-center text-md-center">
                   <div class="col-xs-12 col-sm-12 col-md-12">
-                    <h5>Nuestras secciones</h5>
+                    <h4>Nuestras secciones</h4>
                     <ul class="list-unstyled list-inline text-center footer-links">
                       <li><a href="inicio.html"><i class="fa fa-angle-double-right"></i>Inicio</a></li>
                       <li><a href="menu.html"><i class="fa fa-angle-double-right"></i>Menu</a></li>
@@ -131,11 +154,11 @@
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-12">
                     <ul class="list-unstyled list-inline social text-center">
-                      <li class="list-inline-item"><a href="https://www.facebook.com/alberto.gomezmorales.5/?locale=es_ES"><i class="fa fa-facebook"></i></a></li>
-                      <li class="list-inline-item"><a href="https://x.com/AlbertoDA_TW?t=MljGQJ_65qCuFoelpZ9-_A&s=08"><i class="fa fa-twitter"></i></a></li>
-                      <li class="list-inline-item"><a href="https://www.instagram.com/albertoda_ig?igsh=azBwa3RiMmQ0NWM5"><i class="fa fa-instagram"></i></a></li>
-                      <li class="list-inline-item"><a href="https://github.com/ElPediatra"><i class="fa fa-github"></i></a></li>
-                      <li class="list-inline-item"><a href="mailto:albertogomezmorales1994@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/alberto.gomezmorales.5/?locale=es_ES" aria-label="Link a Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="https://x.com/AlbertoDA_TW?t=MljGQJ_65qCuFoelpZ9-_A&s=08" aria-label="Link a Twitter / X"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/albertoda_ig?igsh=azBwa3RiMmQ0NWM5" aria-label="Link a Instagram"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="https://github.com/ElPediatra"><i class="fa fa-github" aria-label="Link a Github"></i></a></li>
+                        <li class="list-inline-item"><a href="mailto:albertogomezmorales1994@gmail.com" target="_blank" aria-label="Link a Correo Electrónico"><i class="fa fa-envelope"></i></a></li>
                     </ul>
                   </div>
                 </div>
@@ -143,7 +166,7 @@
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
                     <p><u><a href="inicio.html">kingsalad.com</a></u> </p>
-                    <p class="h6">&copy Derechos Reservados.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank"> Alberto Gómez Morales.</a></p>
+                    <p class="h6">&copy; Derechos Reservados.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank"> Alberto Gómez Morales.</a></p>
                   </div>
                 </div>	
               </div>

@@ -7,6 +7,12 @@ body {
     background-color: #ece1c3;
 }
 
+#cabecera {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	color:#ece1c3;
+	font-size: 80px;
+}
+
 h1 {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	color:#3e838c;
@@ -28,6 +34,19 @@ img {
 	position: relative;
 	-o-object-fit: cover;
 	object-fit: cover;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #063940;
+    border-color: #195e63;
+    color: #ece1c3;
+}
+
+.btn-primary:hover {
+    border-color:#063940;
+    background-color: #3e838c;
+    color: #ffff;
 }
 
 /* Header */
@@ -64,7 +83,7 @@ img {
     background: #063940;
 }
 
-#footer h5{
+#footer h4{
     color: #ffffff;
 }
 
@@ -83,7 +102,7 @@ img {
     margin-right: 5px;
 	font-size:25px;
 	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
+	-o-transition: .5s all ease;
 	transition: .5s all ease;
 }
 
@@ -108,7 +127,7 @@ img {
 #footer ul.footer-links li{
 	padding: 3px 0;
 	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
+	-o-transition: .5s all ease;
 	transition: .5s all ease;
 }
 
@@ -128,7 +147,7 @@ img {
 }
 
 @media (max-width:767px){
-	#footer h5 {
+	#footer h4 {
     padding-left: 0;
     padding-bottom: 0px;
     margin-bottom: 10px;
