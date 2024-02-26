@@ -1,0 +1,10 @@
+Crar una web que nos muestre el contenido de la tabla "Alumnos" de la Base de Datos 'Instituto'.
+Debe aparecer ordenado por apellido:
+
+    Nota: BD: Instituto, Tabla: Alumnos, Usuario: instituto, Clave: instituto
+
+Para el manejo de las fechas puedes usar el fichero fecha.php (si no haces copia-pega en tu página es mejor).
+
+Vamos a añadir más funcionalidad más funcionalidad incluyendo un filtro mediante dos desplegables: Uno para el curso (primero o segundo) y otro para la leta (A o B).
+
+¿Serías capaz de hacer que los desplegables se generaran automaticamente con los valores de la tabla?
