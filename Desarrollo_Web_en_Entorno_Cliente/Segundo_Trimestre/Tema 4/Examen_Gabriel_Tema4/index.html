@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GomezMorales_Alberto_PE_RA5-RA6_23-24</title>
+        <script src="js/script.js" defer></script>
+    </head>
+
+    <body>
+        <h1>GomezMorales_Alberto_PE_RA5-RA6_23-24</h1>
+        <hr>
+
+        <!-- Creo el formulario de datos -->
+        <form onsubmit="return false" id="formularioDatos">
+            <!-- Datos del Usuario -->
+            <h3>Datos de Usuario</h3>
+
+            <span id="textoNombre">Nombre:</span>
+                <input type="text" name="Nombre" id="nombre" onblur="checkNombre()">
+            <br>
+            <br>
+
+            <span id="textoApellido">Apellidos:</span>
+                <input type="text" name="Apellidos" id="apellidos" onblur="checkApellido()">
+            <br>
+            <br>
+
+            <span id="textoCodigo">Código de Verificación:</span>
+                <input type="text" name="CodigoVerificacion" id="codigoVerificacion" onblur="checkCodigo()">
+            <br>
+            <br>
+
+            <!-- Aquí mostaré los errores que se den con los datos de Nombre, Apellidos y Código de Verificación -->
+            <div id="error"></div>
+            <hr>
+        </form>
+
+        <form onsubmit="return false" id="formularioAcceso">
+            <!-- Datos de Acceso -->
+            <h3> Datos de Acceso:</h3>
+            <span id="textoUsuario">Usuario Administrador:</span>
+                <input type="text" name="Usuario" id="usuario" onblur="checkUsuario()">
+            <br>
+            <br>
+
+            <span id="textoContrasena">Contraseña:</span>
+                <input type="password" name="Contraseña" id="contrasena">
+            <br>
+            <br>
+
+            <div id="btnCheck">
+            <input type="submit" name="Enviar" id="btnEnviar" onclick="checkDatos()" value="Enviar Datos">
+            </div>
+            <br>
+            <br>
+
+            <div id="resultado"></div>
+            <hr>
+        </form>
+    </body>
+</html>
+
+

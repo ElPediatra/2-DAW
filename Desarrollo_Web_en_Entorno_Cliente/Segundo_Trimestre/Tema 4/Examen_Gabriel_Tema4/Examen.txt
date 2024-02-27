@@ -1,0 +1,34 @@
+Prueba para evaluar mediante un Ejercicio práctico parte del  resultado de aprendizaje 5 utilizando los criterio de evaluación f) g) h)  y parte del resultado de aprendizaje 6 utilizando el criterio de evaluación  f).  Calificación de 0 a 10 puntos. 
+
+Enunciado:
+
+1.- (2 puntos) Realiza un programa en javascript que mediante un formulario me permita recopilar los datos de Nombre, Apellidos y código de verificación de 4 dígitos y una letra mayúscula (comprueba el código con expresiones regulares)
+
+2.- (3 puntos) Junto con el formulario de nombre, apellidos y código de verificación debe de haber otro formulario donde nos solicite dos campos llamados
+Usuario Administrador
+Clave de Acceso.
+Estos campos deben de verificarse para comprobar si coinciden con
+
+Usuario Administrador = Admin
+clave de acceso = El código introducido anteriormente pero sin letra.
+
+Si es correcto debe mostrarnos un mensaje que diga: Usuario y clave correctas. Si no es así mostrará: Inténtelo de nuevo
+
+3.- (4 puntos) Si lo hacemos correctamente se nos habilitará un botón con el literal “cambiar a ingles” que cuando lo pulsemos cambiará por “cambiar a español” y a su vez nos modificará los nombres de los campos de formulario a ingles. Cuando volvamos a pulsar lo dejará de nuevo en español, y así hasta que pulsemos otro botón para salir del modo administrador. Este proceso se debe de hacer modificando los nodos del DOM.
+
+4.- (1 puntos) Si no pulsamos el botón de salir del modo administrador  se cerrara automáticamente en 10 segundos.
+
+Nota: Traducción al ingles:
+Administator
+Password
+Name
+Last name
+
+----------------------
+
+Descripción:
+
+Una forma de hacer que las contraseñas sean difíciles de adivinar es asegurarse de que las personas incluyan al menos un número, al menos una letra minúscula, al menos una letra mayúscula y al menos un carácter especial. También tiene sentido que incluyamos algún tipo de control de longitud. Por ejemplo, la contraseña debe tener una longitud de entre 8 y 18 caracteres. La expresión regular verifica todas estas condiciones.
+
+Cuando lo tengas resuelto envíalo con el siguiente formato
+Apellidos_Nombre_PE_RA5-RA6_23-24
