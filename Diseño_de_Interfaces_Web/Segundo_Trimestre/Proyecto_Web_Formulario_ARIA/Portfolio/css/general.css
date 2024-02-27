@@ -2,6 +2,13 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Fjord+One&family=Nunito+Sans:opsz@6..12&family=Yanone+Kaffeesatz:wght@500&display=swap');
 
+/* Salto principal */
+.offscreen {
+	position: absolute;
+	left: -9999px;
+	top: auto;
+}
+
 /* Body */
 body {
     background-color: #ece1c3;
