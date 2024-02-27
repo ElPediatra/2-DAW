@@ -4,11 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practicando Examen Gabriel - Alberto Gómez Morales</title>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <h1>Practicando Examen Gabriel</h1>
     <h2>Alberto Gómez Morales</h2>
     <hr>
-    <h3>Datos de Acceso</h3>
+    <!-- Creo el formulario de datos -->
+    <form onsubmit="return false" id="formularioCompleto">
+        <!-- Datos del Usuario -->
+    <h3>Datos de Usuario</h3>
+    <span>Nombre:</span>
+        <input type="text" name="Nombre" id="nombre" onblur="checkNombre()">
+    <br>
+    <br>
+    <span>Apellidos:</span>
+        <input type="text" name="Apellidos" id="apellidos" onblur="checkApellido()">
+    <br>
+    <br>
+    <span>Correo: </span>
+    <input type="email" name="Correo" id="correo" onblur="checkCorreo()">
+    <br>
+    <br>
+    <span>Código de verificación:</span>
+        <input type="text" name="CodigoVerificacion" id="codigoVerificacion" onblur="checkCodigo()">
+    <br>
+    <br>
+    <div id="error"></div>
+    <hr>
+        <!-- Datos de Acceso -->
+    <h3> Datos de Acceso:</h3>
+    <span>Usuario:</span>
+        <input type="text" name="Usuario" id="usuario" onblur="checkUsuario()">
+    <br>
+    <br>
+    <span>Contraseña:</span>
+        <input type="password" name="Contraseña" id="contrasena">
+    <br>
+    <br>
+        <input type="submit" name="enviar" id="enviar" onclick="checkDatos()" value="Enviar Datos">
+    <br>
+    <br>
+    <div id="resultado"></div>
+    <div id="reloj"></div>
+    <hr>
+    </form>
 </body>
 </html>
