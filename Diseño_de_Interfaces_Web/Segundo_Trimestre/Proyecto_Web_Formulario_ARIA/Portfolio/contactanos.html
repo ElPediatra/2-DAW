@@ -104,20 +104,23 @@
                                     <label for="viudo"><strong>Viudo/a</strong></label>
                                 </div>
                               </div>
-                          
+                              <hr>
                               <h3> Datos de Contacto</h3>
                               <div>
                                   <label for="direccion"><strong>Dirección:</strong></label>
                                   <input type="text" id="direccion" name="direccion_usuario" aria-required="true" aria-label="Dirección" placeholder="Introduce tu dirección" required>
                               </div>
                               <div>
-                                <label for="mail"><strong>Correo:</strong></label>
-                                <input type="email" id="mail" name="mail_usuario" aria-required="true" aria-label="Correo" placeholder="Introduce tu correo" required>
+                                <label for="email"><strong>Correo electrónico:</strong></label>
+                                <input type="email" id="email" aria-required="true" aria-describedby="emailError" placeholder="Escribe tu correo electronico" required>
+                                <div id="emailError">Por favor, escribe un correo electrónico válido (Ej: correo@dominio.com).</div>
                             </div>
                             <div>
                                 <label for="telefono"><strong>Teléfono:</strong></label>
-                                <input type="tel" id="telefono" name="telefono_usuario" aria-required="true" aria-label="Teléfono" placeholder="Introduce tu teléfono" required>
+                                <input type="tel" id="telefono" name="telefono_usuario" aria-required="true" aria-label="Teléfono" aria-describedby="telefonoError" placeholder="Introduce tu teléfono" required>
+                                <div id="telefonoError">Por favor, escribe un teléfono válido (Ej: 666777888).</div>
                             </div>
+                            <hr>
                             <h3> Información Adicional</h3>
                             <div>
                                 <label for="mensaje"><strong>Mensaje:</strong></label>
@@ -135,6 +138,8 @@
                                 <button class="btn btn-lg btn-primary" type="submit">Enviar</button>
                             </div>                            
                             </form>
+                            <br>
+                            <br>
                     </article>
                 </section>
             </div>
@@ -175,6 +180,8 @@
             </section>
           </footer>
           
+          <!-- Links a mi JavaScript -->
+          <script src="js/formulario.js" defer></script>
           <!-- Links Bootstrap JavaScript -->
           <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>

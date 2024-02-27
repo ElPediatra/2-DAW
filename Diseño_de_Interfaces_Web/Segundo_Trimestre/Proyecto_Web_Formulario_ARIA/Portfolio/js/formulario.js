@@ -1,34 +1,43 @@
-var slider = document.querySelector('.slider');
-slider.addEventListener('keydown', function(e) {
-  var valorActual = parseInt(this.getAttribute('aria-valuenow'));
-  var valorMinimo = parseInt(this.getAttribute('aria-valuemin'));
-  var valorMaximo = parseInt(this.getAttribute('aria-valuemax'));
+/* Variables correo */
+const inputCorreo = document.getElementById('email');
+const emailError = document.getElementById('emailError');
 
-  switch(e.key) {
-    case "ArrowRight":
-    case "ArrowUp":
-      this.setAttribute('aria-valuenow', Math.min(valorActual + 1, valorMaximo));
-      break;
-    case "ArrowLeft":
-    case "ArrowDown":
-      this.setAttribute('aria-valuenow', Math.max(valorActual - 1, valorMinimo));
-      break;
-    default:
-      return;
-  }
+/* Variables teléfono */
+const inputTelefono = document.getElementById('telefono');
+const telefonoError = document.getElementById('telefonoError');
 
-  e.preventDefault();
-});
+/* Eventos correo y teléfono */
+inputCorreo.addEventListener('blur', validarCorreo);
+inputTelefono.addEventListener('blur', validarTelefono);
 
-var input = document.querySelector('#autocomplete');
-var list = document.querySelector('#autocomplete-options');
+/* Función Correo */
+function validarCorreo() {
+    const correo = inputCorreo.value.trim();
+    const regexCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-input.addEventListener('input', function() {
-  // Buscar opciones basadas en input.value y llenar la lista
-  // ...
-  input.setAttribute('aria-expanded', 'true');
-});
+    if (regexCorreo.test(correo)) {
+        // El correo es válido, puedes continuar con el resto del formulario
+        emailError.style.display = 'none';
+        // Aquí puedes agregar más lógica para el resto del formulario
+    } else {
+        // El correo no es válido, muestra el mensaje de error y enfoca el campo
+        emailError.style.display = 'block';
+        inputCorreo.focus();
+    }
+}
 
-input.addEventListener('blur', function() {
-  input.setAttribute('aria-expanded', 'false');
-});
+/* Función Teléfono */
+function validarTelefono() {
+    const telefono = inputTelefono.value.trim();
+    const regexTelefono = /^[6789]\d{8}$/;
+
+    if (regexTelefono.test(telefono)) {
+        // El teléfono es válido, puedes continuar con el resto del formulario
+        telefonoError.style.display = 'none';
+        // Aquí puedes agregar más lógica para el resto del formulario
+    } else {
+        // El teléfono no es válido, muestra el mensaje de error y enfoca el campo
+        telefonoError.style.display = 'block';
+        inputTelefono.focus();
+    }
+}

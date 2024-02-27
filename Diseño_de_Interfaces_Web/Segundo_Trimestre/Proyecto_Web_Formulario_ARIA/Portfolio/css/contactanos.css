@@ -5,9 +5,24 @@
 }
 
 form {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #3e838c;
+    border-radius: 5px;
 }
 
 form div {
     padding: 5px;
+}
+
+/* RIA Correo */
+
+#emailError {
+    color: red;
+    display: none;
+}
+
+/* RIA Teléfono */
+#telefonoError {
+    color: red;
+    display: none;
 }
