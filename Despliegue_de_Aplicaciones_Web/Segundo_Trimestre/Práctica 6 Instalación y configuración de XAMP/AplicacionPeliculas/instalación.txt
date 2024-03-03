@@ -1,0 +1,30 @@
+-- Curso: Despliegue de aplicaciones web
+-- Fichero: Instalación.txt
+
+
+	1.	Instalar un servidor WAMP/LAMP.
+	2.	Configuración de la base de datos
+		-	Arrancar mysql
+		-	Crear un usuario en mysql denominado peliculas con password películas.
+			o La configuración de la conexión a la base deatos está definida en el fichero configuración.php.
+ 			o La configuración por defecto es
+				
+				define("BD_SERVIDOR", "localhost:3306");
+				define("BD_NOMBRE", "peliculas");
+				define ("BD_USUARIO", "peliculas");
+				define ("BD_PASSWORD", "peliculas");
+
+
+		-	Crear un esquema/catalogo en mysql denominado películas.
+		-	Asignarle permisos al usuario películas sobre el esquema películas
+		-	Conectarse a la base de datos con el usuario películas y al esquema películas
+		-	Ejecutar los scripts
+			o	CrearTablas_Peliculas.sql
+			o	InsercionAdministrador_Peliculas.sql
+				-	Usuario: admin.
+				-	Clave: admin.
+				-	Se recomienda cambiar el usuario y la clave por defecto
+	3.	Configuración de la aplicación web
+		-	Copiar el directorio películas a un directorio del servidor web.
+		-	Reiniciar Apache
+	4.	Arrancar una navegador y acceder a http://localhost/peliculas

@@ -1,0 +1,8 @@
+-- Curso: Despliegue de aplicaciones web
+-- Fichero: Cargar_datos_prueba.txt
+
+	1.	Conectarse a la base de datos con el usuario películas al esquema películas
+	2.	Ejecutar el script
+		-	InsercionesPrurba_Peliculas.sql
+	3.	Copiar las imágenes proporcionadas en Aplicacion/DatosPrueba/img al directorio htdocs/películas/img
+

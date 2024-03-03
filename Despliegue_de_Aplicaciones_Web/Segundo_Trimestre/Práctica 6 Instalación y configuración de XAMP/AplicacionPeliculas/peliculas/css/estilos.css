@@ -1,0 +1,140 @@
+
+body{
+background-color:#CCCCCC}
+
+td.logo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 56px;
+    font-weight: bold;
+    color: #CC99CC;
+}
+
+td.izquierda{
+    background-color: #CC99CC;
+}
+
+td.Derecha{
+    background-color: #CCFFCC;
+}
+
+td.Registrar{
+    background-color: #FFFF99;
+}
+
+td.datos{
+    background-color: #FFFF99;
+    font-weight: bold;
+}
+
+td.formularioTitulo{
+    background-color: #FFCC66;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #990000; 
+}
+
+td.formulario{
+    background-color: #FFCC66;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #990000; 
+}
+
+td.mostrarTitulo{
+    background-color: #FFCC66;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #990000; 
+}
+
+td.mostrarCabecera{
+    background-color: #FFCC66;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #990000; 
+}
+
+td.mostrar{
+    
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #990000; 
+}
+
+td.mostrarComentario{
+    
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #990000; 
+    background-color: #FFFF99;
+}
+
+td.mostrarPaginacion{
+    background-color: #FFCC66;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #990000; 
+}
+
+
+
+.textoUsuario{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #990000; 
+}
+
+.textoLogin{
+    font-weight: bold;
+    color: #000000; 
+}
+
+.textoAviso{
+    font-weight: bold;
+    color: #000000;
+    font-size: 12px;
+}
+
+a.textoFormulario{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #660033;
+    text-decoration: none;
+}
+
+a.textoFormulario:hover{
+    color: #CC00CC;
+}
+
+a.textoRegistrar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #660033;
+    text-decoration: none;
+}
+
+
+
+a.textoRegistrar:hover{
+    color: #CC00CC;
+}
+
+
+.prohibido{
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #336666;
+}
+
+
