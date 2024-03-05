@@ -9,9 +9,10 @@
     <script src="login.js" defer></script>
     <script src="json.js" defer></script>
     <script src="captura.js" defer></script>
-    <!-- Link a Librerías JS de PDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
-    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="pdf.js"></script>
+    <!-- Link a JS de PDF -->
+    <script src="jspdf.js"></script>
+    <script src="jspdf.plugin.autotable.js"></script>
 </head>
 <body>
   <div class="centrado">
@@ -128,7 +129,7 @@
       <!-- Botón para mostar los datos (id="resultado") -->
       <input type="button" name="verDatos" id="verDatos" value="Mostar/Ocultar Datos" onclick="alternarVisibilidad()" />
       <!-- Botón para imprimir PDF -->
-      <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
+      <button type="button" onclick="generarPDF()">Generar PDF</button>
       <br>
       <br>
       <div id="resultado">
