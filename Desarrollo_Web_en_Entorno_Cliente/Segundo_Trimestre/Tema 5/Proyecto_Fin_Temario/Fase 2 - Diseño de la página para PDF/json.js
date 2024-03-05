@@ -46,4 +46,5 @@ fetch(url)
             }
         });
     })
+    /* Captura de mensajes en caso de error */
     .catch(error => console.error('Error:', error));

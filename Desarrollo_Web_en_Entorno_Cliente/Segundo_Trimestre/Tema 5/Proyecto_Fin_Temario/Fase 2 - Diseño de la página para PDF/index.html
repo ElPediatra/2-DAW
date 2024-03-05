@@ -8,7 +8,7 @@
     <!-- Link a mis JSs -->
     <script src="login.js" defer></script>
     <script src="json.js" defer></script>
-    <script src="pdf.js" defer></script>
+    <script src="captura.js" defer></script>
     <!-- Link a Librerías JS de PDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
     <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
@@ -19,8 +19,10 @@
       <img src="img/junta.jpg" alt="Junta de Andalucía">
       <img src="img/murgi.png" alt="IES Murgi">
     </div>
-    <h1>Unidad Didáctica</h1>
-    <h2>Módulo: Desarrollo Web en Entorno Servidor</h2>
+    <div class="seccion-cabecera">
+      <h1>Unidad Didáctica</h1>
+      <h2>Módulo: Desarrollo Web en Entorno Servidor</h2>
+    </div>
     <div class="seccion-profesor">
       <h3>Profesor: <input type="text" name="profesor" id="nombreProfe"></h3>
     </div>
@@ -43,24 +45,65 @@
       <form id="tablaRAs">
         <table>
             <tr>
-                <td>Objetivo:</td>
-                <td><input type="text" name="objetivo" placeholder="Escribe el objetivo aquí"></td>
+                <td>Objetivo: </td>
+                <td>
+                  <select name="objetivo">
+                    <!-- Opcione del select -->
+                    <option value="1">Ajustar la configuración lógica analizando las necesidades y criterios establecidos para configurar y explotar sistemas informáticos.</option>
+                    <option value="2">Identificar las necesidades de seguridad verificando el plan preestablecido para aplicar técnicas y procedimientos relacionados.</option>
+                    <option value="3">Instalar módulos analizando su estructura y funcionalidad para gestionar servidores de aplicaciones.</option>
+                    <option value="4">Ajustar parámetros analizando la configuración para gestionar servidores de aplicaciones.</option>
+                    <option value="5">Interpretar el diseño lógico, verificando los parámetros establecidos para gestionar bases de datos.</option>
+                    <option value="6">Seleccionar lenguajes, objetos y herramientas, interpretando las especificaciones para desarrollar aplicaciones web con acceso a bases de datos.</option>
+                    <option value="7">Utilizar lenguajes, objetos y herramientas, interpretando las especificaciones para desarrollar aplicaciones web con acceso a bases de datos.</option>
+                    <option value="8">Generar componentes de acceso a datos, cumpliendo las especificaciones, para integrar contenidos en la lógica de una aplicación web.</option>
+                    <option value="9">Utilizar lenguajes de marcas y estándares web, asumiendo el manual de estilo, para desarrollar interfaces en aplicaciones web.</option>
+                    <option value="10">Emplear herramientas y lenguajes específicos, siguiendo las especificaciones, para desarrollar componentes multimedia.</option>
+                    <option value="11">Evaluar la interactividad, accesibilidad y usabilidad de un interfaz, verificando los criterios preestablecidos, para Integrar componentes multimedia en el interfaz de una aplicación.</option>
+                    <option value="12">Utilizar herramientas y lenguajes específicos, cumpliendo las especificaciones, para desarrollar e integrar componentes software en el entorno del servidor web.</option>
+                    <option value="13">Emplear herramientas específicas, integrando la funcionalidad entre aplicaciones, para desarrollar servicios empleables en aplicaciones web.</option>
+                    <option value="14">Evaluar servicios distribuidos ya desarrollados, verificando sus prestaciones y funcionalidad, para integrar servicios distribuidos en una aplicación web.</option>
+                    <option value="15">Verificar los componentes de software desarrollados, analizando las especificaciones, para completar el plan de pruebas.</option>
+                    <option value="16">Utilizar herramientas específicas, cumpliendo los estándares establecidos, para elaborar y mantener la documentación de los procesos.</option>
+                    <option value="17">Establecer procedimientos, verificando su funcionalidad, para desplegar y distribuir aplicaciones.</option>
+                    <option value="18">Programar y realizar actividades para gestionar el mantenimiento de los recursos informáticos.</option>
+                    <option value="19">Analizar y utilizar los recursos y oportunidades de aprendizaje relacionadas con la evolución científica, tecnológica y organizativa del sector y las tecnologías de la información y la comunicación, para mantener el espíritu de actualización y adaptarse a nuevas situaciones laborales y personales.</option>
+                    <option value="20">Desarrollar la creatividad y el espíritu de innovación para responder a los retos que se presentan en los procesos y organización de trabajo y de la vida personal.</option>
+                    <option value="21">Tomar decisiones de forma fundamentada analizando las variables implicadas, integrando saberes de distinto ámbito y aceptando los riesgos y la posibilidad de equivocación en las mismas, para afrontar y resolver distintas situaciones, problemas o contingencias</option>
+                    <option value="22">Desarrollar técnicas de liderazgo, motivación, supervisión y comunicación en contextos de trabajo en grupo para facilitar la organización y coordinación de equipos de trabajo</option>
+                    <option value="23">Aplicar estrategias y técnicas de comunicación adaptándose a los contenidos que se van a transmitir, la finalidad y a las características de los receptores, para asegurar la eficacia en los procesos de comunicación.</option>
+                    <option value="24">Evaluar situaciones de prevención de riesgos laborales y de protección ambiental, proponiendo y aplicando medidas de prevención personales y colectivas, de acuerdo a la normativa aplicable en los procesos del trabajo, para garantizar entornos seguros.</option>
+                    <option value="25">Identificar y proponer las acciones profesionales necesarias para dar respuesta a la accesibilidad universal y al diseño para todos.</option>
+                    <option value="26">Identificar y aplicar parámetros de calidad en los trabajos y actividades realizados en el proceso de aprendizaje para valorar la cultura de la evaluación y de la calidad y ser capaces de supervisar y mejorar procedimientos de gestión de calidad.</option>
+                    <option value="27">Utilizar procedimientos relacionados con la cultura emprendedora, empresarial y de iniciativa profesional, para realizar la gestión básica de una pequeña empresa o emprender un trabajo.</option>
+                    <option value="28">Reconocer sus derechos y deberes como agente activo en la sociedad, teniendo en cuenta el marco legal que regula las condiciones sociales y laborales para participar como ciudadano democrático.</option>
+                  </select>
+                  <td><button type="button">Añadir Objetivo</button></td>
+                </td>
             </tr>
             <tr>
                 <td>RA:</td>
                 <td><select name="ra" id="losRA"></select></td>
                 <td><button type="button">Añadir RA</button></td>
-                <td><button type="button">Quitar RA</button></td>
                 <td><input type="text" name="peso" placeholder="Peso del RA %"></td>
             </tr>
             <tr>
                 <td>Criterio</td>
                 <td><select name="criterio" id="losCriterios"></select></td>
                 <td><button type="button">Añadir Cr.</button></td>
-                <td><button type="button">Quitar Cr.</button></td>
             </tr>
             <tr>
                 <td>Tipo Tarea</td>
+                <td>
+                  <select name="tarea">
+                    <option value="1">Test</option>
+                    <option value="2">Prueba escrita</option>
+                    <option value="3">Trabajo</option>
+                    <option value="4">Prueba práctica</option>
+                    <option value="5">Prueba Teórico-práctica</option>
+                    <option value="6">Proyecto</option>
+                  </select>
+                </td>
                 <td>Nombre de la Tarea:</td>
                 <td><input type="text" name="tarea" placeholder="Escribe el nombre de la tarea aquí"></td>
             </tr>
@@ -72,11 +115,64 @@
                 <td><input type="text" name="fuente" placeholder="Escribe la fuente del contenido aquí"></td>
             </tr>
         </table>
-        <div id="resultado"></div>
       </form>
+      <br>
+      <br>
+      <div id="resultado"></div>
+      <br>
+      <br>
       <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
       <input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF" />
     </div>
   </div>
 </body>
 </html>
+
+<!--
+<form id="tablaRAs">
+  <table>
+      <tr>
+          <td>Objetivo: </td>
+          <td>
+            <select name="objetivo">
+              //Opciones del 1 al 28
+              <option value="1"></option>
+            </select>
+            <td><button type="button">Añadir Objetivo</button></td>
+          </td>
+      </tr>
+      <tr>
+          <td>RA:</td>
+          <td><select name="ra" id="losRA"></select></td>
+          <td><button type="button">Añadir RA</button></td>
+          <td><input type="text" name="peso" placeholder="Peso del RA %"></td>
+      </tr>
+      <tr>
+          <td>Criterio</td>
+          <td><select name="criterio" id="losCriterios"></select></td>
+          <td><button type="button">Añadir Cr.</button></td>
+      </tr>
+      <tr>
+          <td>Tipo Tarea</td>
+          <td>
+            <select name="tarea">
+              //Opciones del 1 al 6
+              <option value="1"></option>
+            </select>
+          </td>
+          <td>Nombre de la Tarea:</td>
+          <td><input type="text" name="tarea" placeholder="Escribe el nombre de la tarea aquí"></td>
+      </tr>
+      <tr>
+          <td>Contenido</td>
+          <td>Nombre:</td>
+          <td><input type="text" name="nombre" placeholder="Escribe el nombre del contenido aquí"></td>
+          <td>Fuente:</td>
+          <td><input type="text" name="fuente" placeholder="Escribe la fuente del contenido aquí"></td>
+      </tr>
+  </table>
+</form>
+<br>
+<br>
+<div id="resultado"></div>
+-->

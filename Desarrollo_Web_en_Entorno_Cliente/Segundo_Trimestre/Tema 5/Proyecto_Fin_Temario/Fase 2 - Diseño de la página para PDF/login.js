@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const botonAdmin = document.getElementById('botonAdmin');
     const seccionLogin = document.querySelector('.seccion-login');
     const seccionProfesor = document.querySelector('.seccion-profesor');
+    const seccionCabecera = document.querySelector('.seccion-cabecera');
 
     botonUsuario.addEventListener('click', function() {
         alert('Opción no disponible, pendiente de acceso a Servidor AJAX/JSON');
     });
 
     botonAdmin.addEventListener('click', function() {
-        const nombreProfesor = document.getElementById('nombreProfe').value;
         const nombreUsuario = document.getElementById('campoUsuario').value;
         const contrasena = document.getElementById('contrasena').value;
 
@@ -20,14 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 seccionProfesor.style.display = 'block';
                 setTimeout(function() {
                     seccionProfesor.style.display = 'none';
-                    //Creo un nuevo elemento h3
-                    var nuevoH3 = document.createElement('h3');
-                    //Capturo el nombre del profesor
-                    var nombreProfesor = document.getElementById('nombreProfe').value;
-                    //Añado el texto al h3
+                    // Creo un nuevo elemento <h3>
+                    const nuevoH3 = document.createElement('h3');
+                    // Capturo el nombre del profesor después del segundo timeout
+                    const nombreProfesor = document.getElementById('nombreProfe').value;
+                    // Establezco el texto del <h3> con el nombre del profesor
                     nuevoH3.textContent = 'Profesor: ' + nombreProfesor;
-                    //Añado el nuevo H3 al DOM
-                    seccionProfesor.appendChild(nuevoH3);
+                    // Agrego el nuevo <h3> al DOM (dentro de la sección de cabecera)
+                    seccionCabecera.appendChild(nuevoH3);
                 }, 10000);
             }, 100);
         } else {
@@ -35,4 +35,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
