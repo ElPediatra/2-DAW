@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     nuevoH3.textContent = 'Profesor: ' + nombreProfesor;
                     //Agrego el <h3> que he creado al DOM (dentro de la sección de cabecera)
                     seccionCabecera.appendChild(nuevoH3);
+
+                    //Capturo el elemento <p> del texto del profesor
+                    const textoProfesor = document.querySelector("#textoProfesor");
+                    //Añado el nombre del profesor al contenido existente
+                    textoProfesor.innerHTML += " " + nombreProfesor;
                 }, 10000);
             }, 100);
         } else {

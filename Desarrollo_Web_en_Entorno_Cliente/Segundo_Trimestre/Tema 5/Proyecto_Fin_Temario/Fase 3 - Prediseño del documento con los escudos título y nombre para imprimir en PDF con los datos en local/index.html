@@ -78,24 +78,27 @@
                     <option value="27">Utilizar procedimientos relacionados con la cultura emprendedora, empresarial y de iniciativa profesional, para realizar la gestión básica de una pequeña empresa o emprender un trabajo.</option>
                     <option value="28">Reconocer sus derechos y deberes como agente activo en la sociedad, teniendo en cuenta el marco legal que regula las condiciones sociales y laborales para participar como ciudadano democrático.</option>
                   </select>
-                  <td><button type="button">Añadir Objetivo</button></td>
+                  <td><button type="button" onclick="agregarObjetivo()">Añadir Objetivo</button></td>
+                  <td><button type="button" onclick="quitarObjetivo()">Quitar Objetivo</button></td>
                 </td>
             </tr>
             <tr>
                 <td>RA:</td>
                 <td><select name="ra" id="losRA"></select></td>
-                <td><button type="button">Añadir RA</button></td>
-                <td><input type="text" name="peso" placeholder="Peso del RA %"></td>
+                <td><button type="button" onclick="agregarRA()">Añadir RA</button></td>
+                <td><button type="button" onclick="quitarRA()">Quitar RA</button></td>
+                <td><input type="text" name="peso" id="peso" placeholder="Peso del RA %"></td>
             </tr>
             <tr>
                 <td>Criterio</td>
                 <td><select name="criterio" id="losCriterios"></select></td>
-                <td><button type="button">Añadir Cr.</button></td>
+                <td><button type="button" onclick="agregarCri()">Añadir Cr.</button></td>
+                <td><button type="button" onclick="quitarCri()">Quitar Cr.</button></td>
             </tr>
             <tr>
                 <td>Tipo Tarea</td>
                 <td>
-                  <select name="tarea">
+                  <select name="tarea" id="tipoTarea">
                     <option value="1">Test</option>
                     <option value="2">Prueba escrita</option>
                     <option value="3">Trabajo</option>
@@ -105,7 +108,9 @@
                   </select>
                 </td>
                 <td>Nombre de la Tarea:</td>
-                <td><input type="text" name="tarea" placeholder="Escribe el nombre de la tarea aquí"></td>
+                <td><input type="text" name="tarea" id="nombreTarea" placeholder="Escribe el nombre de la tarea aquí"></td>
+                <td><button type="button" onclick="agregarTarea()">Añadir Tarea</button></td>
+                <td><button type="button" onclick="quitarTarea()">Quitar Tarea</button></td>
             </tr>
             <tr>
                 <td>Contenido</td>
@@ -113,66 +118,30 @@
                 <td><input type="text" name="nombre" placeholder="Escribe el nombre del contenido aquí"></td>
                 <td>Fuente:</td>
                 <td><input type="text" name="fuente" placeholder="Escribe la fuente del contenido aquí"></td>
+                <td><button type="button" onclick="agregarContenido()">Añadir Contenido</button></td>
+                <td><button type="button" onclick="quitarContenido()">Quitar Contenido</button></td>
             </tr>
         </table>
       </form>
       <br>
       <br>
-      <div id="resultado"></div>
-      <br>
-      <br>
+      <!-- Botón para mostar los datos (id="resultado") -->
+      <input type="button" name="verDatos" id="verDatos" value="Mostar/Ocultar Datos" onclick="alternarVisibilidad()" />
+      <!-- Botón para imprimir PDF -->
       <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
-      <input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF" />
+      <br>
+      <br>
+      <div id="resultado">
+        <p id="textoProfesor"><strong>Profesor:</strong></p>
+        <p id="textoObjetivo"><strong>Objetivo:</strong></p>
+        <p id="textoRA"><strong>RA:</strong></p>
+        <ul id="criterios"><strong>Critérios:</strong>
+          <!-- Aquí añadiré los critérios con <li> -->
+        </ul>
+        <p id="textoTarea"><strong>Tarea:</strong></p>
+        <p id="textoContenido"><strong>Contenido: </strong></p>
+      </div>
     </div>
   </div>
 </body>
 </html>
-
-<!--
-<form id="tablaRAs">
-  <table>
-      <tr>
-          <td>Objetivo: </td>
-          <td>
-            <select name="objetivo">
-              //Opciones del 1 al 28
-              <option value="1"></option>
-            </select>
-            <td><button type="button">Añadir Objetivo</button></td>
-          </td>
-      </tr>
-      <tr>
-          <td>RA:</td>
-          <td><select name="ra" id="losRA"></select></td>
-          <td><button type="button">Añadir RA</button></td>
-          <td><input type="text" name="peso" placeholder="Peso del RA %"></td>
-      </tr>
-      <tr>
-          <td>Criterio</td>
-          <td><select name="criterio" id="losCriterios"></select></td>
-          <td><button type="button">Añadir Cr.</button></td>
-      </tr>
-      <tr>
-          <td>Tipo Tarea</td>
-          <td>
-            <select name="tarea">
-              //Opciones del 1 al 6
-              <option value="1"></option>
-            </select>
-          </td>
-          <td>Nombre de la Tarea:</td>
-          <td><input type="text" name="tarea" placeholder="Escribe el nombre de la tarea aquí"></td>
-      </tr>
-      <tr>
-          <td>Contenido</td>
-          <td>Nombre:</td>
-          <td><input type="text" name="nombre" placeholder="Escribe el nombre del contenido aquí"></td>
-          <td>Fuente:</td>
-          <td><input type="text" name="fuente" placeholder="Escribe la fuente del contenido aquí"></td>
-      </tr>
-  </table>
-</form>
-<br>
-<br>
-<div id="resultado"></div>
--->

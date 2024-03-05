@@ -44,3 +44,12 @@ table {
 .seccion-profesor {
   display: none;
 }
+
+/* Cuadro resultado */
+#resultado {
+    display: none;
+}
+
+#criterios {
+    list-style: none;
+}
