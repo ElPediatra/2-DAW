@@ -49,14 +49,10 @@ function agregarCri() {
     //Capturo los elementos del DOM y los datos del select
     const selectElement = document.querySelector("#losCriterios");
     const selectedOption = selectElement.options[selectElement.selectedIndex].text;
-    const criteriosList = document.querySelector("#criterios");
+    const textoCriterios = document.querySelector("#criterios");
 
-    //Creo un nuevo elemento <li> con el texto del criterio seleccionado
-    const nuevoLi = document.createElement("li");
-    nuevoLi.textContent = selectedOption;
-
-    //Añado el elemento <li> al final de la lista de criterios
-    criteriosList.appendChild(nuevoLi);
+    //Añado el criterio al final de la lista de criterios
+    textoCriterios.innerHTML += selectedOption + "<br>";
 }
 
 /* Función para quitar critérios */
@@ -73,13 +69,13 @@ function agregarTarea() {
     const textoTarea = document.querySelector("#textoTarea");
 
     // Añadir el texto del tipo de tarea y el nombre de la tarea al contenido existente
-    textoTarea.innerHTML += " <strong>Tipo:</strong> " + selectedOption + " <strong>Nombre:</strong> " + nombreTarea + "<br>";
+    textoTarea.innerHTML += "Tipo: " + selectedOption + " Nombre: " + nombreTarea + "<br>";
 }
 
 /* Función para quitar la tarea */
 function quitarTarea() {
     const textoTarea = document.querySelector("#textoTarea");
-    textoContenido.innerHTML = "<strong>Tarea:</strong>";
+    textoTarea.innerHTML = "<strong>Tarea:</strong>";
 }
 
 /* Función para añadir contenido */
@@ -89,7 +85,7 @@ function agregarContenido() {
     const textoContenido = document.querySelector("#textoContenido");
 
     // Añadir el texto del nombre del contenido y la fuente al contenido existente
-    textoContenido.innerHTML += "<br><strong>Nombre:</strong> " + nombreContenido + " <strong>Fuente:</strong> " + fuenteContenido;
+    textoContenido.innerHTML += "Nombre: " + nombreContenido + " Fuente: " + fuenteContenido + "<br>";
 }
 
 /* Función para quitar el contenido */
