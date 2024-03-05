@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     seccionProfesor.style.display = 'none';
                     // Creo un nuevo elemento <h3>
                     const nuevoH3 = document.createElement('h3');
-                    // Capturo el nombre del profesor después del segundo timeout
+                    //Capturo el nombre del profesor después del segundo timeout
                     const nombreProfesor = document.getElementById('nombreProfe').value;
-                    // Establezco el texto del <h3> con el nombre del profesor
+                    //Pongo el texto del <h3> con el nombre del profesor que he capturado antes
                     nuevoH3.textContent = 'Profesor: ' + nombreProfesor;
-                    // Agrego el nuevo <h3> al DOM (dentro de la sección de cabecera)
+                    //Agrego el <h3> que he creado al DOM (dentro de la sección de cabecera)
                     seccionCabecera.appendChild(nuevoH3);
                 }, 10000);
             }, 100);
