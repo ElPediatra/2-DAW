@@ -1,5 +1,22 @@
 //URL del archivo JSON - Al tenerlo en local pongo el nombre directamente
-let url = 'datos.json';
+let url = 'http://192.168.217.128:80/datos.json'; //Variable para JSON SERVIDOR
+/* let url = 'datos.json'; //Variable para LOCAL */
+
+/*
+
+Para cargar el JSON uso lamp-server (apache2)
+
+Habilito el módulo de CORS en el equipo: sudo a2enmod headers
+
+Añado esta línea en apache2.conf para habilitar las cabeceras CORS en la carpeta de html
+
+<Directory "/var/www/html">
+    Header set Access-Control-Allow-Origin "*"
+</Directory>
+
+Reinicio el servicio de lamp-server y listo :)
+
+*/
 
 //Utilizo fetch para cargar el archivo JSON
 fetch(url)
