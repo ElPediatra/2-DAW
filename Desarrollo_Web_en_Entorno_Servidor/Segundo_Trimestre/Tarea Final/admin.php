@@ -176,5 +176,60 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre_usuario"]) && i
             }
         ?>
     </div>
+
+    <div>
+    <?php
+        // Comprueba si se ha enviado el formulario para añadir un juego
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (isset($_POST["nombre"]) && isset($_POST["descripcion"]) && isset($_FILES["imagen"])) {
+                $nombre = $_POST["nombre"];
+                $descripcion = $_POST["descripcion"];
+                $imagen = $_FILES["imagen"];
+
+                // Comprueba si el archivo subido es una imagen
+                $tipo_imagen = exif_imagetype($imagen["tmp_name"]);
+                if (in_array($tipo_imagen, [IMAGETYPE_GIF, IMAGETYPE_JPEG, IMAGETYPE_PNG, IMAGETYPE_BMP])) {
+                    // Comprueba si el archivo de imagen ya existe y, si es así, añade la fecha y hora actuales al nombre del archivo
+                    $ruta_imagen = "./img/" . $imagen["name"];
+                        if (file_exists($ruta_imagen)) {
+                            $ruta_imagen = "./img/" . date("YmdHis") . "_" . $imagen["name"];
+                        }
+
+                        // Mueve el archivo de imagen subido al directorio ./img/
+                        if (move_uploaded_file($imagen["tmp_name"], $ruta_imagen)) {
+                            // Prepara la consulta SQL
+                            $stmt = $conn->prepare("INSERT INTO juegos (nombre, imagen, descripcion) VALUES (?, ?, ?)");
+                            $stmt->bind_param("sss", $nombre, $ruta_imagen, $descripcion);
+                            
+                            // Ejecuta la consulta
+                            if ($stmt->execute()) {
+                                echo "Juego añadido con éxito.";
+                            } else {
+                            echo "Error: " . $stmt->error;
+                            }
+                        } else {
+                            echo "Error al subir la imagen.";
+                        }
+                } else {
+                    echo "El archivo subido no es una imagen válida.";
+                }
+            } else {
+                echo "Por favor, proporciona un nombre, una descripción y una imagen.";
+            }
+        }
+    // Muestra el formulario para añadir un juego
+    ?>
+
+    <h2>Añadir un juego</h2>
+    <form method="post" action="admin.php" enctype="multipart/form-data">
+        <label for="nombre">Nombre del juego:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label for="descripcion">Descripción:</label><br>
+        <textarea id="descripcion" name="descripcion" required></textarea><br>
+        <label for="imagen">Imagen:</label><br>
+        <input type="file" id="imagen" name="imagen" required><br>
+        <input type="submit" value="Añadir juego">
+    </form>
+    </div>
 </body>
 </html>
