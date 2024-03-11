@@ -50,6 +50,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <h1>Tienda de Juegos</h1>
+
+    <div>
+        <h2>Lista de compras:</h2>
+        <ul>
+            <?php foreach ($_SESSION['compras'] as $compra) { ?>
+                <li><?php echo $compra; ?></li>
+            <?php } ?>
+        </ul>
+        <form method="post">
+            <button type="submit" name="validar_compra">Validar compra</button>
+        </form>
+        <?php
+        // Verificar si se ha enviado el formulario de validación
+            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['validar_compra'])) {
+            echo "Compra confirmada. ¡Gracias!";
+            }
+        ?>
+    </div>
+    <br>
+
     <table>
         <thead>
             <tr>
@@ -76,23 +96,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php } ?>
         </tbody>
     </table>
-
-    <div>
-        <h2>Lista de compras:</h2>
-        <ul>
-            <?php foreach ($_SESSION['compras'] as $compra) { ?>
-                <li><?php echo $compra; ?></li>
-            <?php } ?>
-        </ul>
-        <form method="post">
-            <button type="submit" name="validar_compra">Validar compra</button>
-        </form>
-        <?php
-        // Verificar si se ha enviado el formulario de validación
-            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['validar_compra'])) {
-            echo "Compra confirmada. ¡Gracias!";
-            }
-        ?>
-    </div>
 </body>
 </html>
