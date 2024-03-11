@@ -85,6 +85,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
             echo "Compra confirmada. ¡Gracias!";
                 // Vaciar la lista de compras
                 $_SESSION['compras'] = array();
+
+                // Si el array está vacío, también borramos el mensaje
+                if (empty($_SESSION['compras'])) {
+                // Borra el mensaje
+                echo "<script>document.getElementById('mensaje_compra').innerHTML = '';</script>";
+                }
             }
         ?>
     </div>
