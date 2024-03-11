@@ -140,5 +140,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre_usuario"]) && i
             }
         ?>
     </div>
+
+    <div>
+        <?php
+            // Consulta para obtener todos los juegos
+            $result = $conn->query("SELECT * FROM juegos");
+
+            // Muestra todos los juegos
+            echo "<h2>Juegos existentes:</h2>";
+            echo "<table>";
+            echo "<tr><th>ID</th><th>Nombre</th><th>Acciones</th></tr>";
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["id"] . "</td>";
+                echo "<td>" . $row["nombre"] . "</td>";
+                echo "<td><a href='admin.php?eliminar_juego=" . $row["id"] . "'>Eliminar</a></td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+
+            // Comprueba si se ha enviado el parámetro para eliminar un juego
+            if (isset($_GET["eliminar_juego"])) {
+                $id = $_GET["eliminar_juego"];
+
+                // Prepara la consulta SQL
+                $stmt = $conn->prepare("DELETE FROM juegos WHERE id = ?");
+                $stmt->bind_param("i", $id);
+
+                // Ejecuta la consulta
+                if ($stmt->execute()) {
+                    echo "Juego eliminado con éxito.";
+                } else {
+                echo "Error: " . $stmt->error;
+                }
+            }
+        ?>
+    </div>
 </body>
 </html>
