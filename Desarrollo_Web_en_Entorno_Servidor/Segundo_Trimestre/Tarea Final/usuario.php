@@ -31,6 +31,12 @@ if ($result->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Juegos</title>
+    <style>
+    img {
+	    width: 200px; /* Ancho de 100 p\u00edxeles */
+    	height: 100px; /* Alto de 100 p\u00edxeles */
+	}
+    </style>
 </head>
 <body>
     <h1>Tienda de Juegos</h1>
