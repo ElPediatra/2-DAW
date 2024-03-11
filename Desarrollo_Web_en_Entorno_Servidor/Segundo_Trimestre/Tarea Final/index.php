@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
     <form method="post" action="index.php">
         <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
         <input type="password" name="contrasena" placeholder="Contraseña" required>
-        <button type="submit">Iniciar sesión</button>
+        <button type="submit" name="accion" value="iniciar">Iniciar sesión</button>
     </form>
     <!-- Aquí pondré el mensaje de error en caso de usuario o contraseña incorrecta -->
     <?php if (isset($mensaje_error)) { ?>
@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
     <!-- Formulario para el modo claro y oscuro -->
     <form method="post" action="index.php">
         <input type="hidden" name="modo" value="<?php echo $modo; ?>"> <!-- Valor alternante entre "oscuro" y "claro" -->
-        <button type="submit">Cambiar modo</button>
+        <button type="submit" name="accion" value="cambiar">Cambiar modo</button>
     </form>
 
     <!-- Estilo dinámico según la cookie "modo" -->
