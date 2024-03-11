@@ -23,6 +23,16 @@ if ($result->num_rows > 0) {
         ];
     }
 }
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['comprar_id']) && isset($_POST['comprar_nombre'])) {
+        $compra_id = $_POST['comprar_id'];
+        $compra_nombre = $_POST['comprar_nombre'];
+
+        // Agregar el juego a la lista de compras en la sesión
+        $_SESSION['compras'][] = $compra_nombre;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +67,8 @@ if ($result->num_rows > 0) {
                     <td><?php echo $producto['descripcion']; ?></td>
                     <td>
                         <form method="post">
-                            <input type="hidden" name="comprar" value="<?php echo $id; ?>">
+                            <input type="hidden" name="comprar_id" value="<?php echo $id; ?>">
+                            <input type="hidden" name="comprar_nombre" value="<?php echo $producto['nombre']; ?>">
                             <button type="submit">Comprar</button>
                         </form>
                     </td>
@@ -76,6 +87,12 @@ if ($result->num_rows > 0) {
         <form method="post">
             <button type="submit" name="validar_compra">Validar compra</button>
         </form>
+        <?php
+        // Verificar si se ha enviado el formulario de validación
+            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['validar_compra'])) {
+            echo "Compra confirmada. ¡Gracias!";
+            }
+        ?>
     </div>
 </body>
 </html>
