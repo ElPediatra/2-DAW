@@ -4,7 +4,7 @@
 // Establece la conexión a la base de datos (reemplaza con tus propios valores)
 $servername = "localhost";
 $username = "dwes";
-$password = "";
+$password = "abc123.";
 $dbname = "Tienda_Juegos"; // Nombre de tu base de datos
 
 // Crea la conexión
