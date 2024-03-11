@@ -25,7 +25,7 @@ CREATE TABLE juegos (
     descripcion TEXT
 );
 
--- Inserto los datos
+-- Inserto los datos de los juegos
 INSERT INTO juegos (nombre, imagen, descripcion)
 VALUES
     ('The Legend of Zelda: Ocarina of Time', '/home/alberto/img/The-Legend-of-Zelda-Ocarnia-of-Time.avif', 'Legend of Zelda se lanzó en 1998. The Legend of Zelda: Ocarina of Time es un videojuego de acción, desarrollado por Nintendo EAD y publicado por Nintendo para la consola Nintendo 64. El protagonista es Link, que se adentra en el reino de Hyrule para detener a Ganondorf, rey de la tribu Gerudo.'),
@@ -79,6 +79,6 @@ VALUES
     ('Call of Duty: Modern Warfare 2', '/home/alberto/img/Call-of-Duty-modern-warfare.avif', 'Call of Duty Modern Warfare se lanzó en 2009. Es un videojuego de acción, creado por Infinity Ward y distribuido por Activision. Es la sexta entrega de la saga y salió a la venta el 10 de noviembre de 2009. La historia comienza 5 años después de Modern Warfare, con Imran Zakhaev, que ahora fue declarado héroe de la nueva Rusia.'),
     ('God of War', '/home/alberto/img/God-of-war-edited.avif', 'God of War narra las aventuras del guerrero Kratos. Se basa en las aventuras de un todo poderoso Kratos, que se enfrenta a varios personajes de la mitología griega y nórdica. Fue desarrollado por Santa Monica Studio y publicado por Sony Interactive Entertainment (SIE). El año pasado ganó el premio al mejor videojuego del año en la gala The Game Awards, que se hizo en Los Ángeles.');
 
--- Asignación de permisos al usuario dwes
+-- Asignación de permisos al usuario dwes y refresco
 GRANT ALL PRIVILEGES ON Tienda_Juegos.* TO 'dwes'@'localhost';
 FLUSH PRIVILEGES;
