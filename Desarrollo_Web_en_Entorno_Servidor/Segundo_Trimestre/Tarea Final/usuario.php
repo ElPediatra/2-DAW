@@ -11,12 +11,6 @@ $dbname = "Tienda_Juegos";
 //Creo la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-//Valido la entrada del usuario a la página
-if (!isset($_SESSION['nombre_usuario']) || $_SESSION['perfil'] !== 'usuario') {
-    echo "No puedes acceder a esta página.";
-    exit;
-}
-
 $productos = [];
 $sql = "SELECT nombre, imagen, descripcion FROM juegos";
 $result = $conn->query($sql);
