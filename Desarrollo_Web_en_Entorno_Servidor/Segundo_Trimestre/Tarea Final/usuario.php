@@ -80,8 +80,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
         color: <?php echo ($modo_actual == "oscuro") ? "#fff" : "#000"; ?>;
     }
     </style>
-    <!-- Estilo dinámico según la cookie "modo" -->
-    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <h1>Tienda de Juegos</h1>

@@ -64,10 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
-    <!-- Estilo dinámico según la cookie "modo" -->
-    <link rel="stylesheet" href="estilos.css">
     <style>
-        /* estilos.css */
     body {
         background-color: <?php echo ($modo_actual == "oscuro") ? "#1a1a1a" : "#fff"; ?>;
         color: <?php echo ($modo_actual == "oscuro") ? "#fff" : "#000"; ?>;
