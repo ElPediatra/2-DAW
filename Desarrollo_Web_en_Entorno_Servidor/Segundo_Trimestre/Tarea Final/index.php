@@ -53,9 +53,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Compruebo si se ha enviado el formulario para cambiar el modo
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
     $modo_actual = $_COOKIE["modo"] ?? "claro"; // Valor predeterminado: claro
-    $modo = ($modo_actual == "oscuro") ? "claro" : "oscuro";
+    $modo = ($_POST["modo"] == "oscuro") ? "oscuro" : "claro"; // Cambia al modo seleccionado
+
+    // Establece la cookie con el nuevo modo
     setcookie("modo", $modo, time() + 3600, "/"); // La cookie expira en 1 hora
 }
+
+// Obtengo el valor actual de la cookie (modo)
+$modo_actual = $_COOKIE["modo"] ?? "claro"; // Valor predeterminado: claro
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +84,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
 
     <!-- Formulario para el modo claro y oscuro -->
     <form method="post" action="index.php">
-        <input type="hidden" name="modo" value="<?php echo $modo; ?>"> <!-- Valor alternante entre "oscuro" y "claro" -->
+        <label>
+            <input type="radio" name="modo" value="oscuro" <?php echo ($modo_actual == "oscuro") ? "checked" : ""; ?>>
+            Modo oscuro
+        </label>
+        <label>
+            <input type="radio" name="modo" value="claro" <?php echo ($modo_actual == "claro") ? "checked" : ""; ?>>
+            Modo claro
+        </label>
         <button type="submit" name="accion" value="cambiar">Cambiar modo</button>
     </form>
 
