@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
     <h1>Tienda de Juegos</h1>
 
     <!-- Formulario para el modo claro y oscuro -->
-    <form method="post" action="index.php">
+    <form method="post" action="usuario.php">
         <input type="hidden" name="modo" value="<?php echo $modo; ?>"> <!-- Valor alternante entre "oscuro" y "claro" -->
         <button type="submit">Cambiar modo</button>
     </form>
