@@ -2,19 +2,19 @@
 // usuario.php
 
 session_start();
-if (!isset($_SESSION['nombre_usuario']) || $_SESSION['perfil'] !== 'usuario') {
-    echo "No puedes acceder a esta página.";
-    exit;
-}
 
 $servername = "localhost";
 $username = "dwes";
 $password = "abc123.";
 $dbname = "Tienda_Juegos";
+
+//Creo la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
+//Valido la entrada del usuario a la página
+if (!isset($_SESSION['nombre_usuario']) || $_SESSION['perfil'] !== 'usuario') {
+    echo "No puedes acceder a esta página.";
+    exit;
 }
 
 $productos = [];
