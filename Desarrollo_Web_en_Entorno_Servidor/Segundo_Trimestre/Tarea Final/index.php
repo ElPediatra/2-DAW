@@ -1,40 +1,40 @@
 <?php
 // index.php
 
-// Establece la conexión a la base de datos (reemplaza con tus propios valores)
+//Creo las variables para el acceso
 $servername = "localhost";
 $username = "dwes";
 $password = "abc123.";
-$dbname = "Tienda_Juegos"; // Nombre de tu base de datos
+$dbname = "Tienda_Juegos";
 
-// Crea la conexión
+//Creo la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verifica si hay errores en la conexión
+//Compruebo que no haya errores en la conexión
 if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
 
-// Verifica si se envió el formulario
+// Verifico que se envió el formulario de acceso
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtén las credenciales ingresadas
+    //Capturo los datos de acceso
     $nombre_usuario = $_POST["nombre_usuario"];
     $contrasena = $_POST["contrasena"];
 
-    // Escapa los valores para evitar inyección SQL (importante para la seguridad)
+    //Escapa los valores para evitar inyección SQL (importante para la seguridad)
     $nombre_usuario = $conn->real_escape_string($nombre_usuario);
     $contrasena = $conn->real_escape_string($contrasena);
 
-    // Realiza la consulta en la base de datos
+    //Realizo la consulta a la base de datos
     $consulta = "SELECT perfil FROM usuarios WHERE nombre_usuario = '$nombre_usuario' AND contrasena = '$contrasena'";
     $resultado = $conn->query($consulta);
 
-    // Verifica si se encontró un usuario con las credenciales correctas
+    //Compruebo que el usuario exista en la base de datos
     if ($resultado->num_rows > 0) {
         $fila = $resultado->fetch_assoc();
         $perfil = $fila["perfil"];
 
-        // Redirige según el perfil
+        //Redirijo al usuario dependiendo de su perfil
         if ($perfil == "usuario") {
             header("Location: usuario.php");
             exit;
@@ -65,6 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" name="contrasena" placeholder="Contraseña" required>
         <button type="submit">Iniciar sesión</button>
     </form>
+    <!-- Aquí pondré el mensaje de error en caso de usuario o contraseña incorrecta -->
     <?php if (isset($mensaje_error)) { ?>
         <p style="color: red;"><?php echo $mensaje_error; ?></p>
     <?php } ?>
