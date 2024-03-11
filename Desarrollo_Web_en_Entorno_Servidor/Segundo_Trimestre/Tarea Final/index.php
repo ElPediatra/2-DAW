@@ -2,25 +2,6 @@
 // index.php
 session_start(); // Inicia la sesión o reanuda una existente
 
-// Verifica si el usuario está autenticado
-if (!isset($_SESSION["nombre_usuario"])) {
-    // Redirige al usuario a la página de inicio de sesión si no está autenticado
-    header("Location: index.php");
-    exit;
-}
-
-// Accede a la información del usuario
-$nombre_usuario = $_SESSION["nombre_usuario"];
-$perfil = $_SESSION["perfil"];
-
-// Verifica si el perfil es el requerido (por ejemplo, "usuario")
-if ($perfil !== "usuario") {
-    // Redirige al usuario a una página de acceso denegado
-    header("Location: acceso_denegado.php");
-    exit;
-}
-?>
-
 // Creo las variables para el acceso
 $servername = "localhost";
 $username = "dwes";
