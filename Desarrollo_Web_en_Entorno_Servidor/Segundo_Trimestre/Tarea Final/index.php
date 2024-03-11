@@ -10,11 +10,6 @@ $dbname = "Tienda_Juegos";
 // Creo la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Compruebo que no haya errores en la conexión
-if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
-}
-
 // Verifico que se envió el formulario de acceso
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre_usuario"])) {
     // Capturo los datos de acceso
@@ -45,9 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre_usuario"])) {
     } else {
         $mensaje_error = "Usuario o contraseña incorrectos. Inténtalo de nuevo.";
     }
-
-    // Cierra la conexión
-    $conn->close();
 }
 
 // Compruebo si se ha enviado el formulario para cambiar el modo
