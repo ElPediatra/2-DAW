@@ -1,20 +1,37 @@
 <?php
 // index.php
 
-//Confirmo cuando se envía el formulario de acceso
+// Establece la conexión a la base de datos (reemplaza con tus propios valores)
+$servername = "localhost";
+$username = "dwes";
+$password = "";
+$dbname = "Tienda_Juegos"; // Nombre de tu base de datos
+
+// Crea la conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verifica si hay errores en la conexión
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+}
+
+// Verifica si se envió el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    //Capturo el usuario y la contraseña que ha puesto el usuario
+    // Obtén las credenciales ingresadas
     $nombre_usuario = $_POST["nombre_usuario"];
     $contrasena = $_POST["contrasena"];
 
-    // Realiza la consulta en la base de datos (debes implementar la conexión a la base de datos)
-    // Aquí asumimos que ya tienes una conexión establecida y una tabla llamada "usuarios"
+    // Escapa los valores para evitar inyección SQL (importante para la seguridad)
+    $nombre_usuario = $conn->real_escape_string($nombre_usuario);
+    $contrasena = $conn->real_escape_string($contrasena);
+
+    // Realiza la consulta en la base de datos
     $consulta = "SELECT perfil FROM usuarios WHERE nombre_usuario = '$nombre_usuario' AND contrasena = '$contrasena'";
-    // Ejecuta la consulta y obtén el resultado
+    $resultado = $conn->query($consulta);
 
     // Verifica si se encontró un usuario con las credenciales correctas
-    if ($resultado) {
-        $fila = mysqli_fetch_assoc($resultado);
+    if ($resultado->num_rows > 0) {
+        $fila = $resultado->fetch_assoc();
         $perfil = $fila["perfil"];
 
         // Redirige según el perfil
@@ -26,8 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit;
         }
     } else {
-        $mensaje_error = "Credenciales incorrectas. Inténtalo de nuevo.";
+        $mensaje_error = "Usuario o contraseña incorrectos. Inténtalo de nuevo.";
     }
+
+    // Cierra la conexión
+    $conn->close();
 }
 ?>
 
