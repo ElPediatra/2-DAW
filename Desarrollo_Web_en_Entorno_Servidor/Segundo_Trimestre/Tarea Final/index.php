@@ -50,11 +50,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 
-//Comprobación del formulario para cambiar el modo de claro a oscuro y viceversa
+// Compruebo si se ha enviado el formulario para cambiar el modo
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
-    $modo_actual = $_COOKIE["modo"] ?? "claro"; //Valor predeterminado: claro
+    $modo_actual = $_COOKIE["modo"] ?? "claro"; // Valor predeterminado: claro
     $modo = ($modo_actual == "oscuro") ? "claro" : "oscuro";
-    setcookie("modo", $modo, time() + 3600, "/"); //Pongo que la cookie expire en 1 hora
+    setcookie("modo", $modo, time() + 3600, "/"); // La cookie expira en 1 hora
 }
 ?>
 
@@ -79,8 +79,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
 
     <!-- Formulario para el modo claro y oscuro -->
     <form method="post" action="index.php">
-        <input type="hidden" name="modo" value="<?php echo $modo; ?>"> <!-- Cambio el valor entre "oscuro" y "claro" -->
-        <button type="submit">Cambiar Estilo de la Web (Claro y Oscuro)</button>
+        <input type="hidden" name="modo" value="<?php echo $modo; ?>"> <!-- Valor alternante entre "oscuro" y "claro" -->
+        <button type="submit">Cambiar modo</button>
     </form>
 
     <!-- Estilo dinámico según la cookie "modo" -->
