@@ -69,5 +69,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php if (isset($mensaje_error)) { ?>
         <p style="color: red;"><?php echo $mensaje_error; ?></p>
     <?php } ?>
+
+    <!-- Formulario para el modo claro y oscuro -->
+    <form method="post" action="index.php">
+        <input type="hidden" name="modo" value="oscuro"> <!-- Valor "oscuro" o "claro" según el botón -->
+        <button type="submit">Cambiar modo</button>
+    </form>
 </body>
 </html>
