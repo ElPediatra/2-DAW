@@ -1,7 +1,9 @@
 <?php
 // usuario.php
+// Incluye el archivo para configurar la cookie
+include("configurar_modo.php");
 
-session_start();
+session_start(); // Inicia la sesión o reanuda una existente
 
 // Verifica si el usuario está autenticado
 if (!isset($_SESSION["nombre_usuario"])) {
@@ -20,9 +22,6 @@ if ($perfil !== "usuario") {
     header("Location: index.php");
     exit;
 }
-
-// Accede a la configuración de la cookie
-$modo_actual = $_COOKIE["modo"] ?? "claro"; // Valor predeterminado: claro
 
 $servername = "localhost";
 $username = "dwes";
@@ -69,6 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Juegos</title>
+    <!-- Estilo propio de las imágenes de esta página -->
     <style>
     img {
 	    width: 200px; /* Ancho de 100 p\u00edxeles */
@@ -76,10 +76,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
 	}
 
     body {
-            background-color: <?php echo ($modo_actual == "oscuro") ? "#1a1a1a" : "#fff"; ?>;
-            color: <?php echo ($modo_actual == "oscuro") ? "#fff" : "#000"; ?>;
-        }
+        background-color: <?php echo ($modo_actual == "oscuro") ? "#1a1a1a" : "#fff"; ?>;
+        color: <?php echo ($modo_actual == "oscuro") ? "#fff" : "#000"; ?>;
+    }
     </style>
+    <!-- Estilo dinámico según la cookie "modo" -->
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <h1>Tienda de Juegos</h1>

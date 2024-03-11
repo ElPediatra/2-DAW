@@ -1,5 +1,8 @@
 <?php
 // index.php
+// Incluye el archivo para configurar la cookie
+include("configurar_modo.php");
+
 session_start(); // Inicia la sesión o reanuda una existente
 
 // Creo las variables para el acceso
@@ -61,6 +64,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
+    <!-- Estilo dinámico según la cookie "modo" -->
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* estilos.css */
+    body {
+        background-color: <?php echo ($modo_actual == "oscuro") ? "#1a1a1a" : "#fff"; ?>;
+        color: <?php echo ($modo_actual == "oscuro") ? "#fff" : "#000"; ?>;
+    }
+    </style>
 </head>
 <body>
     <h1>Iniciar sesión</h1>
@@ -79,13 +91,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
         <input type="hidden" name="modo" value="<?php echo $modo; ?>"> <!-- Valor alternante entre "oscuro" y "claro" -->
         <button type="submit">Cambiar modo</button>
     </form>
-
-    <!-- Estilo dinámico según la cookie "modo" -->
-    <style>
-        body {
-            background-color: <?php echo ($modo_actual == "oscuro") ? "#1a1a1a" : "#fff"; ?>;
-            color: <?php echo ($modo_actual == "oscuro") ? "#fff" : "#000"; ?>;
-        }
-    </style>
 </body>
 </html>
