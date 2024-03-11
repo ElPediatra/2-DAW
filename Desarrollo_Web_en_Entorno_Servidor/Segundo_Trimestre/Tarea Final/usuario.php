@@ -2,10 +2,9 @@
 // usuario.php
 
 session_start();
-// Verificar si el usuario tiene el perfil de administrador
-if(!isset($_SESSION['usuario'])  !isset($_SESSION['perfil'])  $_SESSION['perfil'] !== 'usuario') {
-    header("Location: index.php");
-    exit();
+if (!isset($_SESSION['nombre_usuario']) || $_SESSION['perfil'] !== 'usuario') {
+    echo "No puedes acceder a esta página.";
+    exit;
 }
 
 $servername = "localhost";
@@ -13,6 +12,10 @@ $username = "dwes";
 $password = "abc123.";
 $dbname = "Tienda_Juegos";
 $conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+}
 
 $productos = [];
 $sql = "SELECT nombre, imagen, descripcion FROM juegos";
