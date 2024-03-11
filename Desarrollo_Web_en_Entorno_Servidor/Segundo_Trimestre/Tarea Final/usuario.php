@@ -16,7 +16,7 @@ if (!isset($_SESSION["nombre_usuario"])) {
 $nombre_usuario = $_SESSION["nombre_usuario"];
 $perfil = $_SESSION["perfil"];
 
-// Verifica si el perfil es el requerido (por ejemplo, "usuario")
+// Verifica si el perfil es el requerido (en este caso "usuario")
 if ($perfil !== "usuario") {
     // Redirige al usuario a una página de acceso denegado
     header("Location: index.php");
