@@ -65,6 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verificar si se ha enviado el formulario de validación
             if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['validar_compra'])) {
             echo "Compra confirmada. ¡Gracias!";
+                // Vaciar la lista de compras
+                $_SESSION['compras'] = array();
             }
         ?>
     </div>
