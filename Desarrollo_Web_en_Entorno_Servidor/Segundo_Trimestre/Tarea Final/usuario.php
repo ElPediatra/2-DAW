@@ -54,6 +54,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['compras'][] = $compra_nombre;
     }
 }
+
+// Compruebo si se ha enviado el formulario para cambiar el modo
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
+    $modo_actual = $_COOKIE["modo"] ?? "claro"; // Valor predeterminado: claro
+    $modo = ($modo_actual == "oscuro") ? "claro" : "oscuro";
+    setcookie("modo", $modo, time() + 3600, "/"); //Timer para que se mantenga la configuración de la cookie
+}
 ?>
 
 <!DOCTYPE html>
@@ -76,6 +83,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <h1>Tienda de Juegos</h1>
+
+    <!-- Formulario para el modo claro y oscuro -->
+    <form method="post" action="index.php">
+        <input type="hidden" name="modo" value="<?php echo $modo; ?>"> <!-- Valor alternante entre "oscuro" y "claro" -->
+        <button type="submit">Cambiar modo</button>
+    </form>
+    <br>
     <div>
         <h2>Lista de compras:</h2>
         <ul>
