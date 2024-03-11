@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 }
 
 // Verifico que se envió el formulario de acceso
-if ($_SERVER["REQUEST_METHOD"] == "POST" isset($_POST["nombre_usuario"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre_usuario"])) {
     // Capturo los datos de acceso
     $nombre_usuario = $_POST["nombre_usuario"];
     $contrasena = $_POST["contrasena"];
