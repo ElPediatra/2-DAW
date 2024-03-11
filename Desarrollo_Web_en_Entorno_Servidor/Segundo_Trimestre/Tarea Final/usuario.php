@@ -110,6 +110,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
         ?>
     </div>
     <br>
+    <form action="cerrar_sesion.php" method="post">
+        <input type="submit" value="Cerrar sesión">
+    </form>
+    <br>
 
     <table>
         <thead>
