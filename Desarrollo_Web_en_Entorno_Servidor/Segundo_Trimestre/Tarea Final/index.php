@@ -88,5 +88,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
         <input type="hidden" name="modo" value="<?php echo $modo; ?>"> <!-- Valor alternante entre "oscuro" y "claro" -->
         <button type="submit">Cambiar modo</button>
     </form>
+
+    <h2>
+    Lo lograron. Finalmente lo rompieron. Finalmente ganaron. Destrozaron a alguien. Alguien que siempre estaba feliz, que siempre estaba sonriendo. Alguien que no merecía el odio. Alguien que no hacia nada mas que ayudar a las personas. Alguien que amó con todo su corazón.
+    </h2>
 </body>
 </html>
