@@ -1,5 +1,25 @@
 <?php
 // index.php
+session_start(); // Inicia la sesión o reanuda una existente
+
+// Verifica si el usuario está autenticado
+if (!isset($_SESSION["nombre_usuario"])) {
+    // Redirige al usuario a la página de inicio de sesión si no está autenticado
+    header("Location: index.php");
+    exit;
+}
+
+// Accede a la información del usuario
+$nombre_usuario = $_SESSION["nombre_usuario"];
+$perfil = $_SESSION["perfil"];
+
+// Verifica si el perfil es el requerido (por ejemplo, "usuario")
+if ($perfil !== "usuario") {
+    // Redirige al usuario a una página de acceso denegado
+    header("Location: acceso_denegado.php");
+    exit;
+}
+?>
 
 // Creo las variables para el acceso
 $servername = "localhost";
@@ -29,7 +49,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre_usuario"])) {
         $fila = $resultado->fetch_assoc();
         $perfil = $fila["perfil"];
 
-        // Redirijo al usuario dependiendo de su perfil
+        // Establece una variable de sesión para el usuario
+        $_SESSION["nombre_usuario"] = $nombre_usuario;
+        $_SESSION["perfil"] = $perfil;
+
+        // Redirige al usuario según su perfil
         if ($perfil == "usuario") {
             header("Location: usuario.php");
             exit;
