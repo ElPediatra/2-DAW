@@ -44,17 +44,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre_usuario"]) && i
     $contrasena = $_POST["contrasena"]; // Deberías encriptar esta contraseña
     $perfil = $_POST["perfil"];
 
-    // Prepara la consulta SQL
-    $stmt = $conn->prepare("INSERT INTO usuarios (nombre_usuario, contrasena, perfil) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $nombre_usuario, $contrasena, $perfil);
+    // Verifica que $nombre_usuario tenga entre 4 y 8 letras
+    if (preg_match("/^[a-zA-Z]{4,8}$/", $nombre_usuario)) {
+        // Verifica que $contrasena tenga entre 4 y 25 letras, números 0 caracteres especiales
+        if (preg_match("/^[\w\W]{4,25}$/", $contrasena)) {
+            // Prepara la consulta SQL
+            $stmt = $conn->prepare("INSERT INTO usuarios (nombre_usuario, contrasena, perfil) VALUES (?, ?, ?)");
+            $stmt->bind_param("sss", $nombre_usuario, $contrasena, $perfil);
 
-    // Ejecuta la consulta
-    if ($stmt->execute()) {
-        echo "Usuario añadido con éxito.";
+            // Ejecuta la consulta
+            if ($stmt->execute()) {
+                echo "Usuario añadido con éxito.";
+            } else {
+                echo "Error: no se ha podido añadir el usuario."; //. $stmt->error;
+            }
+        } else {
+            echo "La contraseña debe tener entre 4 y 25 letras, números o caracteres especiales.";
+        }
     } else {
-        echo "Error: " . $stmt->error;
+        echo "El nombre de usuario debe tener entre 4 y 8 letras.";
     }
 }
+
 ?>
 
 <!DOCTYPE html>
