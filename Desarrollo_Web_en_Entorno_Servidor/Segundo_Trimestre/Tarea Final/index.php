@@ -1,43 +1,43 @@
 <?php
-// index.php
-// Incluye el archivo para configurar la cookie
+//index.php
+//Incluyo el archivo para configurar la cookie
 include("configurar_modo.php");
 
-session_start(); // Inicia la sesión o reanuda una existente
+session_start(); //Inicio la sesión o reanudo una existente en caso de no haberla cerrado
 
-// Creo las variables para el acceso
+//Creo las variables para el acceso
 $servername = "localhost";
 $username = "dwes";
 $password = "abc123.";
 $dbname = "Tienda_Juegos";
 
-// Creo la conexión
+//Creo la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verifico que se envió el formulario de acceso
+//Verifico que se envió el formulario de acceso
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre_usuario"])) {
-    // Capturo los datos de acceso
+    //Capturo los datos de acceso
     $nombre_usuario = $_POST["nombre_usuario"];
     $contrasena = $_POST["contrasena"];
 
-    // Escapa los valores para evitar inyección SQL (importante para la seguridad)
+    //Aseguro la cadena de texto antes de mandarla (lo vi por ahí y lo puse)
     $nombre_usuario = $conn->real_escape_string($nombre_usuario);
     $contrasena = $conn->real_escape_string($contrasena);
 
-    // Realizo la consulta a la base de datos
+    //Realizo la consulta a la base de datos
     $consulta = "SELECT perfil FROM usuarios WHERE nombre_usuario = '$nombre_usuario' AND contrasena = '$contrasena'";
     $resultado = $conn->query($consulta);
 
-    // Compruebo que el usuario exista en la base de datos
+    //Compruebo que el usuario exista en la base de datos
     if ($resultado->num_rows > 0) {
         $fila = $resultado->fetch_assoc();
         $perfil = $fila["perfil"];
 
-        // Establece una variable de sesión para el usuario
+        //Establezco una variable de sesión para el usuario
         $_SESSION["nombre_usuario"] = $nombre_usuario;
         $_SESSION["perfil"] = $perfil;
 
-        // Redirige al usuario según su perfil
+        //Redirijo al usuario según su perfil
         if ($perfil == "usuario") {
             header("Location: usuario.php");
             exit;
@@ -46,15 +46,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre_usuario"])) {
             exit;
         }
     } else {
+        //Mando mensaje en lugar de usuario o contraseña incorrecta
         $mensaje_error = "Usuario o contraseña incorrectos. Inténtalo de nuevo.";
     }
 }
 
-// Compruebo si se ha enviado el formulario para cambiar el modo
+//Compruebo que se ha mandado el formulario para cambiar de modo claro a modo oscuro
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
     $modo_actual = $_COOKIE["modo"] ?? "claro"; // Valor predeterminado: claro
     $modo = ($modo_actual == "oscuro") ? "claro" : "oscuro";
-    setcookie("modo", $modo, time() + 3600, "/"); //Timer para que se mantenga la configuración de la cookie
+    setcookie("modo", $modo, time() + 3600, "/"); //Timer para que se mantenga la configuración de la cookie (No funciona)
 }
 ?>
 
@@ -83,14 +84,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
         <p style="color: red;"><?php echo $mensaje_error; ?></p>
     <?php } ?>
 
-    <!-- Formulario para el modo claro y oscuro -->
     <form method="post" action="index.php">
-        <input type="hidden" name="modo" value="<?php echo $modo; ?>"> <!-- Valor alternante entre "oscuro" y "claro" -->
+        <input type="hidden" name="modo" value="<?php echo $modo; ?>"> <!-- Alterna el valor entre "oscuro" y "claro" -->
         <button type="submit">Cambiar modo</button>
     </form>
-
-    <h2>
-    Lo lograron. Finalmente lo rompieron. Finalmente ganaron. Destrozaron a alguien. Alguien que siempre estaba feliz, que siempre estaba sonriendo. Alguien que no merecía el odio. Alguien que no hacia nada mas que ayudar a las personas. Alguien que amó con todo su corazón.
-    </h2>
 </body>
 </html>

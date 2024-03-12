@@ -1,28 +1,29 @@
 <?php
-// usuario.php
-// Incluye el archivo para configurar la cookie
+//usuario.php
+//Incluyo el archivo para configurar la cookie
 include("configurar_modo.php");
 
-session_start(); // Inicia la sesión o reanuda una existente
+session_start(); //Inicio la sesión o reanudo una existente en caso de no haberla cerrado
 
-// Verifica si el usuario está autenticado
+//Verifico si el usuario está logueado
 if (!isset($_SESSION["nombre_usuario"])) {
-    // Redirige al usuario a la página de inicio de sesión si no está autenticado
+    //Redirige al usuario a la página de inicio de sesión si no está loguead
     header("Location: index.php");
     exit;
 }
 
-// Accede a la información del usuario
+//Accedo a la información del usuario
 $nombre_usuario = $_SESSION["nombre_usuario"];
 $perfil = $_SESSION["perfil"];
 
-// Verifica si el perfil es el requerido (en este caso "usuario")
+//Verifico si el perfil es el requerido (en este caso "usuario")
 if ($perfil !== "usuario") {
-    // Redirige al usuario a una página de acceso denegado
-    header("Location: index.php");
+    //Redirijo al usuario a su página, (si no es perfil "usuario" es pergil "admin")
+    header("Location: admin.php");
     exit;
 }
 
+//Creo las variables para el acceso
 $servername = "localhost";
 $username = "dwes";
 $password = "abc123.";
@@ -31,10 +32,12 @@ $dbname = "Tienda_Juegos";
 //Creo la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+//Creo un array vacío para almacenar los productos
 $productos = [];
+//Creo una consulta SQL para capturar los datos de la tabla juegos y la ejecuto
 $sql = "SELECT nombre, imagen, descripcion FROM juegos";
 $result = $conn->query($sql);
-if ($result->num_rows > 0) {
+if ($result->num_rows > 0) { //Compruebo que al menos me de un resultado, capturo los elementos y los añado al array
     while ($row = $result->fetch_assoc()) {
         $productos[] = [
             'nombre' => $row['nombre'],
@@ -44,21 +47,22 @@ if ($result->num_rows > 0) {
     }
 }
 
+//Solicitud post para incluir los juegos seleccionados en el listado al "carrito"
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['comprar_id']) && isset($_POST['comprar_nombre'])) {
         $compra_id = $_POST['comprar_id'];
         $compra_nombre = $_POST['comprar_nombre'];
 
-        // Agregar el juego a la lista de compras en la sesión
+        //Agregar el juego a la lista de compras en la sesión
         $_SESSION['compras'][] = $compra_nombre;
     }
 }
 
-// Compruebo si se ha enviado el formulario para cambiar el modo
+//Compruebo que se ha mandado el formulario para cambiar de modo claro a modo oscuro
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
     $modo_actual = $_COOKIE["modo"] ?? "claro"; // Valor predeterminado: claro
     $modo = ($modo_actual == "oscuro") ? "claro" : "oscuro";
-    setcookie("modo", $modo, time() + 3600, "/"); //Timer para que se mantenga la configuración de la cookie
+    setcookie("modo", $modo, time() + 3600, "/"); //Timer para que se mantenga la configuración de la cookie (No funciona)
 }
 ?>
 
@@ -93,6 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
     <div>
         <h2>Lista de compras:</h2>
         <ul>
+            <!-- For each para recorrer el array de compras y mostar los elementos en una lista -->
             <?php foreach ($_SESSION['compras'] as $compra) { ?>
                 <li><?php echo $compra; ?></li>
             <?php } ?>
@@ -101,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
             <button type="submit" name="validar_compra">Validar compra</button>
         </form>
         <?php
-        // Verificar si se ha enviado el formulario de validación
+        //Verificar si se ha enviado el formulario de validación
             if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['validar_compra'])) {
             echo "Compra confirmada. ¡Gracias!";
                 // Vaciar la lista de compras
@@ -125,6 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["modo"])) {
             </tr>
         </thead>
         <tbody>
+            <!-- Foreach para mostrar los productos de la tabla juegos -->
             <?php foreach ($productos as $id => $producto) { ?>
                 <tr>
                     <td><?php echo $producto['nombre']; ?></td>
