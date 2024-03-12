@@ -19,7 +19,7 @@ $perfil = $_SESSION["perfil"];
 // Verifica si el perfil es el requerido (en este caso "usuario")
 if ($perfil !== "admin") {
     // Redirige al usuario a una página de acceso denegado
-    header("Location: index.php");
+    header("Location: usuario.php");
     exit;
 }
 

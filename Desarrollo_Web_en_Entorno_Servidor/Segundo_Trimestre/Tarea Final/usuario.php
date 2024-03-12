@@ -19,7 +19,7 @@ $perfil = $_SESSION["perfil"];
 //Verifico si el perfil es el requerido (en este caso "usuario")
 if ($perfil !== "usuario") {
     //Redirijo al usuario a su página, (si no es perfil "usuario" es pergil "admin")
-    header("Location: index.php");
+    header("Location: admin.php");
     exit;
 }
 
