@@ -146,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre_usuario"]) && i
                 if ($stmt->execute()) {
                     echo "Usuario eliminado con éxito.";
                 } else {
-                    echo "Error: " . $stmt->error;
+                    echo "Error: no se ha podido eliminar el usuario."; //. $stmt->error;
                 }    
             }
         ?>
